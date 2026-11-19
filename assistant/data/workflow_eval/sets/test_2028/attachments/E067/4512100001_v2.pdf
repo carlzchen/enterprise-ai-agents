@@ -1,0 +1,175 @@
+%PDF-1.3
+%‚„œ”
+1 0 obj
+<<
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
+>>
+endobj
+2 0 obj
+<<
+/Count 1
+/Kids [ 3 0 R ]
+/Type /Pages
+>>
+endobj
+3 0 obj
+<<
+/Contents 4 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+>>
+endobj
+4 0 obj
+<<
+/Length 2234
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 42 775.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F2 15 Tf 20 TL (PURCHASE ORDER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 42 769.8898 cm
+Q
+q
+1 0 0 1 42 652.8898 cm
+q
+BT 1 0 0 1 0 108 Tm 13 TL /F1 9 Tf 0 0 0 rg (PO Number: 4512100001) Tj  T* (PO Date: 05-Oct-2026) Tj  T* (Revision: 2) Tj  T* (Buyer: Midwest Appliance Corp.) Tj  T* (Vendor: Kelang Motor Group Co., Ltd.) Tj  T* (Currency: USD) Tj  T* (Payment Terms: Net 60 days) Tj  T* (Ship To: Midwest Appliance Corp., Receiving Dock) Tj  T* (Contact: Anna Lindqvist) Tj T* ET
+Q
+Q
+q
+1 0 0 1 42 640.8898 cm
+Q
+q
+1 0 0 1 35.6378 578.4898 cm
+q
+0 0 0 rg
+BT /F2 8 Tf 9.6 TL ET
+BT 1 0 0 1 6 51.4 Tm (Item) Tj T* ET
+BT 1 0 0 1 36 51.4 Tm (Part No.) Tj T* ET
+BT 1 0 0 1 100 51.4 Tm (Description) Tj T* ET
+BT 1 0 0 1 268 51.4 Tm (Qty) Tj T* ET
+BT 1 0 0 1 312 51.4 Tm (UOM) Tj T* ET
+BT 1 0 0 1 342 51.4 Tm (Unit Price) Tj T* ET
+BT 1 0 0 1 398 51.4 Tm (Amount) Tj T* ET
+BT 1 0 0 1 468 51.4 Tm (Req. Date) Tj T* ET
+BT /F1 8 Tf 9.6 TL ET
+BT 1 0 0 1 6 35.8 Tm (10) Tj T* ET
+BT 1 0 0 1 36 35.8 Tm (M12.BL.003) Tj T* ET
+BT 1 0 0 1 100 35.8 Tm (BLDC motor 120W 310VDC \(120W-310\)) Tj T* ET
+BT 1 0 0 1 268 35.8 Tm (450) Tj T* ET
+BT 1 0 0 1 312 35.8 Tm (PCS) Tj T* ET
+BT 1 0 0 1 342 35.8 Tm (13.76) Tj T* ET
+BT 1 0 0 1 398 35.8 Tm (6,192.00) Tj T* ET
+BT 1 0 0 1 468 35.8 Tm (04-Nov-2026) Tj T* ET
+BT 1 0 0 1 6 20.2 Tm (30) Tj T* ET
+BT 1 0 0 1 36 20.2 Tm (M12.CR.004) Tj T* ET
+BT 1 0 0 1 100 20.2 Tm (Cross-flow fan 20W 220V \(80X600\)) Tj T* ET
+BT 1 0 0 1 268 20.2 Tm (1,680) Tj T* ET
+BT 1 0 0 1 312 20.2 Tm (PCS) Tj T* ET
+BT 1 0 0 1 342 20.2 Tm (6.91) Tj T* ET
+BT 1 0 0 1 398 20.2 Tm (11,608.80) Tj T* ET
+BT 1 0 0 1 468 20.2 Tm (12-Nov-2026) Tj T* ET
+BT 1 0 0 1 6 4.6 Tm  T* ET
+BT 1 0 0 1 36 4.6 Tm  T* ET
+BT 1 0 0 1 100 4.6 Tm (TOTAL) Tj T* ET
+BT 1 0 0 1 268 4.6 Tm  T* ET
+BT 1 0 0 1 312 4.6 Tm  T* ET
+BT 1 0 0 1 342 4.6 Tm  T* ET
+BT 1 0 0 1 398 4.6 Tm (USD 17,800.80) Tj T* ET
+BT 1 0 0 1 468 4.6 Tm  T* ET
+q
+1 J
+1 j
+1 1 1 RG
+.5 w
+n 0 46.8 m 524 46.8 l S
+Q
+Q
+Q
+q
+1 0 0 1 42 566.4898 cm
+Q
+q
+1 0 0 1 42 553.4898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F1 9 Tf 13 TL (Please acknowledge this order within 2 business days. Partial shipments require prior approval.) Tj T* ET
+Q
+Q
+ 
+
+endstream
+endobj
+5 0 obj
+<<
+/F1 6 0 R
+/F2 7 0 R
+>>
+endobj
+6 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/Author ()
+/CreationDate (D\07220000101000000\05300\04700\047)
+/Creator ()
+/Keywords ()
+/ModDate (D\07220000101000000\05300\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject ()
+/Title (PO)
+/Trapped (\057False)
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000142 00000 n 
+0000000341 00000 n 
+0000002627 00000 n 
+0000002668 00000 n 
+0000002775 00000 n 
+0000002887 00000 n 
+trailer
+<<
+/Size 9
+/Root 1 0 R
+/Info 8 0 R
+/ID [ <6f3aa7130493f5f4e3c47ade444a5e73> <6f3aa7130493f5f4e3c47ade444a5e73> ]
+>>
+startxref
+3146
+%%EOF

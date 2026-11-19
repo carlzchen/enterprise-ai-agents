@@ -1,0 +1,1998 @@
+[
+ {
+  "id": "E001",
+  "file": "inbox/E001.eml",
+  "date": "2026-10-03T11:47:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO-C008-261001",
+     "attachment": "E001/采购订单_PO-C008-261001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E001/采购订单_PO-C008-261001.xlsx"
+  ],
+  "message_id": "<e001.7ed6eb43@c008-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 8,
+  "from": "c008.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO-C008-261001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E002",
+  "file": "inbox/E002.eml",
+  "date": "2026-10-03T15:04:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609280002",
+     "customer_po": "CG-2026-09905",
+     "material": "KL-SP-YJ68-25W-220",
+     "customer_part_no": "M09.SH.002",
+     "requested_date": "2026-10-23"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e002.b8cc9b09@c009-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 9,
+  "from": "c009.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 CG-2026-09905 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E003",
+  "file": "inbox/E003.eml",
+  "date": "2026-10-03T18:21:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261003001",
+     "attachment": "E003/PO20261003001_v1.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E003/PO20261003001_v1.pdf"
+  ],
+  "message_id": "<e003.a2fcd9c6@c035-corp.example.com>",
+  "lang": "en",
+  "customer_id": 35,
+  "from": "c035.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO PO20261003001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E004",
+  "file": "inbox/E004.eml",
+  "date": "2026-10-03T21:38:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e004.f881a94f@mail-admin.example.org>",
+  "lang": "en",
+  "customer_id": null,
+  "from": "news@mail-admin.example.org",
+  "to": "orders@kelang.example.com",
+  "subject": "Your mailbox storage is almost full",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E005",
+  "file": "inbox/E005.eml",
+  "date": "2026-10-04T00:55:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609140004",
+     "customer_po": "PO-C022-2609905",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e005.ddcc5d8a@c022-corp.example.com>",
+  "lang": "en",
+  "customer_id": 22,
+  "from": "c022.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "Order status inquiry",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E006",
+  "file": "inbox/E006.eml",
+  "date": "2026-10-04T04:12:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609220003",
+     "customer_po": "PO-C008-2609903",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e006.9c04fafe@c008-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 8,
+  "from": "c008.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "询问订单 PO-C008-2609903 交期",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E007",
+  "file": "inbox/E007.eml",
+  "date": "2026-10-04T07:29:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e007.1bba45d7@expo-sz.example.net>",
+  "lang": "zh",
+  "customer_id": null,
+  "from": "news@expo-sz.example.net",
+  "to": "orders@kelang.example.com",
+  "subject": "2026 深圳国际电机展诚邀参展",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E008",
+  "file": "inbox/E008.eml",
+  "date": "2026-10-04T10:46:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609020004",
+     "customer_po": "PO20260902901",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e008.e8afebaf@c003-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 3,
+  "from": "purchasing@c003-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "询问订单 PO20260902901 交期",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E009",
+  "file": "inbox/E009.eml",
+  "date": "2026-10-04T14:03:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e009.c7967907@global-sourcing.example.org>",
+  "lang": "en",
+  "customer_id": null,
+  "from": "news@global-sourcing.example.org",
+  "to": "orders@kelang.example.com",
+  "subject": "Partnership opportunity",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E010",
+  "file": "inbox/E010.eml",
+  "date": "2026-10-04T17:20:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609240004",
+     "customer_po": "PO-C008-2609904",
+     "material": "KL-BL-90W-310",
+     "customer_part_no": "K08300000",
+     "requested_date": "2026-10-15"
+    }
+   },
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SP-YJ68-25W-220",
+     "params": {
+      "series": "SHADED_POLE",
+      "voltage": "220V",
+      "power_w": 25.0
+     },
+     "annual_volume": 10000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e010.dcc94e0c@c008-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 8,
+  "from": "c008.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "交期 / 询价",
+  "intents": [
+   "expedite",
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E011",
+  "file": "inbox/E011.eml",
+  "date": "2026-10-04T20:37:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609280001",
+     "customer_po": "PO20260928908",
+     "material": "KL-SP-YJ61-18W-220",
+     "customer_part_no": "C004-SH-1028",
+     "requested_date": "2026-10-15"
+    }
+   },
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SV-130-1500W",
+     "params": {
+      "series": "SERVO",
+      "voltage": "220VAC",
+      "power_w": 1500.0
+     },
+     "annual_volume": 2000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e011.dcc94e0c@c004-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 4,
+  "from": "c004.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "交期 / 询价",
+  "intents": [
+   "expedite",
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E012",
+  "file": "inbox/E012.eml",
+  "date": "2026-10-04T23:54:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SP-YJ68-25W-220",
+     "params": {
+      "series": "SHADED_POLE",
+      "voltage": "220V",
+      "power_w": 25.0
+     },
+     "annual_volume": 2000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e012.d3aded6e@c034-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 34,
+  "from": "purchasing@c034-corp.example.com",
+  "to": "market@kelang.example.com",
+  "subject": "新项目电机选型询价",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E013",
+  "file": "inbox/E013.eml",
+  "date": "2026-10-05T03:11:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "CG-2026-09001",
+     "attachment": "E013/采购订单_CG-2026-09001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E013/采购订单_CG-2026-09001.pdf"
+  ],
+  "message_id": "<e013.505cfdd5@c009-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 9,
+  "from": "c009.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 CG-2026-09001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E014",
+  "file": "inbox/E014.eml",
+  "date": "2026-10-05T06:28:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "4507090901",
+     "attachment": "E014/采购订单_4507090901_第2版.pdf",
+     "base_version": 1,
+     "erp_order_no": "SO2609010002"
+    }
+   }
+  ],
+  "attachments": [
+   "E014/采购订单_4507090901_第2版.pdf"
+  ],
+  "message_id": "<e014.b05613ac@c007-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 7,
+  "from": "c007.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 4507090901 第2版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E015",
+  "file": "inbox/E015.eml",
+  "date": "2026-10-05T09:45:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-ST-86x98",
+     "params": {
+      "series": "STEPPER",
+      "voltage": "24VDC",
+      "power_w": null
+     },
+     "annual_volume": 5000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e015.d3aded6e@c023-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 23,
+  "from": "c023.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "新项目电机选型询价",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E016",
+  "file": "inbox/E016.eml",
+  "date": "2026-10-05T13:02:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4514100001",
+     "attachment": "E016/4514100001_v1.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E016/4514100001_v1.xlsx"
+  ],
+  "message_id": "<e016.11e413f0@c014-corp.example.com>",
+  "lang": "en",
+  "customer_id": 14,
+  "from": "purchasing@c014-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4514100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E017",
+  "file": "inbox/E017.eml",
+  "date": "2026-10-05T16:19:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "4514100001",
+     "attachment": "E017/4514100001_v2.xlsx",
+     "base_version": 1,
+     "erp_order_no": null
+    }
+   }
+  ],
+  "attachments": [
+   "E017/4514100001_v2.xlsx"
+  ],
+  "message_id": "<e017.cf3732ea@c014-corp.example.com>",
+  "lang": "en",
+  "customer_id": 14,
+  "from": "c014.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "Revised PO 4514100001 rev.2",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E018",
+  "file": "inbox/E018.eml",
+  "date": "2026-10-05T19:36:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4526100001",
+     "attachment": "E018/采购订单_4526100001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E018/采购订单_4526100001.pdf"
+  ],
+  "message_id": "<e018.b11162f5@c026-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 26,
+  "from": "c026.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 4526100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E019",
+  "file": "inbox/E019.eml",
+  "date": "2026-10-05T22:53:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261005001",
+     "attachment": "E019/采购订单_PO20261005001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E019/采购订单_PO20261005001.pdf"
+  ],
+  "message_id": "<e019.21d7a615@c032-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 32,
+  "from": "c032.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO20261005001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E020",
+  "file": "inbox/E020.eml",
+  "date": "2026-10-06T02:10:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609240001",
+     "customer_po": "PO20260924912",
+     "material": "KL-CF-80X600",
+     "customer_part_no": "C001-CR-1028",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e020.940e874f@c001-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 1,
+  "from": "purchasing@c001-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 PO20260924912 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E021",
+  "file": "inbox/E021.eml",
+  "date": "2026-10-06T05:27:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO-C027-261001",
+     "attachment": "E021/采购订单_PO-C027-261001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E021/采购订单_PO-C027-261001.xlsx"
+  ],
+  "message_id": "<e021.9a88ef96@c027-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 27,
+  "from": "c027.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO-C027-261001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E022",
+  "file": "inbox/E022.eml",
+  "date": "2026-10-06T08:44:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4512100001",
+     "attachment": "E022/4512100001_v1.pdf"
+    }
+   },
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609210001",
+     "customer_po": "4512090903",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [
+   "E022/4512100001_v1.pdf"
+  ],
+  "message_id": "<e022.cb93be2e@c012-corp.example.com>",
+  "lang": "en",
+  "customer_id": 12,
+  "from": "c012.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4512100001 / status",
+  "intents": [
+   "delivery_query",
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E023",
+  "file": "inbox/E023.eml",
+  "date": "2026-10-06T12:01:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261006001",
+     "attachment": "E023/采购订单_PO20261006001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E023/采购订单_PO20261006001.xlsx"
+  ],
+  "message_id": "<e023.5a855275@c003-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 3,
+  "from": "c003.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO20261006001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E024",
+  "file": "inbox/E024.eml",
+  "date": "2026-10-06T15:18:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609220004",
+     "customer_po": "4529090903",
+     "material": "KL-ST-28x32",
+     "customer_part_no": "K29300262",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e024.3ab39b61@c029-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 29,
+  "from": "purchasing@c029-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 4529090903 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E025",
+  "file": "inbox/E025.eml",
+  "date": "2026-10-06T18:35:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4507100001",
+     "attachment": "E025/采购订单_4507100001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E025/采购订单_4507100001.pdf"
+  ],
+  "message_id": "<e025.ffaa05d3@c007-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 7,
+  "from": "c007.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 4507100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E026",
+  "file": "inbox/E026.eml",
+  "date": "2026-10-06T21:52:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e026.90ec7610@motionweekly.example.org>",
+  "lang": "en",
+  "customer_id": null,
+  "from": "news@motionweekly.example.org",
+  "to": "orders@kelang.example.com",
+  "subject": "Motion Control Weekly: Top 5 trends",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E027",
+  "file": "inbox/E027.eml",
+  "date": "2026-10-07T01:09:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO-C006-261001",
+     "attachment": "E027/采购订单_PO-C006-261001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E027/采购订单_PO-C006-261001.pdf"
+  ],
+  "message_id": "<e027.04f2bc18@c006-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 6,
+  "from": "c006.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO-C006-261001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E028",
+  "file": "inbox/E028.eml",
+  "date": "2026-10-07T04:26:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261007001",
+     "attachment": "E028/采购订单_PO20261007001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E028/采购订单_PO20261007001.xlsx"
+  ],
+  "message_id": "<e028.9a04da9c@c017-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 17,
+  "from": "purchasing@c017-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO20261007001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E029",
+  "file": "inbox/E029.eml",
+  "date": "2026-10-07T07:43:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609160007",
+     "customer_po": "PO20260916907",
+     "material": "KL-BL-120W-310",
+     "customer_part_no": "K17300262",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e029.dba2dcb4@c017-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 17,
+  "from": "c017.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 PO20260916907 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E030",
+  "file": "inbox/E030.eml",
+  "date": "2026-10-07T11:00:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SP-YJ68-25W-220",
+     "params": {
+      "series": "SHADED_POLE",
+      "voltage": "220V",
+      "power_w": 25.0
+     },
+     "annual_volume": 10000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e030.b5458c05@c012-corp.example.com>",
+  "lang": "en",
+  "customer_id": 12,
+  "from": "c012.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "Inquiry: motor for new project",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E031",
+  "file": "inbox/E031.eml",
+  "date": "2026-10-07T14:17:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609150014",
+     "customer_po": "4528090902",
+     "asked_by": "order_no"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e031.ddcc5d8a@c028-corp.example.com>",
+  "lang": "en",
+  "customer_id": 28,
+  "from": "c028.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "Order status inquiry",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E032",
+  "file": "inbox/E032.eml",
+  "date": "2026-10-07T17:34:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO20260908906",
+     "attachment": "E032/采购订单_PO20260908906_第2版.xlsx",
+     "base_version": 1,
+     "erp_order_no": "SO2609080001"
+    }
+   },
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609240001",
+     "customer_po": "PO20260924912",
+     "material": "KL-SP-YJ48-5W-220",
+     "customer_part_no": "C001-SH-1021",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [
+   "E032/采购订单_PO20260908906_第2版.xlsx"
+  ],
+  "message_id": "<e032.2022f6bb@c001-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 1,
+  "from": "purchasing@c001-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO PO20260908906 rev.2 / 交期",
+  "intents": [
+   "expedite",
+   "po_change"
+  ]
+ },
+ {
+  "id": "E033",
+  "file": "inbox/E033.eml",
+  "date": "2026-10-07T20:51:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609180010",
+     "customer_po": "PO-C022-2609906",
+     "asked_by": "customer_po"
+    }
+   },
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SV-130-1500W",
+     "params": {
+      "series": "SERVO",
+      "voltage": "220VAC",
+      "power_w": 1500.0
+     },
+     "annual_volume": 5000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e033.a9af6b3f@c022-corp.example.com>",
+  "lang": "en",
+  "customer_id": 22,
+  "from": "c022.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "status / inquiry",
+  "intents": [
+   "delivery_query",
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E034",
+  "file": "inbox/E034.eml",
+  "date": "2026-10-08T00:08:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO20260908906",
+     "attachment": "E034/采购订单_PO20260908906_第3版.xlsx",
+     "base_version": 2,
+     "erp_order_no": "SO2609080001"
+    }
+   }
+  ],
+  "attachments": [
+   "E034/采购订单_PO20260908906_第3版.xlsx"
+  ],
+  "message_id": "<e034.99f9aae2@c001-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 1,
+  "from": "c001.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 PO20260908906 第3版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E035",
+  "file": "inbox/E035.eml",
+  "date": "2026-10-08T03:25:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4507100002",
+     "attachment": "E035/采购订单_4507100002.pdf"
+    }
+   },
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609010002",
+     "customer_po": "4507090901",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [
+   "E035/采购订单_4507100002.pdf"
+  ],
+  "message_id": "<e035.d3c0a8ec@c007-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 7,
+  "from": "c007.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4507100002 / 交期",
+  "intents": [
+   "delivery_query",
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E036",
+  "file": "inbox/E036.eml",
+  "date": "2026-10-08T06:42:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609180001",
+     "customer_po": "CG-2026-02904",
+     "asked_by": "order_no"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e036.acb837ce@c002-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 2,
+  "from": "purchasing@c002-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "询问订单 SO2609180001 交期",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E037",
+  "file": "inbox/E037.eml",
+  "date": "2026-10-08T09:59:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-SP-YJ61-12W-220",
+     "params": {
+      "series": "SHADED_POLE",
+      "voltage": "220V",
+      "power_w": 12.0
+     },
+     "annual_volume": 2000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e037.b5458c05@c014-corp.example.com>",
+  "lang": "en",
+  "customer_id": 14,
+  "from": "c014.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "Inquiry: motor for new project",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E038",
+  "file": "inbox/E038.eml",
+  "date": "2026-10-08T13:16:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO20260903901",
+     "attachment": "E038/PO20260903901_v2.pdf",
+     "base_version": 1,
+     "erp_order_no": "SO2609030003"
+    }
+   }
+  ],
+  "attachments": [
+   "E038/PO20260903901_v2.pdf"
+  ],
+  "message_id": "<e038.b6f46d9a@c015-corp.example.com>",
+  "lang": "en",
+  "customer_id": 15,
+  "from": "c015.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "Revised PO PO20260903901 rev.2",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E039",
+  "file": "inbox/E039.eml",
+  "date": "2026-10-08T16:33:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4520100001",
+     "attachment": "E039/采购订单_4520100001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E039/采购订单_4520100001.pdf"
+  ],
+  "message_id": "<e039.00710713@c020-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 20,
+  "from": "c020.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 4520100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E040",
+  "file": "inbox/E040.eml",
+  "date": "2026-10-08T19:50:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "CG-2026-05001",
+     "attachment": "E040/采购订单_CG-2026-05001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E040/采购订单_CG-2026-05001.pdf"
+  ],
+  "message_id": "<e040.617c5e3e@c005-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 5,
+  "from": "purchasing@c005-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 CG-2026-05001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E041",
+  "file": "inbox/E041.eml",
+  "date": "2026-10-08T23:07:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "4507100002",
+     "attachment": "E041/采购订单_4507100002_第2版.pdf",
+     "base_version": 1,
+     "erp_order_no": null
+    }
+   }
+  ],
+  "attachments": [
+   "E041/采购订单_4507100002_第2版.pdf"
+  ],
+  "message_id": "<e041.3cde7693@c007-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 7,
+  "from": "c007.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 4507100002 第2版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E042",
+  "file": "inbox/E042.eml",
+  "date": "2026-10-09T02:24:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO20260908906",
+     "attachment": "E042/采购订单_PO20260908906_第4版.xlsx",
+     "base_version": 3,
+     "erp_order_no": "SO2609080001"
+    }
+   },
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609240001",
+     "customer_po": "PO20260924912",
+     "material": "KL-SP-YJ48-5W-220",
+     "customer_part_no": "C001-SH-1021",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [
+   "E042/采购订单_PO20260908906_第4版.xlsx"
+  ],
+  "message_id": "<e042.521a5baf@c001-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 1,
+  "from": "c001.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO PO20260908906 rev.4 / 交期",
+  "intents": [
+   "expedite",
+   "po_change"
+  ]
+ },
+ {
+  "id": "E043",
+  "file": "inbox/E043.eml",
+  "date": "2026-10-09T05:41:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4529100001",
+     "attachment": "E043/采购订单_4529100001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E043/采购订单_4529100001.xlsx"
+  ],
+  "message_id": "<e043.0a8086b2@c029-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 29,
+  "from": "c029.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 4529100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E044",
+  "file": "inbox/E044.eml",
+  "date": "2026-10-09T08:58:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": null,
+     "params": {
+      "series": "SERVO",
+      "voltage": "380VAC",
+      "power_w": 3000
+     },
+     "annual_volume": 800
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e044.b5458c05@c012-corp.example.com>",
+  "lang": "en",
+  "customer_id": 12,
+  "from": "purchasing@c012-corp.example.com",
+  "to": "market@kelang.example.com",
+  "subject": "Inquiry: motor for new project",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E045",
+  "file": "inbox/E045.eml",
+  "date": "2026-10-09T12:15:00+08:00",
+  "scenario": "duplicate",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "CG-2026-09001",
+     "attachment": "E045/采购订单_CG-2026-09001.pdf",
+     "duplicate_of_version": 1
+    }
+   }
+  ],
+  "attachments": [
+   "E045/采购订单_CG-2026-09001.pdf"
+  ],
+  "message_id": "<e045.af9a9e94@c009-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 9,
+  "from": "c009.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "转发：采购订单 CG-2026-09001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E046",
+  "file": "inbox/E046.eml",
+  "date": "2026-10-09T15:32:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO-C008-261001",
+     "attachment": "E046/采购订单_PO-C008-261001_第2版.xlsx",
+     "base_version": 1,
+     "erp_order_no": null
+    }
+   }
+  ],
+  "attachments": [
+   "E046/采购订单_PO-C008-261001_第2版.xlsx"
+  ],
+  "message_id": "<e046.f782c930@c008-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 8,
+  "from": "c008.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 PO-C008-261001 第2版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E047",
+  "file": "inbox/E047.eml",
+  "date": "2026-10-09T18:49:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "PO-C027-261001",
+     "attachment": "E047/采购订单_PO-C027-261001_第2版.xlsx",
+     "base_version": 1,
+     "erp_order_no": null
+    }
+   }
+  ],
+  "attachments": [
+   "E047/采购订单_PO-C027-261001_第2版.xlsx"
+  ],
+  "message_id": "<e047.57b318a3@c027-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 27,
+  "from": "c027.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 PO-C027-261001 第2版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E048",
+  "file": "inbox/E048.eml",
+  "date": "2026-10-09T22:06:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261009001",
+     "attachment": "E048/PO20261009001_v1.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E048/PO20261009001_v1.pdf"
+  ],
+  "message_id": "<e048.0713e298@c015-corp.example.com>",
+  "lang": "en",
+  "customer_id": 15,
+  "from": "purchasing@c015-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO PO20261009001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E049",
+  "file": "inbox/E049.eml",
+  "date": "2026-10-10T01:23:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": null,
+     "params": {
+      "series": "SERVO",
+      "voltage": "380VAC",
+      "power_w": 3000
+     },
+     "annual_volume": 1200
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e049.b5458c05@c028-corp.example.com>",
+  "lang": "en",
+  "customer_id": 28,
+  "from": "c028.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "Inquiry: motor for new project",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E050",
+  "file": "inbox/E050.eml",
+  "date": "2026-10-10T04:40:00+08:00",
+  "scenario": "compound",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609110013",
+     "customer_po": "PO-C027-2609901",
+     "asked_by": "customer_po"
+    }
+   },
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-CF-65X480",
+     "params": {
+      "series": "CROSSFLOW",
+      "voltage": "220V",
+      "power_w": 20.0
+     },
+     "annual_volume": 20000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e050.dcc94e0c@c027-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 27,
+  "from": "c027.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "交期 / 询价",
+  "intents": [
+   "delivery_query",
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E051",
+  "file": "inbox/E051.eml",
+  "date": "2026-10-10T07:57:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-ST-42x48",
+     "params": {
+      "series": "STEPPER",
+      "voltage": "24VDC",
+      "power_w": null
+     },
+     "annual_volume": 20000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e051.d3aded6e@c023-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 23,
+  "from": "c023.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "新项目电机选型询价",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E052",
+  "file": "inbox/E052.eml",
+  "date": "2026-10-10T11:14:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e052.9e35f1f8@seo-boost.example.net>",
+  "lang": "zh",
+  "customer_id": null,
+  "from": "news@seo-boost.example.net",
+  "to": "orders@kelang.example.com",
+  "subject": "官网排名提升，三个月见效",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E053",
+  "file": "inbox/E053.eml",
+  "date": "2026-10-10T14:31:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "CG-2026-02001",
+     "attachment": "E053/采购订单_CG-2026-02001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E053/采购订单_CG-2026-02001.pdf"
+  ],
+  "message_id": "<e053.2f5cf2d8@c002-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 2,
+  "from": "c002.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 CG-2026-02001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E054",
+  "file": "inbox/E054.eml",
+  "date": "2026-10-10T17:48:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609230005",
+     "customer_po": "PO20260923910",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e054.041877ab@c017-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 17,
+  "from": "c017.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "询问订单 PO20260923910 交期",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E055",
+  "file": "inbox/E055.eml",
+  "date": "2026-10-10T21:05:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4528100001",
+     "attachment": "E055/4528100001_v1.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E055/4528100001_v1.pdf"
+  ],
+  "message_id": "<e055.e054fc01@c028-corp.example.com>",
+  "lang": "en",
+  "customer_id": 28,
+  "from": "c028.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4528100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E056",
+  "file": "inbox/E056.eml",
+  "date": "2026-10-11T00:22:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609280005",
+     "customer_po": "CG-2026-21905",
+     "material": "KL-BL-90W-310",
+     "customer_part_no": "K21300262",
+     "requested_date": "2026-10-18"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e056.2aa6c785@c021-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 21,
+  "from": "purchasing@c021-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 CG-2026-21905 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E057",
+  "file": "inbox/E057.eml",
+  "date": "2026-10-11T03:39:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4525100001",
+     "attachment": "E057/4525100001_v1.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E057/4525100001_v1.pdf"
+  ],
+  "message_id": "<e057.0f8b6622@c025-corp.example.com>",
+  "lang": "en",
+  "customer_id": 25,
+  "from": "c025.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4525100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E058",
+  "file": "inbox/E058.eml",
+  "date": "2026-10-11T06:56:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261011001",
+     "attachment": "E058/采购订单_PO20261011001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E058/采购订单_PO20261011001.xlsx"
+  ],
+  "message_id": "<e058.30200dd0@c001-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 1,
+  "from": "c001.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO20261011001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E059",
+  "file": "inbox/E059.eml",
+  "date": "2026-10-11T10:13:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609180010",
+     "customer_po": "PO-C022-2609906",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e059.ddcc5d8a@c022-corp.example.com>",
+  "lang": "en",
+  "customer_id": 22,
+  "from": "c022.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "Order status inquiry",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E060",
+  "file": "inbox/E060.eml",
+  "date": "2026-10-11T13:30:00+08:00",
+  "scenario": "spam",
+  "subtasks": [
+   {
+    "type": "other",
+    "refs": {}
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e060.9d52929d@fastship.example.net>",
+  "lang": "zh",
+  "customer_id": null,
+  "from": "news@fastship.example.net",
+  "to": "orders@kelang.example.com",
+  "subject": "中美海运特价舱位",
+  "intents": [
+   "other"
+  ]
+ },
+ {
+  "id": "E061",
+  "file": "inbox/E061.eml",
+  "date": "2026-10-11T16:47:00+08:00",
+  "scenario": "spec_inquiry",
+  "subtasks": [
+   {
+    "type": "spec_inquiry",
+    "refs": {
+     "expected_material": "KL-BL-60W-310",
+     "params": {
+      "series": "BLDC",
+      "voltage": "310VDC",
+      "power_w": 60.0
+     },
+     "annual_volume": 5000
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e061.b5458c05@c015-corp.example.com>",
+  "lang": "en",
+  "customer_id": 15,
+  "from": "c015.contact0@example.com",
+  "to": "market@kelang.example.com",
+  "subject": "Inquiry: motor for new project",
+  "intents": [
+   "spec_inquiry"
+  ]
+ },
+ {
+  "id": "E062",
+  "file": "inbox/E062.eml",
+  "date": "2026-10-11T20:04:00+08:00",
+  "scenario": "expedite",
+  "subtasks": [
+   {
+    "type": "expedite",
+    "refs": {
+     "order_no": "SO2609220004",
+     "customer_po": "4529090903",
+     "material": "KL-BL-120W-310",
+     "customer_part_no": "K29300000",
+     "requested_date": "2026-10-15"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e062.3ab39b61@c029-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 29,
+  "from": "c029.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "【加急】订单 4529090903 申请提前交货",
+  "intents": [
+   "expedite"
+  ]
+ },
+ {
+  "id": "E063",
+  "file": "inbox/E063.eml",
+  "date": "2026-10-11T23:21:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO-C033-261001",
+     "attachment": "E063/采购订单_PO-C033-261001.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E063/采购订单_PO-C033-261001.pdf"
+  ],
+  "message_id": "<e063.04f875e0@c033-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 33,
+  "from": "c033.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO-C033-261001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E064",
+  "file": "inbox/E064.eml",
+  "date": "2026-10-12T02:38:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO-C018-261001",
+     "attachment": "E064/采购订单_PO-C018-261001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E064/采购订单_PO-C018-261001.xlsx"
+  ],
+  "message_id": "<e064.61e20569@c018-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 18,
+  "from": "purchasing@c018-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO-C018-261001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E065",
+  "file": "inbox/E065.eml",
+  "date": "2026-10-12T05:55:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "4516100001",
+     "attachment": "E065/4516100001_v1.pdf"
+    }
+   }
+  ],
+  "attachments": [
+   "E065/4516100001_v1.pdf"
+  ],
+  "message_id": "<e065.d1c8b6bd@c016-corp.example.com>",
+  "lang": "en",
+  "customer_id": 16,
+  "from": "c016.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO 4516100001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E066",
+  "file": "inbox/E066.eml",
+  "date": "2026-10-12T09:12:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261012001",
+     "attachment": "E066/PO20261012001_v1.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E066/PO20261012001_v1.xlsx"
+  ],
+  "message_id": "<e066.dcfe61f1@c011-corp.example.com>",
+  "lang": "en",
+  "customer_id": 11,
+  "from": "c011.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "PO PO20261012001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E067",
+  "file": "inbox/E067.eml",
+  "date": "2026-10-12T12:29:00+08:00",
+  "scenario": "po_change",
+  "subtasks": [
+   {
+    "type": "po_change",
+    "refs": {
+     "po_no": "4507100001",
+     "attachment": "E067/采购订单_4507100001_第2版.pdf",
+     "base_version": 1,
+     "erp_order_no": null
+    }
+   }
+  ],
+  "attachments": [
+   "E067/采购订单_4507100001_第2版.pdf"
+  ],
+  "message_id": "<e067.3691fc1c@c007-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 7,
+  "from": "c007.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "订单变更 4507100001 第2版",
+  "intents": [
+   "po_change"
+  ]
+ },
+ {
+  "id": "E068",
+  "file": "inbox/E068.eml",
+  "date": "2026-10-12T15:46:00+08:00",
+  "scenario": "duplicate",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261007001",
+     "attachment": "E068/采购订单_PO20261007001.xlsx",
+     "duplicate_of_version": 1
+    }
+   }
+  ],
+  "attachments": [
+   "E068/采购订单_PO20261007001.xlsx"
+  ],
+  "message_id": "<e068.f89208be@c017-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 17,
+  "from": "purchasing@c017-corp.example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "转发：采购订单 PO20261007001",
+  "intents": [
+   "po_entry"
+  ]
+ },
+ {
+  "id": "E069",
+  "file": "inbox/E069.eml",
+  "date": "2026-10-12T19:03:00+08:00",
+  "scenario": "delivery_query",
+  "subtasks": [
+   {
+    "type": "delivery_query",
+    "refs": {
+     "order_no": "SO2609140002",
+     "customer_po": "CG-2026-05903",
+     "asked_by": "customer_po"
+    }
+   }
+  ],
+  "attachments": [],
+  "message_id": "<e069.8241859a@c005-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 5,
+  "from": "c005.contact1@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "询问订单 CG-2026-05903 交期",
+  "intents": [
+   "delivery_query"
+  ]
+ },
+ {
+  "id": "E070",
+  "file": "inbox/E070.eml",
+  "date": "2026-10-12T22:20:00+08:00",
+  "scenario": "new_po",
+  "subtasks": [
+   {
+    "type": "po_entry",
+    "refs": {
+     "po_no": "PO20261012001",
+     "attachment": "E070/采购订单_PO20261012001.xlsx"
+    }
+   }
+  ],
+  "attachments": [
+   "E070/采购订单_PO20261012001.xlsx"
+  ],
+  "message_id": "<e070.4eede4f7@c024-corp.example.com>",
+  "lang": "zh",
+  "customer_id": 24,
+  "from": "c024.contact0@example.com",
+  "to": "orders@kelang.example.com",
+  "subject": "采购订单 PO20261012001",
+  "intents": [
+   "po_entry"
+  ]
+ }
+]

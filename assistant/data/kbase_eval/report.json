@@ -1,0 +1,152 @@
+{
+ "generated_at": "2026-10-08T16:36:44",
+ "dataset": {
+  "total": 297,
+  "PARAM": 110,
+  "DESC": 127,
+  "MIXED": 30,
+  "REFUSE": 30
+ },
+ "status": {
+  "DENIED": 15,
+  "EMPTY": 2,
+  "ERROR": 1,
+  "LOW": 12,
+  "OK": 267
+ },
+ "param_accuracy": 1.0,
+ "mixed_param_accuracy": 1.0,
+ "desc_answered_rate": 1.0,
+ "desc_gold_doc_in_sources": 0.9873,
+ "refuse_accuracy": 0.9667,
+ "refuse_by_sub": {
+  "知识库里没有": {
+   "n": 15,
+   "refused": 14,
+   "denied": 0
+  },
+  "没有权限": {
+   "n": 15,
+   "refused": 15,
+   "denied": 15
+  }
+ },
+ "wrongly_refused": 0,
+ "citation": {
+  "answered": 267,
+  "with_citation": 267,
+  "all_citations_valid": 267,
+  "degraded_to_extract": 0,
+  "regenerated_once": 0
+ },
+ "latency_s": {
+  "PARAM": {
+   "n": 110,
+   "p50": 4.87,
+   "p95": 11.51,
+   "first_token_p50": 4.28
+  },
+  "DESC": {
+   "n": 127,
+   "p50": 22.52,
+   "p95": 44.79,
+   "first_token_p50": 21.99
+  },
+  "MIXED": {
+   "n": 30,
+   "p50": 14.65,
+   "p95": 38.15,
+   "first_token_p50": 14.14
+  },
+  "全部": {
+   "n": 297,
+   "p50": 10.39,
+   "p95": 42.96,
+   "first_token_p50": 9.95
+  }
+ },
+ "stage_ms_p50": {},
+ "tokens_avg": 764,
+ "ragas": {
+  "judge_model": "deepseek-chat",
+  "n": 267,
+  "seconds": 6583,
+  "overall": {
+   "faithfulness": 0.8916,
+   "answer_relevancy": 0.8606,
+   "context_precision": 0.9508,
+   "context_recall": 0.9935
+  },
+  "by_kind": {
+   "PARAM": {
+    "n": 110,
+    "faithfulness": 0.8531,
+    "answer_relevancy": 0.96,
+    "context_precision": 1.0,
+    "context_recall": 1.0
+   },
+   "DESC": {
+    "n": 127,
+    "faithfulness": 0.9179,
+    "answer_relevancy": 0.7778,
+    "context_precision": 0.9667,
+    "context_recall": 0.986
+   },
+   "MIXED": {
+    "n": 30,
+    "faithfulness": 0.9313,
+    "answer_relevancy": 0.8201,
+    "context_precision": 0.1429,
+    "context_recall": 1.0
+   }
+  },
+  "failed_scores": {
+   "faithfulness": 16,
+   "answer_relevancy": 15,
+   "context_precision": 128,
+   "context_recall": 9
+  }
+ },
+ "ablation": {
+  "n": 157,
+  "seconds": 10546,
+  "recall@50": 0.9873,
+  "configs": {
+   "只用稠密向量": {
+    "hit@1": 0.949,
+    "hit@3": 0.9809,
+    "hit@5": 0.9873,
+    "mrr": 0.9652
+   },
+   "只用稀疏向量": {
+    "hit@1": 0.828,
+    "hit@3": 0.9427,
+    "hit@5": 0.9682,
+    "mrr": 0.8885
+   },
+   "双通道 + RRF 融合": {
+    "hit@1": 0.8981,
+    "hit@3": 0.9682,
+    "hit@5": 0.9873,
+    "mrr": 0.9368
+   },
+   "双通道 + RRF + 重排": {
+    "hit@1": 0.8025,
+    "hit@3": 0.9873,
+    "hit@5": 0.9873,
+    "mrr": 0.8928
+   }
+  }
+ },
+ "param_ablation": {
+  "n": 60,
+  "结构化查询": {
+   "accuracy": 1.0,
+   "p50_s": 4.84
+  },
+  "纯向量检索": {
+   "accuracy": 0.8667,
+   "p50_s": 18.71
+  }
+ }
+}

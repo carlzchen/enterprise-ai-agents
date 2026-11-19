@@ -1,0 +1,58 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: minierp
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:minierp}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: ${DB_USER:minierp}
+    password: ${DB_PASSWORD:minierp}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc.batch_size: 100
+        order_inserts: true
+        order_updates: true
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 21MB
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+minierp:
+  jwt:
+    secret: ${JWT_SECRET:change-me-in-production-please-use-a-long-random-secret-0123456789}
+    ttl-hours: 12
+  plm:
+    # 技术文档存储目录（容器中挂载为卷）
+    storage: ${PLM_STORAGE:./data/plm}
+  seed:
+    # 首次启动且库中无业务数据时，自动生成模拟业务数据
+    enabled: ${SEED_ENABLED:true}
+    start-date: ${SEED_START:2024-10-01}
+    end-date: ${SEED_END:2026-09-28}
+    random-seed: 20260929
+
+  log-dir: ${LOG_DIR:logs}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+  default-produces-media-type: application/json
+
+logging:
+  level:
+    com.minierp: INFO
+    org.hibernate.SQL: WARN

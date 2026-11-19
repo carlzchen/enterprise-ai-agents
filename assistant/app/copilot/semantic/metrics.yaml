@@ -1,0 +1,437 @@
+# 业务口径库：每个指标只有一个定义。看板、问数、导出、评测都以这里为准。
+#   type        atomic 原子指标（直接从数据里数出来）/ derived 派生指标（用原子指标算出来）
+#   formula     给人看的公式
+#   view / expr 给 SQL 生成用的来源视图和表达式（派生指标可以跨视图，写在 note 里）
+#   dims        可以按哪些维度看
+#   sensitivity normal 普通 / salary 薪酬（HR、财务、管理层）/ finance 成本与毛利（财务、管理层）
+#   templates   能直接回答这个指标的分析模板
+
+# ---------- 原子指标 ----------
+- name: 在职人数
+  aliases: [人数, 员工数, 编制, 在岗人数, headcount]
+  type: atomic
+  formula: 统计日当天在职的员工数（入职日期 ≤ 统计日，且未离职或离职日期 > 统计日）
+  view: v_employee
+  expr: "COUNT(*)，条件 hire_date <= 统计日 AND (leave_date IS NULL OR leave_date > 统计日)"
+  dims: [部门, 产线, 班组, 用工类型, 计薪方式, 性别, 司龄段]
+  unit: 人
+  templates: [T01]
+
+- name: 入职人数
+  aliases: [新入职, 新进人数, 招了多少人]
+  type: atomic
+  formula: 期间内入职日期落在该期间的员工数
+  view: v_employee
+  expr: "COUNT(*)，条件 hire_date BETWEEN 期初 AND 期末"
+  dims: [月份, 部门, 产线, 用工类型]
+  unit: 人
+  templates: [T02]
+
+- name: 离职人数
+  aliases: [流失人数, 走了多少人, 离职]
+  type: atomic
+  formula: 期间内离职日期落在该期间且状态为已离职的员工数
+  view: v_employee
+  expr: "COUNT(*)，条件 status = 'LEFT' AND leave_date BETWEEN 期初 AND 期末"
+  dims: [月份, 部门, 产线, 用工类型, 离职原因, 司龄段]
+  unit: 人
+  templates: [T02, T04, T05]
+
+- name: 应出勤人天
+  aliases: [应出勤天数, 排班人天]
+  type: atomic
+  formula: 考勤记录条数（每人每个工作日一条）
+  view: v_attendance
+  expr: "COUNT(*)"
+  dims: [月份, 部门, 产线, 班组]
+  unit: 人天
+
+- name: 实际出勤人天
+  aliases: [出勤天数, 实出勤]
+  type: atomic
+  formula: 考勤状态为正常或迟到的记录条数
+  view: v_attendance
+  expr: "SUM(status IN ('NORMAL','LATE'))"
+  dims: [月份, 部门, 产线, 班组]
+  unit: 人天
+
+- name: 加班工时
+  aliases: [加班小时, 加班时长, 加班时间]
+  type: atomic
+  formula: 考勤记录里加班工时之和
+  view: v_attendance
+  expr: "SUM(overtime_hours)"
+  dims: [月份, 部门, 产线, 班组, 员工]
+  unit: 小时
+  templates: [T07, T08]
+
+- name: 迟到次数
+  aliases: [迟到人次]
+  type: atomic
+  formula: 考勤状态为迟到的记录条数
+  view: v_attendance
+  expr: "SUM(status = 'LATE')"
+  dims: [月份, 部门, 产线, 班组]
+  unit: 人次
+  templates: [T10]
+
+- name: 旷工次数
+  aliases: [旷工人次, 旷工天数]
+  type: atomic
+  formula: 考勤状态为旷工的记录条数
+  view: v_attendance
+  expr: "SUM(status = 'ABSENT')"
+  dims: [月份, 部门, 产线, 班组]
+  unit: 人次
+  templates: [T10]
+
+- name: 请假天数
+  aliases: [请假, 休假天数]
+  type: atomic
+  formula: 已批准请假单的天数之和，按请假开始日期归属期间
+  view: v_leave
+  expr: "SUM(days)，条件 status = 'APPROVED'"
+  dims: [月份, 部门, 请假类型]
+  unit: 天
+  templates: [T09]
+
+- name: 人工成本
+  aliases: [人力成本, 用工成本, 薪酬成本, 工资成本]
+  type: atomic
+  formula: 应发工资 + 单位社保公积金
+  view: v_payslip
+  expr: "SUM(gross_pay + social_employer)"
+  dims: [月份, 部门, 产线, 成本类型, 计薪方式]
+  unit: 元
+  sensitivity: salary
+  templates: [T11]
+
+- name: 应发工资
+  aliases: [工资总额, 应发, 税前工资]
+  type: atomic
+  formula: 基本工资 + 计件工资 + 保底补差 + 加班工资 − 缺勤扣款
+  view: v_payslip
+  expr: "SUM(gross_pay)"
+  dims: [月份, 部门, 产线, 计薪方式]
+  unit: 元
+  sensitivity: salary
+  templates: [T11, T12]
+
+- name: 实发工资
+  aliases: [实发, 到手工资, 税后工资, 实发工资总额]
+  type: atomic
+  formula: 应发工资 − 个人社保公积金 − 个税
+  view: v_payslip
+  expr: "SUM(net_pay)"
+  dims: [月份, 部门, 产线, 计薪方式]
+  unit: 元
+  sensitivity: salary
+  templates: [T11]
+
+- name: 个税
+  aliases: [个人所得税, 代扣个税]
+  type: atomic
+  formula: 按累计预扣法代扣的个人所得税
+  view: v_payslip
+  expr: "SUM(income_tax)"
+  dims: [月份, 部门]
+  unit: 元
+  sensitivity: salary
+  templates: [T11]
+
+- name: 计件工资
+  aliases: [计件总额, 计件工资总额]
+  type: atomic
+  formula: 分摊到个人的良品数 × 计件单价之和
+  view: v_payslip
+  expr: "SUM(piece_pay)"
+  dims: [月份, 产线, 班组]
+  unit: 元
+  sensitivity: salary
+  templates: [T13]
+
+- name: 保底补差
+  aliases: [保底, 补差, 拿保底]
+  type: atomic
+  formula: 计件工资低于保底工资时补足的金额；保底补差人数 = 补差金额大于 0 的人数
+  view: v_payslip
+  expr: "SUM(guarantee_topup)；人数 SUM(guarantee_topup > 0)"
+  dims: [月份, 产线, 班组]
+  unit: 元
+  sensitivity: salary
+  templates: [T13]
+
+- name: 计件单价
+  aliases: [单价, 计件价格]
+  type: atomic
+  formula: 各产线每台良品的计件单价，取生效日期不晚于统计日的最新一条
+  view: hr_piece_rate
+  expr: "rate"
+  dims: [产线]
+  unit: 元/台
+  templates: [T14]
+
+- name: 良品数
+  aliases: [产量, 良品, 合格数, 完工数量]
+  type: atomic
+  formula: 报工良品数之和
+  view: v_wo_report
+  expr: "SUM(good_qty)"
+  dims: [月份, 产线, 产品, 产品系列]
+  unit: 台
+  templates: [T15]
+
+- name: 报废数
+  aliases: [报废, 不良数]
+  type: atomic
+  formula: 报工报废数之和
+  view: v_wo_report
+  expr: "SUM(scrap_qty)"
+  dims: [月份, 产线, 产品, 不良代码]
+  unit: 台
+  templates: [T15]
+
+- name: 销售收入
+  aliases: [收入, 营收, 销售额, 营业收入]
+  type: atomic
+  formula: 发货明细的 数量 × 单价 × 汇率 之和，按发货日期确认
+  view: v_sales_fact
+  expr: "SUM(revenue_cny)"
+  dims: [月份, 季度, 事业部, 产品系列, 产品, 客户, 行业, 区域, 内外销]
+  unit: 元
+  templates: [T19, T20]
+
+- name: 销量
+  aliases: [销售数量, 出货量, 发货量]
+  type: atomic
+  formula: 发货数量之和
+  view: v_sales_fact
+  expr: "SUM(qty)"
+  dims: [月份, 季度, 事业部, 产品系列, 产品, 客户, 行业, 区域]
+  unit: 台
+  templates: [T19, T20]
+
+- name: 销售成本
+  aliases: [成本, 营业成本, 主营业务成本]
+  type: atomic
+  formula: 发货明细的 数量 × 单位成本 之和
+  view: v_sales_fact
+  expr: "SUM(cost_cny)"
+  dims: [月份, 季度, 事业部, 产品系列, 产品, 客户, 行业, 区域]
+  unit: 元
+  sensitivity: finance
+  templates: [T19]
+
+- name: 毛利
+  aliases: [毛利额, 销售毛利]
+  type: atomic
+  formula: 销售收入 − 销售成本
+  view: v_sales_fact
+  expr: "SUM(gross_profit_cny)"
+  dims: [月份, 季度, 事业部, 产品系列, 产品, 客户, 行业, 区域]
+  unit: 元
+  sensitivity: finance
+  templates: [T19]
+
+- name: 回款金额
+  aliases: [回款, 收款金额, 收款]
+  type: atomic
+  formula: 收款单金额之和，按收款日期归属期间
+  view: v_receipt
+  expr: "SUM(amount_cny)"
+  dims: [月份, 客户, 收款方式]
+  unit: 元
+  templates: [T24]
+
+- name: 应收余额
+  aliases: [应收账款, 未收金额, 应收]
+  type: atomic
+  formula: 未收清发票的未收金额之和
+  view: v_sales_invoice
+  expr: "SUM(outstanding_cny)，条件 status IN ('OPEN','PARTIAL')"
+  dims: [客户, 行业, 区域]
+  unit: 元
+  templates: [T23]
+
+- name: 逾期金额
+  aliases: [逾期应收, 逾期未收, 逾期]
+  type: atomic
+  formula: 已过到期日仍未收清的发票的未收金额之和
+  view: v_sales_invoice
+  expr: "SUM(outstanding_cny)，条件 status IN ('OPEN','PARTIAL') AND overdue_days > 0"
+  dims: [客户, 行业, 区域]
+  unit: 元
+  templates: [T23]
+
+- name: 采购价差
+  aliases: [价差, 材料涨价, 原材料涨价]
+  type: atomic
+  formula: （发票价 − 订单价）× 数量 之和；价差率 = 价差 ÷ 按订单价计算的金额
+  view: v_price_variance
+  expr: "SUM(variance)"
+  dims: [月份, 物料类别, 供应商, 物料]
+  unit: 元
+  sensitivity: finance
+  templates: [T22]
+
+# ---------- 派生指标 ----------
+- name: 离职率
+  aliases: [流失率, 员工流失率, 离职比例]
+  type: derived
+  formula: 当月离职人数 ÷ 月初在职人数
+  depends_on: [离职人数, 在职人数]
+  note: 和人力看板一致，分母用月初人数（入职日期 < 月初，且未离职或离职日期 ≥ 月初）。跨多个月时按各月分别计算。
+  dims: [月份, 部门, 产线, 用工类型]
+  unit: "%"
+  templates: [T03]
+
+- name: 出勤率
+  aliases: [到岗率, 出勤比例]
+  type: derived
+  formula: 实际出勤人天 ÷ 应出勤人天
+  depends_on: [实际出勤人天, 应出勤人天]
+  view: v_attendance
+  expr: "SUM(status IN ('NORMAL','LATE')) / COUNT(*)"
+  dims: [月份, 部门, 产线, 班组]
+  unit: "%"
+  templates: [T06]
+
+- name: 加班率
+  aliases: [加班比例, 加班占比, 加班强度]
+  type: derived
+  formula: 加班工时 ÷ 应出勤工时，应出勤工时 = 应出勤人天 × 8 小时
+  depends_on: [加班工时, 应出勤人天]
+  view: v_attendance
+  expr: "SUM(overtime_hours) / (COUNT(*) * 8)"
+  dims: [月份, 部门, 产线, 班组]
+  unit: "%"
+  templates: [T07]
+
+- name: 人均加班工时
+  aliases: [人均加班, 平均加班时间]
+  type: derived
+  formula: 加班工时 ÷ 有考勤记录的人数
+  depends_on: [加班工时]
+  view: v_attendance
+  expr: "SUM(overtime_hours) / COUNT(DISTINCT employee_id)"
+  dims: [月份, 部门, 产线, 班组]
+  unit: 小时
+  templates: [T07]
+
+- name: 人均工资
+  aliases: [平均工资, 人均应发, 平均薪资]
+  type: derived
+  formula: 应发工资 ÷ 计薪人数
+  depends_on: [应发工资]
+  view: v_payslip
+  expr: "SUM(gross_pay) / COUNT(DISTINCT employee_id)"
+  dims: [月份, 部门, 产线, 计薪方式]
+  unit: 元
+  sensitivity: salary
+  templates: [T12]
+
+- name: 良率
+  aliases: [良品率, 合格率, 直通率]
+  type: derived
+  formula: 良品数 ÷（良品数 + 报废数）
+  depends_on: [良品数, 报废数]
+  view: v_wo_report
+  expr: "SUM(good_qty) / (SUM(good_qty) + SUM(scrap_qty))"
+  dims: [月份, 产线, 产品, 产品系列]
+  unit: "%"
+  templates: [T15]
+
+- name: 人均产量
+  aliases: [人均产出, 人均台数]
+  type: derived
+  formula: 产线当月良品数 ÷ 产线当月计薪人数
+  depends_on: [良品数]
+  note: 良品数取 v_wo_report，计薪人数取 v_payslip 里该产线当月的人数。
+  dims: [月份, 产线]
+  unit: 台/人
+  templates: [T16]
+
+- name: 人均产值
+  aliases: [人效, 劳动生产率, 人均产出金额]
+  type: derived
+  formula: 产线当月完工产值 ÷ 产线当月计薪人数，完工产值 = 良品数 × 产品标准售价
+  depends_on: [良品数]
+  note: 只对成品产线（L1–L6）有意义；组件线（L7、L8）没有售价，用人均产量。
+  dims: [月份, 产线]
+  unit: 元/人
+  templates: [T16]
+
+- name: 单位人工成本
+  aliases: [单台人工成本, 每台人工]
+  type: derived
+  formula: 产线当月人工成本 ÷ 产线当月良品数
+  depends_on: [人工成本, 良品数]
+  dims: [月份, 产线]
+  unit: 元/台
+  sensitivity: salary
+  templates: [T17]
+
+- name: OEE
+  aliases: [设备综合效率, 综合效率, 稼动率]
+  type: derived
+  formula: 时间稼动率 × 性能稼动率 × 良品率，按产线日结取平均
+  view: v_line_day
+  expr: "AVG(oee)"
+  dims: [月份, 产线]
+  unit: "%"
+  templates: [T18]
+
+- name: 劳动效率
+  aliases: [工时效率, 标准工时达成率]
+  type: derived
+  formula: 标准工时 ÷ 实际工时
+  view: v_line_day
+  expr: "SUM(std_hours) / SUM(actual_hours)"
+  dims: [月份, 产线]
+  unit: "%"
+  templates: [T18]
+
+- name: 毛利率
+  aliases: [产品毛利率, 客户毛利率, 销售毛利率, GPM]
+  type: derived
+  formula: （销售收入 − 销售成本）÷ 销售收入
+  depends_on: [销售收入, 销售成本]
+  view: v_sales_fact
+  expr: "SUM(gross_profit_cny) / SUM(revenue_cny)"
+  dims: [月份, 季度, 事业部, 产品系列, 产品, 客户, 行业, 区域]
+  unit: "%"
+  sensitivity: finance
+  templates: [T19]
+
+- name: 平均售价
+  aliases: [均价, 单价, ASP]
+  type: derived
+  formula: 销售收入 ÷ 销量
+  depends_on: [销售收入, 销量]
+  view: v_sales_fact
+  expr: "SUM(revenue_cny) / SUM(qty)"
+  dims: [月份, 季度, 产品系列, 产品, 客户]
+  unit: 元/台
+  templates: [T20]
+
+- name: 直接人工成本率
+  aliases: [人工成本率, 人工占收入比, 人力成本率]
+  type: derived
+  formula: 生产类人工成本 ÷ 销售收入，生产类人工成本 = 成本类型为 PRODUCTION 的人工成本
+  depends_on: [人工成本, 销售收入]
+  note: 人工成本取 v_payslip（cost_type = 'PRODUCTION'），销售收入取 v_sales_fact，按月份对齐。
+  dims: [月份]
+  unit: "%"
+  sensitivity: finance
+  templates: [T21]
+
+- name: 逾期率
+  aliases: [应收逾期率, 逾期占比]
+  type: derived
+  formula: 逾期金额 ÷ 应收余额
+  depends_on: [逾期金额, 应收余额]
+  view: v_sales_invoice
+  expr: "SUM(IF(overdue_days > 0, outstanding_cny, 0)) / SUM(outstanding_cny)，条件 status IN ('OPEN','PARTIAL')"
+  dims: [客户, 行业, 区域]
+  unit: "%"
+  templates: [T23]

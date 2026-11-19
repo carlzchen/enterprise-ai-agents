@@ -1,0 +1,3053 @@
+{
+ "E001/采购订单_PO-C008-261001.xlsx": {
+  "email_id": "E001",
+  "duplicate_of": null,
+  "customer_id": 8,
+  "customer_code": "C008",
+  "layout": "C",
+  "po_no": "PO-C008-261001",
+  "version": 1,
+  "order_date": "2026-10-03",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 203821.6,
+  "computed_total": 203821.6,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K08300000",
+    "desc": "无刷直流电机 90W 310VDC",
+    "expected_material": "KL-BL-90W-310",
+    "qty": 350.0,
+    "unit_price": 85.1,
+    "price_list_price": 85.1,
+    "delivery_date": "2026-11-16",
+    "amount": 29785.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K08300131",
+    "desc": "罩极电机 YJ58 8W 220V",
+    "expected_material": "KL-SP-YJ58-8W-220",
+    "qty": 5100.0,
+    "unit_price": 18.69,
+    "price_list_price": 18.69,
+    "delivery_date": "2026-11-12",
+    "amount": 95319.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K08300262",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 1740.0,
+    "unit_price": 45.24,
+    "price_list_price": 45.24,
+    "delivery_date": "2026-10-26",
+    "amount": 78717.6
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C008",
+   "customer_po": "PO-C008-261001",
+   "order_date": "2026-10-03",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-90W-310",
+     "qty": 350.0,
+     "unit_price": 85.1,
+     "delivery_date": "2026-11-16"
+    },
+    {
+     "material": "KL-SP-YJ58-8W-220",
+     "qty": 5100.0,
+     "unit_price": 18.69,
+     "delivery_date": "2026-11-12"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 1740.0,
+     "unit_price": 45.24,
+     "delivery_date": "2026-10-26"
+    }
+   ]
+  }
+ },
+ "E003/PO20261003001_v1.pdf": {
+  "email_id": "E003",
+  "duplicate_of": null,
+  "customer_id": 35,
+  "customer_code": "C035",
+  "layout": "B",
+  "po_no": "PO20261003001",
+  "version": 1,
+  "order_date": "2026-10-03",
+  "currency": "EUR",
+  "payment_days": 60,
+  "printed_total": 2610.4,
+  "computed_total": 2610.4,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "unknown_part"
+   }
+  ],
+  "injected": [
+   "unknown_part"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "M35.ST.901",
+    "desc": "Hybrid stepper motor 24VDC (42x40)",
+    "expected_material": "KL-ST-42x40",
+    "qty": 520.0,
+    "unit_price": 3.62,
+    "price_list_price": 3.62,
+    "delivery_date": "2026-11-12",
+    "amount": 1882.4
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "M35.GE.003",
+    "desc": "Gear motor 12W 12VDC (GM37)",
+    "expected_material": "KL-GR-GM37",
+    "qty": 200.0,
+    "unit_price": 3.64,
+    "price_list_price": 3.64,
+    "delivery_date": "2026-11-05",
+    "amount": 728.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C035",
+   "customer_po": "PO20261003001",
+   "order_date": "2026-10-03",
+   "currency": "EUR",
+   "lines": [
+    {
+     "material": "KL-ST-42x40",
+     "qty": 520.0,
+     "unit_price": 3.62,
+     "delivery_date": "2026-11-12"
+    },
+    {
+     "material": "KL-GR-GM37",
+     "qty": 200.0,
+     "unit_price": 3.64,
+     "delivery_date": "2026-11-05"
+    }
+   ]
+  }
+ },
+ "E013/采购订单_CG-2026-09001.pdf": {
+  "email_id": "E013",
+  "duplicate_of": null,
+  "customer_id": 9,
+  "customer_code": "C009",
+  "layout": "A",
+  "po_no": "CG-2026-09001",
+  "version": 1,
+  "order_date": "2026-10-05",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 326707.6,
+  "computed_total": 326707.6,
+  "flags": [
+   {
+    "line_no": 3,
+    "rule": "price_deviation"
+   }
+  ],
+  "injected": [
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "M09.BL.001",
+    "desc": "无刷直流电机 36W 310VDC",
+    "expected_material": "KL-BL-36W-310",
+    "qty": 200.0,
+    "unit_price": 70.74,
+    "price_list_price": 70.74,
+    "delivery_date": "2026-11-01",
+    "amount": 14148.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "M09.CR.004",
+    "desc": "贯流风机 Φ65×480",
+    "expected_material": "KL-CF-65X480",
+    "qty": 2880.0,
+    "unit_price": 42.52,
+    "price_list_price": 42.52,
+    "delivery_date": "2026-10-26",
+    "amount": 122457.6
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "M09.GE.003",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 700.0,
+    "unit_price": 24.46,
+    "price_list_price": 27.02,
+    "delivery_date": "2026-11-18",
+    "amount": 17122.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "M09.SH.002",
+    "desc": "罩极电机 YJ68 25W 220V",
+    "expected_material": "KL-SP-YJ68-25W-220",
+    "qty": 6000.0,
+    "unit_price": 28.83,
+    "price_list_price": 28.83,
+    "delivery_date": "2026-11-01",
+    "amount": 172980.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C009",
+   "customer_po": "CG-2026-09001",
+   "order_date": "2026-10-05",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-36W-310",
+     "qty": 200.0,
+     "unit_price": 70.74,
+     "delivery_date": "2026-11-01"
+    },
+    {
+     "material": "KL-CF-65X480",
+     "qty": 2880.0,
+     "unit_price": 42.52,
+     "delivery_date": "2026-10-26"
+    },
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 700.0,
+     "unit_price": 24.46,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-SP-YJ68-25W-220",
+     "qty": 6000.0,
+     "unit_price": 28.83,
+     "delivery_date": "2026-11-01"
+    }
+   ]
+  }
+ },
+ "E014/采购订单_4507090901_第2版.pdf": {
+  "email_id": "E014",
+  "duplicate_of": null,
+  "customer_id": 7,
+  "customer_code": "C007",
+  "layout": "A",
+  "po_no": "4507090901",
+  "version": 2,
+  "order_date": "2026-09-01",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 187004.0,
+  "computed_total": 187004.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "107251",
+    "material": "KL-CF-80X600",
+    "desc": "贯流风机 Φ80×600",
+    "qty": 1700.0,
+    "unit_price": 50.42,
+    "delivery_date": "2026-10-04",
+    "expected_material": "KL-CF-80X600",
+    "price_list_price": 50.0,
+    "amount": 85714.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "107200",
+    "material": "KL-BL-120W-310",
+    "desc": "无刷直流电机 120W 310VDC",
+    "qty": 1000.0,
+    "unit_price": 101.29,
+    "delivery_date": "2026-10-11",
+    "expected_material": "KL-BL-120W-310",
+    "price_list_price": 99.92,
+    "amount": 101290.0
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [
+    {
+     "line_no": 2,
+     "field": "delivery_date",
+     "from": "2026-10-04",
+     "to": "2026-10-11"
+    }
+   ],
+   "added_lines": [],
+   "cancelled_lines": []
+  },
+  "expected_order": {
+   "customer_code": "C007",
+   "customer_po": "4507090901",
+   "order_date": "2026-09-01",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-CF-80X600",
+     "qty": 1700.0,
+     "unit_price": 50.42,
+     "delivery_date": "2026-10-04"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 1000.0,
+     "unit_price": 101.29,
+     "delivery_date": "2026-10-11"
+    }
+   ]
+  }
+ },
+ "E016/4514100001_v1.xlsx": {
+  "email_id": "E016",
+  "duplicate_of": null,
+  "customer_id": 14,
+  "customer_code": "C014",
+  "layout": "D",
+  "po_no": "4514100001",
+  "version": 1,
+  "order_date": "2026-10-05",
+  "currency": "USD",
+  "payment_days": 45,
+  "printed_total": 28711.0,
+  "computed_total": 28711.0,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "early_delivery"
+   }
+  ],
+  "injected": [
+   "early_delivery"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "C014-GE-1014",
+    "desc": "Gear motor 6W 220V (TYD50)",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 800.0,
+    "unit_price": 4.2,
+    "price_list_price": 4.2,
+    "delivery_date": "2026-10-17",
+    "amount": 3360.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "C014-BL-1021",
+    "desc": "BLDC motor 90W 310VDC (90W-310)",
+    "expected_material": "KL-BL-90W-310",
+    "qty": 1200.0,
+    "unit_price": 13.32,
+    "price_list_price": 13.32,
+    "delivery_date": "2026-11-11",
+    "amount": 15984.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C014-SH-1007",
+    "desc": "Shaded pole motor 12W 120V (YJ61-12W-120)",
+    "expected_material": "KL-SP-YJ61-12W-120",
+    "qty": 2900.0,
+    "unit_price": 3.23,
+    "price_list_price": 3.23,
+    "delivery_date": "2026-11-03",
+    "amount": 9367.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C014",
+   "customer_po": "4514100001",
+   "order_date": "2026-10-05",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 800.0,
+     "unit_price": 4.2,
+     "delivery_date": "2026-10-17"
+    },
+    {
+     "material": "KL-BL-90W-310",
+     "qty": 1200.0,
+     "unit_price": 13.32,
+     "delivery_date": "2026-11-11"
+    },
+    {
+     "material": "KL-SP-YJ61-12W-120",
+     "qty": 2900.0,
+     "unit_price": 3.23,
+     "delivery_date": "2026-11-03"
+    }
+   ]
+  }
+ },
+ "E017/4514100001_v2.xlsx": {
+  "email_id": "E017",
+  "duplicate_of": null,
+  "customer_id": 14,
+  "customer_code": "C014",
+  "layout": "D",
+  "po_no": "4514100001",
+  "version": 2,
+  "order_date": "2026-10-05",
+  "currency": "USD",
+  "payment_days": 45,
+  "printed_total": 12727.0,
+  "computed_total": 12727.0,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "early_delivery"
+   }
+  ],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "C014-GE-1014",
+    "desc": "Gear motor 6W 220V (TYD50)",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 800.0,
+    "unit_price": 4.2,
+    "price_list_price": 4.2,
+    "delivery_date": "2026-10-17",
+    "amount": 3360.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C014-SH-1007",
+    "desc": "Shaded pole motor 12W 120V (YJ61-12W-120)",
+    "expected_material": "KL-SP-YJ61-12W-120",
+    "qty": 2900.0,
+    "unit_price": 3.23,
+    "price_list_price": 3.23,
+    "delivery_date": "2026-11-03",
+    "amount": 9367.0
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [],
+   "added_lines": [],
+   "cancelled_lines": [
+    2
+   ]
+  },
+  "expected_order": {
+   "customer_code": "C014",
+   "customer_po": "4514100001",
+   "order_date": "2026-10-05",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 800.0,
+     "unit_price": 4.2,
+     "delivery_date": "2026-10-17"
+    },
+    {
+     "material": "KL-SP-YJ61-12W-120",
+     "qty": 2900.0,
+     "unit_price": 3.23,
+     "delivery_date": "2026-11-03"
+    }
+   ]
+  }
+ },
+ "E018/采购订单_4526100001.pdf": {
+  "email_id": "E018",
+  "duplicate_of": null,
+  "customer_id": 26,
+  "customer_code": "C026",
+  "layout": "A",
+  "po_no": "4526100001",
+  "version": 1,
+  "order_date": "2026-10-05",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 77803.4,
+  "computed_total": 77803.4,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "pack_multiple"
+   }
+  ],
+  "injected": [
+   "pack_multiple"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K26300131",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 475.0,
+    "unit_price": 27.52,
+    "price_list_price": 27.52,
+    "delivery_date": "2026-11-11",
+    "amount": 13072.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K26300262",
+    "desc": "两相混合式步进电机 86×98mm",
+    "expected_material": "KL-ST-86x98",
+    "qty": 120.0,
+    "unit_price": 97.05,
+    "price_list_price": 97.05,
+    "delivery_date": "2026-11-14",
+    "amount": 11646.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K26300000",
+    "desc": "两相混合式步进电机 57×76mm",
+    "expected_material": "KL-ST-57x76",
+    "qty": 380.0,
+    "unit_price": 56.33,
+    "price_list_price": 56.33,
+    "delivery_date": "2026-10-29",
+    "amount": 21405.4
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "K26300655",
+    "desc": "齿轮减速电机 TYD50 6W",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 1100.0,
+    "unit_price": 28.8,
+    "price_list_price": 28.8,
+    "delivery_date": "2026-11-19",
+    "amount": 31680.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C026",
+   "customer_po": "4526100001",
+   "order_date": "2026-10-05",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 475.0,
+     "unit_price": 27.52,
+     "delivery_date": "2026-11-11"
+    },
+    {
+     "material": "KL-ST-86x98",
+     "qty": 120.0,
+     "unit_price": 97.05,
+     "delivery_date": "2026-11-14"
+    },
+    {
+     "material": "KL-ST-57x76",
+     "qty": 380.0,
+     "unit_price": 56.33,
+     "delivery_date": "2026-10-29"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 1100.0,
+     "unit_price": 28.8,
+     "delivery_date": "2026-11-19"
+    }
+   ]
+  }
+ },
+ "E019/采购订单_PO20261005001.pdf": {
+  "email_id": "E019",
+  "duplicate_of": null,
+  "customer_id": 32,
+  "customer_code": "C032",
+  "layout": "A",
+  "po_no": "PO20261005001",
+  "version": 1,
+  "order_date": "2026-10-05",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 61993.08,
+  "computed_total": 61993.08,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "unknown_part"
+   }
+  ],
+  "injected": [
+   "unknown_part"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "C032-GE-1902",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 1000.0,
+    "unit_price": 26.66,
+    "price_list_price": 26.66,
+    "delivery_date": "2026-11-08",
+    "amount": 26660.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "C032-SE-1000",
+    "desc": "交流伺服电机 60法兰 200W",
+    "expected_material": "KL-SV-60-200W",
+    "qty": 56.0,
+    "unit_price": 178.68,
+    "price_list_price": 178.68,
+    "delivery_date": "2026-11-17",
+    "amount": 10006.08
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C032-GE-1007",
+    "desc": "齿轮减速电机 GM25 6W",
+    "expected_material": "KL-GR-GM25",
+    "qty": 950.0,
+    "unit_price": 26.66,
+    "price_list_price": 26.66,
+    "delivery_date": "2026-11-09",
+    "amount": 25327.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C032",
+   "customer_po": "PO20261005001",
+   "order_date": "2026-10-05",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 1000.0,
+     "unit_price": 26.66,
+     "delivery_date": "2026-11-08"
+    },
+    {
+     "material": "KL-SV-60-200W",
+     "qty": 56.0,
+     "unit_price": 178.68,
+     "delivery_date": "2026-11-17"
+    },
+    {
+     "material": "KL-GR-GM25",
+     "qty": 950.0,
+     "unit_price": 26.66,
+     "delivery_date": "2026-11-09"
+    }
+   ]
+  }
+ },
+ "E021/采购订单_PO-C027-261001.xlsx": {
+  "email_id": "E021",
+  "duplicate_of": null,
+  "customer_id": 27,
+  "customer_code": "C027",
+  "layout": "C",
+  "po_no": "PO-C027-261001",
+  "version": 1,
+  "order_date": "2026-10-06",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 5884.2,
+  "computed_total": 5884.2,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "unknown_part"
+   }
+  ],
+  "injected": [
+   "early_delivery",
+   "unknown_part"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "127903",
+    "desc": "两相混合式步进电机 42×48mm",
+    "expected_material": "KL-ST-42x48",
+    "qty": 180.0,
+    "unit_price": 32.69,
+    "price_list_price": 32.69,
+    "delivery_date": "2026-10-16",
+    "amount": 5884.2
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C027",
+   "customer_po": "PO-C027-261001",
+   "order_date": "2026-10-06",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-ST-42x48",
+     "qty": 180.0,
+     "unit_price": 32.69,
+     "delivery_date": "2026-10-16"
+    }
+   ]
+  }
+ },
+ "E022/4512100001_v1.pdf": {
+  "email_id": "E022",
+  "duplicate_of": null,
+  "customer_id": 12,
+  "customer_code": "C012",
+  "layout": "B",
+  "po_no": "4512100001",
+  "version": 1,
+  "order_date": "2026-10-06",
+  "currency": "USD",
+  "payment_days": 60,
+  "printed_total": 20283.5,
+  "computed_total": 20283.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "M12.GE.001",
+    "desc": "Gear motor 12W 12VDC (GM37)",
+    "expected_material": "KL-GR-GM37",
+    "qty": 500.0,
+    "unit_price": 4.25,
+    "price_list_price": 4.25,
+    "delivery_date": "2026-11-15",
+    "amount": 2125.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "M12.BL.002",
+    "desc": "BLDC motor 36W 310VDC (36W-310)",
+    "expected_material": "KL-BL-36W-310",
+    "qty": 950.0,
+    "unit_price": 10.15,
+    "price_list_price": 10.15,
+    "delivery_date": "2026-11-14",
+    "amount": 9642.5
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "M12.BL.003",
+    "desc": "BLDC motor 120W 310VDC (120W-310)",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 200.0,
+    "unit_price": 13.76,
+    "price_list_price": 13.76,
+    "delivery_date": "2026-11-17",
+    "amount": 2752.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "M12.SH.005",
+    "desc": "Shaded pole motor 5W 220V (YJ48-5W-220)",
+    "expected_material": "KL-SP-YJ48-5W-220",
+    "qty": 2200.0,
+    "unit_price": 2.62,
+    "price_list_price": 2.62,
+    "delivery_date": "2026-11-09",
+    "amount": 5764.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C012",
+   "customer_po": "4512100001",
+   "order_date": "2026-10-06",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-GR-GM37",
+     "qty": 500.0,
+     "unit_price": 4.25,
+     "delivery_date": "2026-11-15"
+    },
+    {
+     "material": "KL-BL-36W-310",
+     "qty": 950.0,
+     "unit_price": 10.15,
+     "delivery_date": "2026-11-14"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 200.0,
+     "unit_price": 13.76,
+     "delivery_date": "2026-11-17"
+    },
+    {
+     "material": "KL-SP-YJ48-5W-220",
+     "qty": 2200.0,
+     "unit_price": 2.62,
+     "delivery_date": "2026-11-09"
+    }
+   ]
+  }
+ },
+ "E023/采购订单_PO20261006001.xlsx": {
+  "email_id": "E023",
+  "duplicate_of": null,
+  "customer_id": 3,
+  "customer_code": "C003",
+  "layout": "C",
+  "po_no": "PO20261006001",
+  "version": 1,
+  "order_date": "2026-10-06",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 186237.5,
+  "computed_total": 186237.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "C003-SH-1000",
+    "desc": "罩极电机 YJ61 18W 220V",
+    "expected_material": "KL-SP-YJ61-18W-220",
+    "qty": 3300.0,
+    "unit_price": 24.13,
+    "price_list_price": 24.13,
+    "delivery_date": "2026-11-06",
+    "amount": 79629.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "C003-GE-1007",
+    "desc": "齿轮减速电机 GM25 6W",
+    "expected_material": "KL-GR-GM25",
+    "qty": 250.0,
+    "unit_price": 25.77,
+    "price_list_price": 25.77,
+    "delivery_date": "2026-11-02",
+    "amount": 6442.5
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C003-GE-1028",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 750.0,
+    "unit_price": 25.94,
+    "price_list_price": 25.94,
+    "delivery_date": "2026-11-06",
+    "amount": 19455.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "C003-SH-1014",
+    "desc": "罩极电机 YJ58 8W 220V",
+    "expected_material": "KL-SP-YJ58-8W-220",
+    "qty": 4300.0,
+    "unit_price": 18.77,
+    "price_list_price": 18.77,
+    "delivery_date": "2026-10-30",
+    "amount": 80711.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C003",
+   "customer_po": "PO20261006001",
+   "order_date": "2026-10-06",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-SP-YJ61-18W-220",
+     "qty": 3300.0,
+     "unit_price": 24.13,
+     "delivery_date": "2026-11-06"
+    },
+    {
+     "material": "KL-GR-GM25",
+     "qty": 250.0,
+     "unit_price": 25.77,
+     "delivery_date": "2026-11-02"
+    },
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 750.0,
+     "unit_price": 25.94,
+     "delivery_date": "2026-11-06"
+    },
+    {
+     "material": "KL-SP-YJ58-8W-220",
+     "qty": 4300.0,
+     "unit_price": 18.77,
+     "delivery_date": "2026-10-30"
+    }
+   ]
+  }
+ },
+ "E025/采购订单_4507100001.pdf": {
+  "email_id": "E025",
+  "duplicate_of": null,
+  "customer_id": 7,
+  "customer_code": "C007",
+  "layout": "A",
+  "po_no": "4507100001",
+  "version": 1,
+  "order_date": "2026-10-06",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 158512.5,
+  "computed_total": 158512.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "107217",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 550.0,
+    "unit_price": 28.33,
+    "price_list_price": 28.33,
+    "delivery_date": "2026-10-29",
+    "amount": 15581.5
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "107251",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 700.0,
+    "unit_price": 50.0,
+    "price_list_price": 50.0,
+    "delivery_date": "2026-10-27",
+    "amount": 35000.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "107200",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 650.0,
+    "unit_price": 99.92,
+    "price_list_price": 99.92,
+    "delivery_date": "2026-11-09",
+    "amount": 64948.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "107234",
+    "desc": "贯流风机 Φ60×360",
+    "expected_material": "KL-CF-60X360",
+    "qty": 1060.0,
+    "unit_price": 40.55,
+    "price_list_price": 40.55,
+    "delivery_date": "2026-10-29",
+    "amount": 42983.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C007",
+   "customer_po": "4507100001",
+   "order_date": "2026-10-06",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 550.0,
+     "unit_price": 28.33,
+     "delivery_date": "2026-10-29"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 700.0,
+     "unit_price": 50.0,
+     "delivery_date": "2026-10-27"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 650.0,
+     "unit_price": 99.92,
+     "delivery_date": "2026-11-09"
+    },
+    {
+     "material": "KL-CF-60X360",
+     "qty": 1060.0,
+     "unit_price": 40.55,
+     "delivery_date": "2026-10-29"
+    }
+   ]
+  }
+ },
+ "E027/采购订单_PO-C006-261001.pdf": {
+  "email_id": "E027",
+  "duplicate_of": null,
+  "customer_id": 6,
+  "customer_code": "C006",
+  "layout": "A",
+  "po_no": "PO-C006-261001",
+  "version": 1,
+  "order_date": "2026-10-07",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 192676.5,
+  "computed_total": 192676.5,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "price_deviation"
+   },
+   {
+    "line_no": 2,
+    "rule": "early_delivery"
+   }
+  ],
+  "injected": [
+   "early_delivery",
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K06300000",
+    "desc": "齿轮减速电机 GM25 6W",
+    "expected_material": "KL-GR-GM25",
+    "qty": 350.0,
+    "unit_price": 25.07,
+    "price_list_price": 26.82,
+    "delivery_date": "2026-11-12",
+    "amount": 8774.5
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K06300262",
+    "desc": "罩极电机 YJ61 18W 220V",
+    "expected_material": "KL-SP-YJ61-18W-220",
+    "qty": 3500.0,
+    "unit_price": 24.88,
+    "price_list_price": 24.88,
+    "delivery_date": "2026-10-15",
+    "amount": 87080.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K06300524",
+    "desc": "罩极电机 YJ48 5W 220V",
+    "expected_material": "KL-SP-YJ48-5W-220",
+    "qty": 5400.0,
+    "unit_price": 17.93,
+    "price_list_price": 17.93,
+    "delivery_date": "2026-10-26",
+    "amount": 96822.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C006",
+   "customer_po": "PO-C006-261001",
+   "order_date": "2026-10-07",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-GM25",
+     "qty": 350.0,
+     "unit_price": 25.07,
+     "delivery_date": "2026-11-12"
+    },
+    {
+     "material": "KL-SP-YJ61-18W-220",
+     "qty": 3500.0,
+     "unit_price": 24.88,
+     "delivery_date": "2026-10-15"
+    },
+    {
+     "material": "KL-SP-YJ48-5W-220",
+     "qty": 5400.0,
+     "unit_price": 17.93,
+     "delivery_date": "2026-10-26"
+    }
+   ]
+  }
+ },
+ "E028/采购订单_PO20261007001.xlsx": {
+  "email_id": "E028",
+  "duplicate_of": null,
+  "customer_id": 17,
+  "customer_code": "C017",
+  "layout": "C",
+  "po_no": "PO20261007001",
+  "version": 1,
+  "order_date": "2026-10-07",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 13001.2,
+  "computed_total": 13001.2,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "below_moq"
+   }
+  ],
+  "injected": [
+   "below_moq"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K17300262",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 100.0,
+    "unit_price": 95.88,
+    "price_list_price": 95.88,
+    "delivery_date": "2026-11-18",
+    "amount": 9588.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K17300524",
+    "desc": "两相混合式步进电机 28×32mm",
+    "expected_material": "KL-ST-28x32",
+    "qty": 140.0,
+    "unit_price": 24.38,
+    "price_list_price": 24.38,
+    "delivery_date": "2026-11-18",
+    "amount": 3413.2
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C017",
+   "customer_po": "PO20261007001",
+   "order_date": "2026-10-07",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 100.0,
+     "unit_price": 95.88,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-ST-28x32",
+     "qty": 140.0,
+     "unit_price": 24.38,
+     "delivery_date": "2026-11-18"
+    }
+   ]
+  }
+ },
+ "E032/采购订单_PO20260908906_第2版.xlsx": {
+  "email_id": "E032",
+  "duplicate_of": null,
+  "customer_id": 1,
+  "customer_code": "C001",
+  "layout": "C",
+  "po_no": "PO20260908906",
+  "version": 2,
+  "order_date": "2026-09-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 296060.2,
+  "computed_total": 296060.2,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 2,
+    "customer_part_no": "C001-GE-1035",
+    "material": "KL-GR-TYD49",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "qty": 2500.0,
+    "unit_price": 25.93,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-GR-TYD49",
+    "price_list_price": 25.65,
+    "amount": 64825.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C001-SH-1007",
+    "material": "KL-SP-YJ61-18W-220",
+    "desc": "罩极电机 YJ61 18W 220V",
+    "qty": 5800.0,
+    "unit_price": 24.14,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-SP-YJ61-18W-220",
+    "price_list_price": 23.88,
+    "amount": 140012.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "C001-CR-1028",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 2020.0,
+    "unit_price": 45.16,
+    "price_list_price": 45.16,
+    "delivery_date": "2026-11-07",
+    "amount": 91223.2
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [
+    {
+     "line_no": 3,
+     "field": "qty",
+     "from": 11000.0,
+     "to": 5800.0
+    }
+   ],
+   "added_lines": [
+    4
+   ],
+   "cancelled_lines": [
+    1
+   ]
+  },
+  "expected_order": {
+   "customer_code": "C001",
+   "customer_po": "PO20260908906",
+   "order_date": "2026-09-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 2500.0,
+     "unit_price": 25.93,
+     "delivery_date": "2026-10-08"
+    },
+    {
+     "material": "KL-SP-YJ61-18W-220",
+     "qty": 5800.0,
+     "unit_price": 24.14,
+     "delivery_date": "2026-10-08"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 2020.0,
+     "unit_price": 45.16,
+     "delivery_date": "2026-11-07"
+    }
+   ]
+  }
+ },
+ "E034/采购订单_PO20260908906_第3版.xlsx": {
+  "email_id": "E034",
+  "duplicate_of": null,
+  "customer_id": 1,
+  "customer_code": "C001",
+  "layout": "C",
+  "po_no": "PO20260908906",
+  "version": 3,
+  "order_date": "2026-09-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 204837.0,
+  "computed_total": 204837.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 2,
+    "customer_part_no": "C001-GE-1035",
+    "material": "KL-GR-TYD49",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "qty": 2500.0,
+    "unit_price": 25.93,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-GR-TYD49",
+    "price_list_price": 25.65,
+    "amount": 64825.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "C001-SH-1007",
+    "material": "KL-SP-YJ61-18W-220",
+    "desc": "罩极电机 YJ61 18W 220V",
+    "qty": 5800.0,
+    "unit_price": 24.14,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-SP-YJ61-18W-220",
+    "price_list_price": 23.88,
+    "amount": 140012.0
+   }
+  ],
+  "change": {
+   "base_version": 2,
+   "changes": [],
+   "added_lines": [],
+   "cancelled_lines": [
+    4
+   ]
+  },
+  "expected_order": {
+   "customer_code": "C001",
+   "customer_po": "PO20260908906",
+   "order_date": "2026-09-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 2500.0,
+     "unit_price": 25.93,
+     "delivery_date": "2026-10-08"
+    },
+    {
+     "material": "KL-SP-YJ61-18W-220",
+     "qty": 5800.0,
+     "unit_price": 24.14,
+     "delivery_date": "2026-10-08"
+    }
+   ]
+  }
+ },
+ "E035/采购订单_4507100002.pdf": {
+  "email_id": "E035",
+  "duplicate_of": null,
+  "customer_id": 7,
+  "customer_code": "C007",
+  "layout": "A",
+  "po_no": "4507100002",
+  "version": 1,
+  "order_date": "2026-10-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 371779.0,
+  "computed_total": 371779.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "107234",
+    "desc": "贯流风机 Φ60×360",
+    "expected_material": "KL-CF-60X360",
+    "qty": 2820.0,
+    "unit_price": 40.55,
+    "price_list_price": 40.55,
+    "delivery_date": "2026-11-06",
+    "amount": 114351.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "107200",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 850.0,
+    "unit_price": 99.92,
+    "price_list_price": 99.92,
+    "delivery_date": "2026-11-05",
+    "amount": 84932.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "107268",
+    "desc": "齿轮减速电机 TYD50 6W",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 900.0,
+    "unit_price": 29.44,
+    "price_list_price": 29.44,
+    "delivery_date": "2026-11-18",
+    "amount": 26496.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "107251",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 2920.0,
+    "unit_price": 50.0,
+    "price_list_price": 50.0,
+    "delivery_date": "2026-11-17",
+    "amount": 146000.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C007",
+   "customer_po": "4507100002",
+   "order_date": "2026-10-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-CF-60X360",
+     "qty": 2820.0,
+     "unit_price": 40.55,
+     "delivery_date": "2026-11-06"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 850.0,
+     "unit_price": 99.92,
+     "delivery_date": "2026-11-05"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 900.0,
+     "unit_price": 29.44,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 2920.0,
+     "unit_price": 50.0,
+     "delivery_date": "2026-11-17"
+    }
+   ]
+  }
+ },
+ "E038/PO20260903901_v2.pdf": {
+  "email_id": "E038",
+  "duplicate_of": null,
+  "customer_id": 15,
+  "customer_code": "C015",
+  "layout": "B",
+  "po_no": "PO20260903901",
+  "version": 2,
+  "order_date": "2026-09-03",
+  "currency": "EUR",
+  "payment_days": 60,
+  "printed_total": 15348.0,
+  "computed_total": 15348.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 2,
+    "customer_part_no": "RHG300000",
+    "material": "KL-CF-60X360",
+    "desc": "Cross-flow fan 20W 220V (60X360)",
+    "qty": 1500.0,
+    "unit_price": 4.84,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-CF-60X360",
+    "price_list_price": 4.82,
+    "amount": 7260.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "RHG300131",
+    "material": "KL-GR-GM25",
+    "desc": "Gear motor 6W 12VDC (GM25)",
+    "qty": 2400.0,
+    "unit_price": 3.37,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-GR-GM25",
+    "price_list_price": 3.38,
+    "amount": 8088.0
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [],
+   "added_lines": [],
+   "cancelled_lines": [
+    1
+   ]
+  },
+  "expected_order": {
+   "customer_code": "C015",
+   "customer_po": "PO20260903901",
+   "order_date": "2026-09-03",
+   "currency": "EUR",
+   "lines": [
+    {
+     "material": "KL-CF-60X360",
+     "qty": 1500.0,
+     "unit_price": 4.84,
+     "delivery_date": "2026-10-08"
+    },
+    {
+     "material": "KL-GR-GM25",
+     "qty": 2400.0,
+     "unit_price": 3.37,
+     "delivery_date": "2026-10-08"
+    }
+   ]
+  }
+ },
+ "E039/采购订单_4520100001.pdf": {
+  "email_id": "E039",
+  "duplicate_of": null,
+  "customer_id": 20,
+  "customer_code": "C020",
+  "layout": "A",
+  "po_no": "4520100001",
+  "version": 1,
+  "order_date": "2026-10-08",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 54612.0,
+  "computed_total": 54612.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K20300393",
+    "desc": "无刷直流电机 90W 310VDC",
+    "expected_material": "KL-BL-90W-310",
+    "qty": 600.0,
+    "unit_price": 91.02,
+    "price_list_price": 91.02,
+    "delivery_date": "2026-11-18",
+    "amount": 54612.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C020",
+   "customer_po": "4520100001",
+   "order_date": "2026-10-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-90W-310",
+     "qty": 600.0,
+     "unit_price": 91.02,
+     "delivery_date": "2026-11-18"
+    }
+   ]
+  }
+ },
+ "E040/采购订单_CG-2026-05001.pdf": {
+  "email_id": "E040",
+  "duplicate_of": null,
+  "customer_id": 5,
+  "customer_code": "C005",
+  "layout": "A",
+  "po_no": "CG-2026-05001",
+  "version": 1,
+  "order_date": "2026-10-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 141454.0,
+  "computed_total": 141454.0,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "price_deviation"
+   }
+  ],
+  "injected": [
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K05300000",
+    "desc": "罩极电机 YJ68 25W 220V",
+    "expected_material": "KL-SP-YJ68-25W-220",
+    "qty": 2900.0,
+    "unit_price": 30.5,
+    "price_list_price": 27.37,
+    "delivery_date": "2026-10-27",
+    "amount": 88450.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K05300131",
+    "desc": "齿轮减速电机 GM37 12W",
+    "expected_material": "KL-GR-GM37",
+    "qty": 1050.0,
+    "unit_price": 27.88,
+    "price_list_price": 27.88,
+    "delivery_date": "2026-11-03",
+    "amount": 29274.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K05300262",
+    "desc": "罩极电机 YJ61 18W 220V",
+    "expected_material": "KL-SP-YJ61-18W-220",
+    "qty": 1000.0,
+    "unit_price": 23.73,
+    "price_list_price": 23.73,
+    "delivery_date": "2026-11-07",
+    "amount": 23730.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C005",
+   "customer_po": "CG-2026-05001",
+   "order_date": "2026-10-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-SP-YJ68-25W-220",
+     "qty": 2900.0,
+     "unit_price": 30.5,
+     "delivery_date": "2026-10-27"
+    },
+    {
+     "material": "KL-GR-GM37",
+     "qty": 1050.0,
+     "unit_price": 27.88,
+     "delivery_date": "2026-11-03"
+    },
+    {
+     "material": "KL-SP-YJ61-18W-220",
+     "qty": 1000.0,
+     "unit_price": 23.73,
+     "delivery_date": "2026-11-07"
+    }
+   ]
+  }
+ },
+ "E041/采购订单_4507100002_第2版.pdf": {
+  "email_id": "E041",
+  "duplicate_of": null,
+  "customer_id": 7,
+  "customer_code": "C007",
+  "layout": "A",
+  "po_no": "4507100002",
+  "version": 2,
+  "order_date": "2026-10-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 395859.5,
+  "computed_total": 395859.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "107234",
+    "desc": "贯流风机 Φ60×360",
+    "expected_material": "KL-CF-60X360",
+    "qty": 2820.0,
+    "unit_price": 40.55,
+    "price_list_price": 40.55,
+    "delivery_date": "2026-11-20",
+    "amount": 114351.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "107200",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 850.0,
+    "unit_price": 99.92,
+    "price_list_price": 99.92,
+    "delivery_date": "2026-11-05",
+    "amount": 84932.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "107268",
+    "desc": "齿轮减速电机 TYD50 6W",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 900.0,
+    "unit_price": 29.44,
+    "price_list_price": 29.44,
+    "delivery_date": "2026-11-18",
+    "amount": 26496.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "107251",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 2920.0,
+    "unit_price": 50.0,
+    "price_list_price": 50.0,
+    "delivery_date": "2026-11-17",
+    "amount": 146000.0
+   },
+   {
+    "line_no": 5,
+    "customer_part_no": "107217",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 850.0,
+    "unit_price": 28.33,
+    "price_list_price": 28.33,
+    "delivery_date": "2026-11-05",
+    "amount": 24080.5
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [
+    {
+     "line_no": 1,
+     "field": "delivery_date",
+     "from": "2026-11-06",
+     "to": "2026-11-20"
+    }
+   ],
+   "added_lines": [
+    5
+   ],
+   "cancelled_lines": []
+  },
+  "expected_order": {
+   "customer_code": "C007",
+   "customer_po": "4507100002",
+   "order_date": "2026-10-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-CF-60X360",
+     "qty": 2820.0,
+     "unit_price": 40.55,
+     "delivery_date": "2026-11-20"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 850.0,
+     "unit_price": 99.92,
+     "delivery_date": "2026-11-05"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 900.0,
+     "unit_price": 29.44,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 2920.0,
+     "unit_price": 50.0,
+     "delivery_date": "2026-11-17"
+    },
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 850.0,
+     "unit_price": 28.33,
+     "delivery_date": "2026-11-05"
+    }
+   ]
+  }
+ },
+ "E042/采购订单_PO20260908906_第4版.xlsx": {
+  "email_id": "E042",
+  "duplicate_of": null,
+  "customer_id": 1,
+  "customer_code": "C001",
+  "layout": "C",
+  "po_no": "PO20260908906",
+  "version": 4,
+  "order_date": "2026-09-08",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 133545.0,
+  "computed_total": 133545.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 2,
+    "customer_part_no": "C001-GE-1035",
+    "material": "KL-GR-TYD49",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "qty": 2500.0,
+    "unit_price": 25.93,
+    "delivery_date": "2026-10-08",
+    "expected_material": "KL-GR-TYD49",
+    "price_list_price": 25.65,
+    "amount": 64825.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "C001-SH-1021",
+    "desc": "罩极电机 YJ48 5W 220V",
+    "expected_material": "KL-SP-YJ48-5W-220",
+    "qty": 4000.0,
+    "unit_price": 17.18,
+    "price_list_price": 17.18,
+    "delivery_date": "2026-11-03",
+    "amount": 68720.0
+   }
+  ],
+  "change": {
+   "base_version": 3,
+   "changes": [],
+   "added_lines": [
+    4
+   ],
+   "cancelled_lines": [
+    3
+   ]
+  },
+  "expected_order": {
+   "customer_code": "C001",
+   "customer_po": "PO20260908906",
+   "order_date": "2026-09-08",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 2500.0,
+     "unit_price": 25.93,
+     "delivery_date": "2026-10-08"
+    },
+    {
+     "material": "KL-SP-YJ48-5W-220",
+     "qty": 4000.0,
+     "unit_price": 17.18,
+     "delivery_date": "2026-11-03"
+    }
+   ]
+  }
+ },
+ "E043/采购订单_4529100001.xlsx": {
+  "email_id": "E043",
+  "duplicate_of": null,
+  "customer_id": 29,
+  "customer_code": "C029",
+  "layout": "C",
+  "po_no": "4529100001",
+  "version": 1,
+  "order_date": "2026-10-09",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 146472.2,
+  "computed_total": 146472.2,
+  "flags": [
+   {
+    "line_no": 2,
+    "rule": "early_delivery"
+   }
+  ],
+  "injected": [
+   "early_delivery"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K29300262",
+    "desc": "两相混合式步进电机 28×32mm",
+    "expected_material": "KL-ST-28x32",
+    "qty": 240.0,
+    "unit_price": 24.73,
+    "price_list_price": 24.73,
+    "delivery_date": "2026-11-02",
+    "amount": 5935.2
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K29300393",
+    "desc": "两相混合式步进电机 57×56mm",
+    "expected_material": "KL-ST-57x56",
+    "qty": 500.0,
+    "unit_price": 48.37,
+    "price_list_price": 48.37,
+    "delivery_date": "2026-10-22",
+    "amount": 24185.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K29300131",
+    "desc": "无刷直流电机 90W 310VDC",
+    "expected_material": "KL-BL-90W-310",
+    "qty": 850.0,
+    "unit_price": 91.12,
+    "price_list_price": 91.12,
+    "delivery_date": "2026-11-21",
+    "amount": 77452.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "K29300000",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 400.0,
+    "unit_price": 97.25,
+    "price_list_price": 97.25,
+    "delivery_date": "2026-11-12",
+    "amount": 38900.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C029",
+   "customer_po": "4529100001",
+   "order_date": "2026-10-09",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-ST-28x32",
+     "qty": 240.0,
+     "unit_price": 24.73,
+     "delivery_date": "2026-11-02"
+    },
+    {
+     "material": "KL-ST-57x56",
+     "qty": 500.0,
+     "unit_price": 48.37,
+     "delivery_date": "2026-10-22"
+    },
+    {
+     "material": "KL-BL-90W-310",
+     "qty": 850.0,
+     "unit_price": 91.12,
+     "delivery_date": "2026-11-21"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 400.0,
+     "unit_price": 97.25,
+     "delivery_date": "2026-11-12"
+    }
+   ]
+  }
+ },
+ "E045/采购订单_CG-2026-09001.pdf": {
+  "email_id": "E045",
+  "duplicate_of": "E013/采购订单_CG-2026-09001.pdf",
+  "customer_id": 9,
+  "customer_code": "C009",
+  "layout": "A",
+  "po_no": "CG-2026-09001",
+  "version": 1,
+  "order_date": "2026-10-05",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 326707.6,
+  "computed_total": 326707.6,
+  "flags": [
+   {
+    "line_no": 3,
+    "rule": "price_deviation"
+   },
+   {
+    "line_no": null,
+    "rule": "duplicate_po"
+   }
+  ],
+  "injected": [
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "M09.BL.001",
+    "desc": "无刷直流电机 36W 310VDC",
+    "expected_material": "KL-BL-36W-310",
+    "qty": 200.0,
+    "unit_price": 70.74,
+    "price_list_price": 70.74,
+    "delivery_date": "2026-11-01",
+    "amount": 14148.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "M09.CR.004",
+    "desc": "贯流风机 Φ65×480",
+    "expected_material": "KL-CF-65X480",
+    "qty": 2880.0,
+    "unit_price": 42.52,
+    "price_list_price": 42.52,
+    "delivery_date": "2026-10-26",
+    "amount": 122457.6
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "M09.GE.003",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 700.0,
+    "unit_price": 24.46,
+    "price_list_price": 27.02,
+    "delivery_date": "2026-11-18",
+    "amount": 17122.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "M09.SH.002",
+    "desc": "罩极电机 YJ68 25W 220V",
+    "expected_material": "KL-SP-YJ68-25W-220",
+    "qty": 6000.0,
+    "unit_price": 28.83,
+    "price_list_price": 28.83,
+    "delivery_date": "2026-11-01",
+    "amount": 172980.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C009",
+   "customer_po": "CG-2026-09001",
+   "order_date": "2026-10-05",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-36W-310",
+     "qty": 200.0,
+     "unit_price": 70.74,
+     "delivery_date": "2026-11-01"
+    },
+    {
+     "material": "KL-CF-65X480",
+     "qty": 2880.0,
+     "unit_price": 42.52,
+     "delivery_date": "2026-10-26"
+    },
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 700.0,
+     "unit_price": 24.46,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-SP-YJ68-25W-220",
+     "qty": 6000.0,
+     "unit_price": 28.83,
+     "delivery_date": "2026-11-01"
+    }
+   ]
+  }
+ },
+ "E046/采购订单_PO-C008-261001_第2版.xlsx": {
+  "email_id": "E046",
+  "duplicate_of": null,
+  "customer_id": 8,
+  "customer_code": "C008",
+  "layout": "C",
+  "po_no": "PO-C008-261001",
+  "version": 2,
+  "order_date": "2026-10-03",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 236973.6,
+  "computed_total": 236973.6,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K08300000",
+    "desc": "无刷直流电机 90W 310VDC",
+    "expected_material": "KL-BL-90W-310",
+    "qty": 350.0,
+    "unit_price": 85.1,
+    "price_list_price": 85.1,
+    "delivery_date": "2026-11-23",
+    "amount": 29785.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K08300131",
+    "desc": "罩极电机 YJ58 8W 220V",
+    "expected_material": "KL-SP-YJ58-8W-220",
+    "qty": 5100.0,
+    "unit_price": 18.69,
+    "price_list_price": 18.69,
+    "delivery_date": "2026-11-12",
+    "amount": 95319.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K08300262",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 1740.0,
+    "unit_price": 45.24,
+    "price_list_price": 45.24,
+    "delivery_date": "2026-10-26",
+    "amount": 78717.6
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "K08300393",
+    "desc": "罩极电机 YJ61 12W 220V",
+    "expected_material": "KL-SP-YJ61-12W-220",
+    "qty": 1600.0,
+    "unit_price": 20.72,
+    "price_list_price": 20.72,
+    "delivery_date": "2026-11-04",
+    "amount": 33152.0
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [
+    {
+     "line_no": 1,
+     "field": "delivery_date",
+     "from": "2026-11-16",
+     "to": "2026-11-23"
+    }
+   ],
+   "added_lines": [
+    4
+   ],
+   "cancelled_lines": []
+  },
+  "expected_order": {
+   "customer_code": "C008",
+   "customer_po": "PO-C008-261001",
+   "order_date": "2026-10-03",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-90W-310",
+     "qty": 350.0,
+     "unit_price": 85.1,
+     "delivery_date": "2026-11-23"
+    },
+    {
+     "material": "KL-SP-YJ58-8W-220",
+     "qty": 5100.0,
+     "unit_price": 18.69,
+     "delivery_date": "2026-11-12"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 1740.0,
+     "unit_price": 45.24,
+     "delivery_date": "2026-10-26"
+    },
+    {
+     "material": "KL-SP-YJ61-12W-220",
+     "qty": 1600.0,
+     "unit_price": 20.72,
+     "delivery_date": "2026-11-04"
+    }
+   ]
+  }
+ },
+ "E047/采购订单_PO-C027-261001_第2版.xlsx": {
+  "email_id": "E047",
+  "duplicate_of": null,
+  "customer_id": 27,
+  "customer_code": "C027",
+  "layout": "C",
+  "po_no": "PO-C027-261001",
+  "version": 2,
+  "order_date": "2026-10-06",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 20204.4,
+  "computed_total": 20204.4,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "unknown_part"
+   }
+  ],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "127903",
+    "desc": "两相混合式步进电机 42×48mm",
+    "expected_material": "KL-ST-42x48",
+    "qty": 180.0,
+    "unit_price": 32.69,
+    "price_list_price": 32.69,
+    "delivery_date": "2026-10-16",
+    "amount": 5884.2
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "127217",
+    "desc": "两相混合式步进电机 28×32mm",
+    "expected_material": "KL-ST-28x32",
+    "qty": 580.0,
+    "unit_price": 24.69,
+    "price_list_price": 24.69,
+    "delivery_date": "2026-11-22",
+    "amount": 14320.2
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [],
+   "added_lines": [
+    2
+   ],
+   "cancelled_lines": []
+  },
+  "expected_order": {
+   "customer_code": "C027",
+   "customer_po": "PO-C027-261001",
+   "order_date": "2026-10-06",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-ST-42x48",
+     "qty": 180.0,
+     "unit_price": 32.69,
+     "delivery_date": "2026-10-16"
+    },
+    {
+     "material": "KL-ST-28x32",
+     "qty": 580.0,
+     "unit_price": 24.69,
+     "delivery_date": "2026-11-22"
+    }
+   ]
+  }
+ },
+ "E048/PO20261009001_v1.pdf": {
+  "email_id": "E048",
+  "duplicate_of": null,
+  "customer_id": 15,
+  "customer_code": "C015",
+  "layout": "B",
+  "po_no": "PO20261009001",
+  "version": 1,
+  "order_date": "2026-10-09",
+  "currency": "EUR",
+  "payment_days": 60,
+  "printed_total": 7679.5,
+  "computed_total": 7135.0,
+  "flags": [
+   {
+    "line_no": null,
+    "rule": "total_mismatch"
+   }
+  ],
+  "injected": [
+   "total_mismatch"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "RHG300393",
+    "desc": "Shaded pole motor 25W 220V (YJ68-25W-220)",
+    "expected_material": "KL-SP-YJ68-25W-220",
+    "qty": 1500.0,
+    "unit_price": 3.63,
+    "price_list_price": 3.63,
+    "delivery_date": "2026-11-01",
+    "amount": 5445.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "RHG300131",
+    "desc": "Gear motor 6W 12VDC (GM25)",
+    "expected_material": "KL-GR-GM25",
+    "qty": 500.0,
+    "unit_price": 3.38,
+    "price_list_price": 3.38,
+    "delivery_date": "2026-11-18",
+    "amount": 1690.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C015",
+   "customer_po": "PO20261009001",
+   "order_date": "2026-10-09",
+   "currency": "EUR",
+   "lines": [
+    {
+     "material": "KL-SP-YJ68-25W-220",
+     "qty": 1500.0,
+     "unit_price": 3.63,
+     "delivery_date": "2026-11-01"
+    },
+    {
+     "material": "KL-GR-GM25",
+     "qty": 500.0,
+     "unit_price": 3.38,
+     "delivery_date": "2026-11-18"
+    }
+   ]
+  }
+ },
+ "E053/采购订单_CG-2026-02001.pdf": {
+  "email_id": "E053",
+  "duplicate_of": null,
+  "customer_id": 2,
+  "customer_code": "C002",
+  "layout": "A",
+  "po_no": "CG-2026-02001",
+  "version": 1,
+  "order_date": "2026-10-10",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 247163.5,
+  "computed_total": 247163.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K02300393",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 1680.0,
+    "unit_price": 48.05,
+    "price_list_price": 48.05,
+    "delivery_date": "2026-11-11",
+    "amount": 80724.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K02300131",
+    "desc": "罩极电机 YJ72 30W 220V",
+    "expected_material": "KL-SP-YJ72-30W-220",
+    "qty": 2400.0,
+    "unit_price": 31.79,
+    "price_list_price": 31.79,
+    "delivery_date": "2026-10-29",
+    "amount": 76296.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "K02300000",
+    "desc": "罩极电机 YJ58 8W 220V",
+    "expected_material": "KL-SP-YJ58-8W-220",
+    "qty": 2900.0,
+    "unit_price": 19.81,
+    "price_list_price": 19.81,
+    "delivery_date": "2026-11-18",
+    "amount": 57449.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "K02300262",
+    "desc": "齿轮减速电机 TYD50 6W",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 1150.0,
+    "unit_price": 28.43,
+    "price_list_price": 28.43,
+    "delivery_date": "2026-11-16",
+    "amount": 32694.5
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C002",
+   "customer_po": "CG-2026-02001",
+   "order_date": "2026-10-10",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-CF-80X600",
+     "qty": 1680.0,
+     "unit_price": 48.05,
+     "delivery_date": "2026-11-11"
+    },
+    {
+     "material": "KL-SP-YJ72-30W-220",
+     "qty": 2400.0,
+     "unit_price": 31.79,
+     "delivery_date": "2026-10-29"
+    },
+    {
+     "material": "KL-SP-YJ58-8W-220",
+     "qty": 2900.0,
+     "unit_price": 19.81,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 1150.0,
+     "unit_price": 28.43,
+     "delivery_date": "2026-11-16"
+    }
+   ]
+  }
+ },
+ "E055/4528100001_v1.pdf": {
+  "email_id": "E055",
+  "duplicate_of": null,
+  "customer_id": 28,
+  "customer_code": "C028",
+  "layout": "B",
+  "po_no": "4528100001",
+  "version": 1,
+  "order_date": "2026-10-10",
+  "currency": "USD",
+  "payment_days": 60,
+  "printed_total": 5142.3,
+  "computed_total": 5142.3,
+  "flags": [
+   {
+    "line_no": 2,
+    "rule": "early_delivery"
+   }
+  ],
+  "injected": [
+   "early_delivery"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "KOS300131",
+    "desc": "Hybrid stepper motor 24VDC (57x56)",
+    "expected_material": "KL-ST-57x56",
+    "qty": 520.0,
+    "unit_price": 6.54,
+    "price_list_price": 6.54,
+    "delivery_date": "2026-11-20",
+    "amount": 3400.8
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "KOS300000",
+    "desc": "Gear motor 6W 220V (TYD50)",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 450.0,
+    "unit_price": 3.87,
+    "price_list_price": 3.87,
+    "delivery_date": "2026-10-22",
+    "amount": 1741.5
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C028",
+   "customer_po": "4528100001",
+   "order_date": "2026-10-10",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-ST-57x56",
+     "qty": 520.0,
+     "unit_price": 6.54,
+     "delivery_date": "2026-11-20"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 450.0,
+     "unit_price": 3.87,
+     "delivery_date": "2026-10-22"
+    }
+   ]
+  }
+ },
+ "E057/4525100001_v1.pdf": {
+  "email_id": "E057",
+  "duplicate_of": null,
+  "customer_id": 25,
+  "customer_code": "C025",
+  "layout": "B",
+  "po_no": "4525100001",
+  "version": 1,
+  "order_date": "2026-10-11",
+  "currency": "USD",
+  "payment_days": 60,
+  "printed_total": 8135.8,
+  "computed_total": 8135.8,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "125200",
+    "desc": "Hybrid stepper motor 24VDC (57x76)",
+    "expected_material": "KL-ST-57x76",
+    "qty": 120.0,
+    "unit_price": 7.66,
+    "price_list_price": 7.66,
+    "delivery_date": "2026-11-07",
+    "amount": 919.2
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "125217",
+    "desc": "Gear motor 4W 220V (TYD49)",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 1200.0,
+    "unit_price": 3.74,
+    "price_list_price": 3.74,
+    "delivery_date": "2026-11-10",
+    "amount": 4488.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "125251",
+    "desc": "Hybrid stepper motor 24VDC (86x98)",
+    "expected_material": "KL-ST-86x98",
+    "qty": 120.0,
+    "unit_price": 13.19,
+    "price_list_price": 13.19,
+    "delivery_date": "2026-11-10",
+    "amount": 1582.8
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "125268",
+    "desc": "Hybrid stepper motor 24VDC (28x32)",
+    "expected_material": "KL-ST-28x32",
+    "qty": 340.0,
+    "unit_price": 3.37,
+    "price_list_price": 3.37,
+    "delivery_date": "2026-11-13",
+    "amount": 1145.8
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C025",
+   "customer_po": "4525100001",
+   "order_date": "2026-10-11",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-ST-57x76",
+     "qty": 120.0,
+     "unit_price": 7.66,
+     "delivery_date": "2026-11-07"
+    },
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 1200.0,
+     "unit_price": 3.74,
+     "delivery_date": "2026-11-10"
+    },
+    {
+     "material": "KL-ST-86x98",
+     "qty": 120.0,
+     "unit_price": 13.19,
+     "delivery_date": "2026-11-10"
+    },
+    {
+     "material": "KL-ST-28x32",
+     "qty": 340.0,
+     "unit_price": 3.37,
+     "delivery_date": "2026-11-13"
+    }
+   ]
+  }
+ },
+ "E058/采购订单_PO20261011001.xlsx": {
+  "email_id": "E058",
+  "duplicate_of": null,
+  "customer_id": 1,
+  "customer_code": "C001",
+  "layout": "C",
+  "po_no": "PO20261011001",
+  "version": 1,
+  "order_date": "2026-10-11",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 17955.0,
+  "computed_total": 17955.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "C001-GE-1035",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 700.0,
+    "unit_price": 25.65,
+    "price_list_price": 25.65,
+    "delivery_date": "2026-11-14",
+    "amount": 17955.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C001",
+   "customer_po": "PO20261011001",
+   "order_date": "2026-10-11",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 700.0,
+     "unit_price": 25.65,
+     "delivery_date": "2026-11-14"
+    }
+   ]
+  }
+ },
+ "E063/采购订单_PO-C033-261001.pdf": {
+  "email_id": "E063",
+  "duplicate_of": null,
+  "customer_id": 33,
+  "customer_code": "C033",
+  "layout": "A",
+  "po_no": "PO-C033-261001",
+  "version": 1,
+  "order_date": "2026-10-11",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 5995.44,
+  "computed_total": 5995.44,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K33300655",
+    "desc": "交流伺服电机 60法兰 200W",
+    "expected_material": "KL-SV-60-200W",
+    "qty": 33.0,
+    "unit_price": 181.68,
+    "price_list_price": 181.68,
+    "delivery_date": "2026-11-30",
+    "amount": 5995.44
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C033",
+   "customer_po": "PO-C033-261001",
+   "order_date": "2026-10-11",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-SV-60-200W",
+     "qty": 33.0,
+     "unit_price": 181.68,
+     "delivery_date": "2026-11-30"
+    }
+   ]
+  }
+ },
+ "E064/采购订单_PO-C018-261001.xlsx": {
+  "email_id": "E064",
+  "duplicate_of": null,
+  "customer_id": 18,
+  "customer_code": "C018",
+  "layout": "C",
+  "po_no": "PO-C018-261001",
+  "version": 1,
+  "order_date": "2026-10-12",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 15619.76,
+  "computed_total": 15619.76,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "price_deviation"
+   }
+  ],
+  "injected": [
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "M18.SE.005",
+    "desc": "交流伺服电机 80法兰 750W",
+    "expected_material": "KL-SV-80-750W",
+    "qty": 52.0,
+    "unit_price": 300.38,
+    "price_list_price": 278.05,
+    "delivery_date": "2026-11-21",
+    "amount": 15619.76
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C018",
+   "customer_po": "PO-C018-261001",
+   "order_date": "2026-10-12",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-SV-80-750W",
+     "qty": 52.0,
+     "unit_price": 300.38,
+     "delivery_date": "2026-11-21"
+    }
+   ]
+  }
+ },
+ "E065/4516100001_v1.pdf": {
+  "email_id": "E065",
+  "duplicate_of": null,
+  "customer_id": 16,
+  "customer_code": "C016",
+  "layout": "B",
+  "po_no": "4516100001",
+  "version": 1,
+  "order_date": "2026-10-12",
+  "currency": "USD",
+  "payment_days": 90,
+  "printed_total": 20701.5,
+  "computed_total": 20701.5,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "below_moq"
+   }
+  ],
+  "injected": [
+   "below_moq"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "IBE300393",
+    "desc": "Shaded pole motor 25W 120V (YJ68-25W-120)",
+    "expected_material": "KL-SP-YJ68-25W-120",
+    "qty": 500.0,
+    "unit_price": 4.14,
+    "price_list_price": 4.14,
+    "delivery_date": "2026-11-17",
+    "amount": 2070.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "IBE300655",
+    "desc": "BLDC motor 120W 310VDC (120W-310)",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 550.0,
+    "unit_price": 13.83,
+    "price_list_price": 13.83,
+    "delivery_date": "2026-11-28",
+    "amount": 7606.5
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "IBE300131",
+    "desc": "Shaded pole motor 12W 220V (YJ61-12W-220)",
+    "expected_material": "KL-SP-YJ61-12W-220",
+    "qty": 3500.0,
+    "unit_price": 3.15,
+    "price_list_price": 3.15,
+    "delivery_date": "2026-11-01",
+    "amount": 11025.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C016",
+   "customer_po": "4516100001",
+   "order_date": "2026-10-12",
+   "currency": "USD",
+   "lines": [
+    {
+     "material": "KL-SP-YJ68-25W-120",
+     "qty": 500.0,
+     "unit_price": 4.14,
+     "delivery_date": "2026-11-17"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 550.0,
+     "unit_price": 13.83,
+     "delivery_date": "2026-11-28"
+    },
+    {
+     "material": "KL-SP-YJ61-12W-220",
+     "qty": 3500.0,
+     "unit_price": 3.15,
+     "delivery_date": "2026-11-01"
+    }
+   ]
+  }
+ },
+ "E066/PO20261012001_v1.xlsx": {
+  "email_id": "E066",
+  "duplicate_of": null,
+  "customer_id": 11,
+  "customer_code": "C011",
+  "layout": "D",
+  "po_no": "PO20261012001",
+  "version": 1,
+  "order_date": "2026-10-12",
+  "currency": "EUR",
+  "payment_days": 60,
+  "printed_total": 15088.0,
+  "computed_total": 15088.0,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "111251",
+    "desc": "Shaded pole motor 25W 220V (YJ68-25W-220)",
+    "expected_material": "KL-SP-YJ68-25W-220",
+    "qty": 4100.0,
+    "unit_price": 3.68,
+    "price_list_price": 3.68,
+    "delivery_date": "2026-11-01",
+    "amount": 15088.0
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C011",
+   "customer_po": "PO20261012001",
+   "order_date": "2026-10-12",
+   "currency": "EUR",
+   "lines": [
+    {
+     "material": "KL-SP-YJ68-25W-220",
+     "qty": 4100.0,
+     "unit_price": 3.68,
+     "delivery_date": "2026-11-01"
+    }
+   ]
+  }
+ },
+ "E067/采购订单_4507100001_第2版.pdf": {
+  "email_id": "E067",
+  "duplicate_of": null,
+  "customer_id": 7,
+  "customer_code": "C007",
+  "layout": "A",
+  "po_no": "4507100001",
+  "version": 2,
+  "order_date": "2026-10-06",
+  "currency": "CNY",
+  "payment_days": 90,
+  "printed_total": 173232.5,
+  "computed_total": 173232.5,
+  "flags": [],
+  "injected": [],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "107217",
+    "desc": "齿轮减速电机 TYD49 4W",
+    "expected_material": "KL-GR-TYD49",
+    "qty": 550.0,
+    "unit_price": 28.33,
+    "price_list_price": 28.33,
+    "delivery_date": "2026-10-29",
+    "amount": 15581.5
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "107251",
+    "desc": "贯流风机 Φ80×600",
+    "expected_material": "KL-CF-80X600",
+    "qty": 700.0,
+    "unit_price": 50.0,
+    "price_list_price": 50.0,
+    "delivery_date": "2026-10-27",
+    "amount": 35000.0
+   },
+   {
+    "line_no": 3,
+    "customer_part_no": "107200",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 650.0,
+    "unit_price": 99.92,
+    "price_list_price": 99.92,
+    "delivery_date": "2026-11-09",
+    "amount": 64948.0
+   },
+   {
+    "line_no": 4,
+    "customer_part_no": "107234",
+    "desc": "贯流风机 Φ60×360",
+    "expected_material": "KL-CF-60X360",
+    "qty": 1060.0,
+    "unit_price": 40.55,
+    "price_list_price": 40.55,
+    "delivery_date": "2026-10-29",
+    "amount": 42983.0
+   },
+   {
+    "line_no": 5,
+    "customer_part_no": "107268",
+    "desc": "齿轮减速电机 TYD50 6W",
+    "expected_material": "KL-GR-TYD50",
+    "qty": 500.0,
+    "unit_price": 29.44,
+    "price_list_price": 29.44,
+    "delivery_date": "2026-11-22",
+    "amount": 14720.0
+   }
+  ],
+  "change": {
+   "base_version": 1,
+   "changes": [],
+   "added_lines": [
+    5
+   ],
+   "cancelled_lines": []
+  },
+  "expected_order": {
+   "customer_code": "C007",
+   "customer_po": "4507100001",
+   "order_date": "2026-10-06",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-TYD49",
+     "qty": 550.0,
+     "unit_price": 28.33,
+     "delivery_date": "2026-10-29"
+    },
+    {
+     "material": "KL-CF-80X600",
+     "qty": 700.0,
+     "unit_price": 50.0,
+     "delivery_date": "2026-10-27"
+    },
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 650.0,
+     "unit_price": 99.92,
+     "delivery_date": "2026-11-09"
+    },
+    {
+     "material": "KL-CF-60X360",
+     "qty": 1060.0,
+     "unit_price": 40.55,
+     "delivery_date": "2026-10-29"
+    },
+    {
+     "material": "KL-GR-TYD50",
+     "qty": 500.0,
+     "unit_price": 29.44,
+     "delivery_date": "2026-11-22"
+    }
+   ]
+  }
+ },
+ "E068/采购订单_PO20261007001.xlsx": {
+  "email_id": "E068",
+  "duplicate_of": "E028/采购订单_PO20261007001.xlsx",
+  "customer_id": 17,
+  "customer_code": "C017",
+  "layout": "C",
+  "po_no": "PO20261007001",
+  "version": 1,
+  "order_date": "2026-10-07",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 13001.2,
+  "computed_total": 13001.2,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "below_moq"
+   },
+   {
+    "line_no": null,
+    "rule": "duplicate_po"
+   }
+  ],
+  "injected": [
+   "below_moq"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K17300262",
+    "desc": "无刷直流电机 120W 310VDC",
+    "expected_material": "KL-BL-120W-310",
+    "qty": 100.0,
+    "unit_price": 95.88,
+    "price_list_price": 95.88,
+    "delivery_date": "2026-11-18",
+    "amount": 9588.0
+   },
+   {
+    "line_no": 2,
+    "customer_part_no": "K17300524",
+    "desc": "两相混合式步进电机 28×32mm",
+    "expected_material": "KL-ST-28x32",
+    "qty": 140.0,
+    "unit_price": 24.38,
+    "price_list_price": 24.38,
+    "delivery_date": "2026-11-18",
+    "amount": 3413.2
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C017",
+   "customer_po": "PO20261007001",
+   "order_date": "2026-10-07",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-BL-120W-310",
+     "qty": 100.0,
+     "unit_price": 95.88,
+     "delivery_date": "2026-11-18"
+    },
+    {
+     "material": "KL-ST-28x32",
+     "qty": 140.0,
+     "unit_price": 24.38,
+     "delivery_date": "2026-11-18"
+    }
+   ]
+  }
+ },
+ "E070/采购订单_PO20261012001.xlsx": {
+  "email_id": "E070",
+  "duplicate_of": null,
+  "customer_id": 24,
+  "customer_code": "C024",
+  "layout": "C",
+  "po_no": "PO20261012001",
+  "version": 1,
+  "order_date": "2026-10-12",
+  "currency": "CNY",
+  "payment_days": 60,
+  "printed_total": 11857.5,
+  "computed_total": 11857.5,
+  "flags": [
+   {
+    "line_no": 1,
+    "rule": "price_deviation"
+   },
+   {
+    "line_no": 1,
+    "rule": "pack_multiple"
+   }
+  ],
+  "injected": [
+   "pack_multiple",
+   "price_deviation"
+  ],
+  "lines": [
+   {
+    "line_no": 1,
+    "customer_part_no": "K24300524",
+    "desc": "齿轮减速电机 GM37 12W",
+    "expected_material": "KL-GR-GM37",
+    "qty": 425.0,
+    "unit_price": 27.9,
+    "price_list_price": 30.12,
+    "delivery_date": "2026-11-07",
+    "amount": 11857.5
+   }
+  ],
+  "change": null,
+  "expected_order": {
+   "customer_code": "C024",
+   "customer_po": "PO20261012001",
+   "order_date": "2026-10-12",
+   "currency": "CNY",
+   "lines": [
+    {
+     "material": "KL-GR-GM37",
+     "qty": 425.0,
+     "unit_price": 27.9,
+     "delivery_date": "2026-11-07"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+# Prometheus 告警规则（在 Grafana 的 Alerting 页面和 Prometheus 的 Alerts 页面都能看到当前状态）。
+# 飞书推送由应用内的告警中心负责（依赖不可用、熔断、批次失败等）；这里的规则是指标层面的补充。
+groups:
+  - name: ai-services
+    rules:
+      - alert: 服务抓取失败
+        expr: up{job=~"kbase|copilot"} == 0
+        for: 2m
+        labels: { level: P1 }
+        annotations: { summary: "{{ $labels.job }} 的 /metrics 抓不到，服务可能挂了" }
+      - alert: 熔断器打开
+        expr: ai_breaker_open == 1
+        for: 1m
+        labels: { level: P2 }
+        annotations: { summary: "熔断器 {{ $labels.name }} 已打开超过 1 分钟，对应功能正在走降级" }
+      - alert: 问答P95过高
+        expr: histogram_quantile(0.95, sum by (le, app) (rate(ai_request_seconds_bucket[10m]))) > 30
+        for: 10m
+        labels: { level: P2 }
+        annotations: { summary: "{{ $labels.app }} 近 10 分钟 P95 超过 30 秒" }
+      - alert: 首字延迟过高
+        expr: histogram_quantile(0.95, sum by (le, app) (rate(ai_first_token_seconds_bucket[10m]))) > 6
+        for: 10m
+        labels: { level: P3 }
+        annotations: { summary: "{{ $labels.app }} 近 10 分钟首字 P95 超过 6 秒" }
+      - alert: 降级比例过高
+        expr: sum by (app) (rate(ai_degraded_total[10m])) / sum by (app) (rate(ai_requests_total[10m])) > 0.2
+        for: 10m
+        labels: { level: P2 }
+        annotations: { summary: "{{ $labels.app }} 超过 20% 的请求走了降级" }
+      - alert: 限流拒绝过多
+        expr: sum by (app) (rate(ai_rejected_total[5m])) > 0.5
+        for: 5m
+        labels: { level: P3 }
+        annotations: { summary: "{{ $labels.app }} 持续有请求被限流或过载保护拒绝，考虑扩容" }
+      - alert: 入库队列积压
+        expr: kb_queue_messages{queue="ready"} > 200
+        for: 10m
+        labels: { level: P2 }
+        annotations: { summary: "入库队列积压超过 200 条" }
+      - alert: 死信队列有消息
+        expr: kb_queue_messages{queue="dlq"} > 0
+        for: 30m
+        labels: { level: P3 }
+        annotations: { summary: "有入库任务重试用完仍然失败，等人处理" }

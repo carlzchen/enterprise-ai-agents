@@ -1,0 +1,399 @@
+# 数据语义库 + 权限配置：每个白名单视图一段。
+#   access      角色 → 可见范围：all 全部行 / dept 本部门及下级部门 / self 只看本人；"*" 是其他角色的默认值；没列出的角色无权访问
+#   row_scope   行级过滤用哪一列：dept_id / dept_name / line_code 用于 dept 范围，employee_id 用于 self 范围
+#   sensitive   敏感列 → 能看到这一列的角色（其他角色整列不返回）
+#   mask        需要打码的列 → 能看到明文的角色（其他角色看到首尾几位）
+#   fresh_as    数据截止日期跟随哪张视图（员工档案没有自己的业务日期，跟随考勤）
+#   columns     字段中文说明（没写说明的字段启动时从数据库补齐，只有字段名）
+# 白名单要和 mysql-init/02_copilot.sql 的授权保持一致。
+
+v_employee:
+  title: 员工档案
+  desc: 每名员工一行（含已离职）。查在职人数、人员结构、司龄、入离职日期用这张。
+  questions: [现在有多少人, 各部门人数, 劳务派遣占比, 谁离职了, 司龄分布]
+  fresh_as: v_attendance
+  access: {"*": all}
+  row_scope: {dept_id: dept_id, employee_id: id, line_code: line_code}
+  sensitive:
+    base_salary: [ADMIN, HR, MANAGEMENT, FINANCE]
+    social_base: [ADMIN, HR, MANAGEMENT, FINANCE]
+  columns:
+    id: 员工 ID
+    emp_no: 工号
+    name: 姓名
+    gender: 性别，M 男 / F 女
+    dept_id: 部门 ID
+    dept_name: 部门名称
+    position_name: 岗位名称
+    grade: 职级，如 P2、M3
+    manager_name: 直属上级姓名
+    line_code: 所属产线 L1–L8，职能人员为空
+    team: 班组 A / B / C
+    employment_type: 用工类型，FULL_TIME 正式 / DISPATCH 劳务派遣 / INTERN 实习
+    wage_type: 计薪方式，MONTHLY 月薪 / PIECE 计件
+    base_salary: 月基本工资（计件员工为保底工资）
+    social_base: 社保公积金缴费基数
+    hire_date: 入职日期
+    leave_date: 离职日期，在职为空
+    leave_reason: 离职原因
+    status: 状态，PROBATION 试用 / ACTIVE 在职 / LEFT 离职
+    tenure_months: 司龄（月）
+
+v_employee_pii:
+  title: 员工敏感信息
+  desc: 每名员工一行，只有身份证号、工资卡号、手机号这三项敏感信息。无权看明文的角色只能看到首尾各 4 位。
+  questions: [身份证号, 银行卡号, 工资卡, 手机号, 联系方式]
+  access: {ADMIN: all, HR: all, FINANCE: all, MANAGEMENT: all, "*": self}
+  row_scope: {dept_id: dept_id, employee_id: employee_id}
+  mask:
+    id_card: [ADMIN, HR]
+    bank_account: [ADMIN, HR, FINANCE]
+    phone: [ADMIN, HR]
+  columns:
+    employee_id: 员工 ID
+    emp_no: 工号
+    name: 姓名
+    dept_name: 部门名称
+    status: 状态，PROBATION 试用 / ACTIVE 在职 / LEFT 离职
+    id_card: 身份证号
+    bank_account: 工资卡号
+    phone: 手机号
+
+v_employee_change:
+  title: 员工异动记录
+  desc: 入职、转正、离职等异动，一次异动一行。
+  questions: [上月入职多少人, 转正记录]
+  date_col: change_date
+  fresh_as: v_attendance
+  access: {ADMIN: all, HR: all, MANAGEMENT: all}
+  sensitive:
+    from_salary: [ADMIN, HR, MANAGEMENT]
+    to_salary: [ADMIN, HR, MANAGEMENT]
+  columns:
+    employee_id: 员工 ID
+    change_type: 异动类型，HIRE 入职 / REGULAR 转正 / LEAVE 离职
+    change_date: 异动日期
+    from_dept: 原部门
+    to_dept: 新部门
+    emp_no: 工号
+    name: 姓名
+    remark: 备注
+
+v_dept:
+  title: 部门
+  desc: 部门树，含负责人和当前在职人数。
+  access: {"*": all}
+  columns:
+    id: 部门 ID
+    code: 部门编码
+    name: 部门名称
+    parent_name: 上级部门
+    manager_name: 部门负责人
+    cost_type: 成本类型，PRODUCTION 制造费用 / SALES 销售费用 / ADMIN 管理费用 / RND 研发费用
+    headcount: 当前在职人数
+
+v_attendance:
+  title: 考勤日记录
+  desc: 每名员工每个工作日一行。查出勤率、迟到、旷工、加班工时用这张。
+  questions: [出勤率, 加班工时, 加班率, 迟到次数, 旷工]
+  date_col: work_date
+  access: {ADMIN: all, HR: all, MANAGEMENT: all, PRODUCTION: dept, "*": self}
+  row_scope: {dept_id: dept_id, employee_id: employee_id, line_code: line_code}
+  columns:
+    employee_id: 员工 ID
+    work_date: 考勤日期
+    status: 考勤状态，NORMAL 正常 / LATE 迟到 / ABSENT 旷工 / LEAVE 请假
+    work_hours: 当日出勤工时
+    overtime_hours: 当日加班工时
+    leave_type: 请假类型，ANNUAL 年假 / SICK 病假 / PERSONAL 事假
+    emp_no: 工号
+    name: 姓名
+    dept_id: 部门 ID
+    dept_name: 部门名称
+    line_code: 产线
+    team: 班组
+
+v_leave:
+  title: 请假单
+  desc: 一张请假单一行。
+  questions: [请假天数, 病假多少人]
+  access: {ADMIN: all, HR: all, MANAGEMENT: all, PRODUCTION: dept, "*": self}
+  row_scope: {dept_name: dept_name, employee_id: employee_id}
+  fresh_as: v_attendance
+  columns:
+    employee_id: 员工 ID
+    leave_type: 请假类型，ANNUAL 年假 / SICK 病假 / PERSONAL 事假
+    start_date: 开始日期
+    end_date: 结束日期
+    days: 请假天数
+    reason: 请假事由
+    status: 状态，PENDING 审批中 / APPROVED 已批准 / REJECTED 已驳回 / WITHDRAWN 已撤回
+    emp_no: 工号
+    name: 姓名
+    dept_name: 部门名称
+
+v_payslip:
+  title: 工资条
+  desc: 每名员工每月一行。查人工成本、人均工资、计件工资、保底补差用这张。人工成本 = gross_pay + social_employer。
+  questions: [人工成本, 人均工资, 计件工资总额, 多少人拿保底]
+  date_col: period
+  access: {ADMIN: all, HR: all, MANAGEMENT: all, FINANCE: all, PRODUCTION: dept, "*": self}
+  row_scope: {dept_id: dept_id, employee_id: employee_id}
+  columns:
+    employee_id: 员工 ID
+    period: 工资月份 YYYY-MM
+    dept_id: 部门 ID
+    dept_name: 部门名称
+    line_code: 产线
+    team: 班组
+    cost_type: 成本类型，PRODUCTION / SALES / ADMIN / RND
+    wage_type: 计薪方式，MONTHLY 月薪 / PIECE 计件
+    scheduled_days: 应出勤天数
+    attend_days: 实际出勤天数
+    leave_days: 请假天数
+    absent_days: 旷工天数
+    overtime_hours: 加班工时
+    base_pay: 基本工资
+    piece_qty: 分摊到个人的良品数
+    piece_pay: 计件工资
+    guarantee_topup: 保底补差（计件不足保底的补足金额）
+    overtime_pay: 加班工资
+    deduction: 缺勤扣款
+    gross_pay: 应发工资
+    social_employee: 个人社保公积金
+    income_tax: 个税
+    net_pay: 实发工资
+    social_employer: 单位社保公积金
+    emp_no: 工号
+    name: 姓名
+
+v_payroll:
+  title: 月度工资表
+  desc: 每月一行的汇总。
+  date_col: period
+  access: {ADMIN: all, HR: all, MANAGEMENT: all, FINANCE: all}
+  columns:
+    period: 工资月份 YYYY-MM
+    status: 状态，DRAFT 草稿 / PENDING 审批中 / APPROVED 已审批入账 / PAID 已发放
+    headcount: 计薪人数
+    gross_total: 应发合计
+    net_total: 实发合计
+    tax_total: 个税合计
+    social_employer: 单位社保公积金合计
+    employer_cost: 企业人工成本 = 应发 + 单位社保公积金
+    paid_date: 发放日期
+
+hr_piece_rate:
+  title: 计件单价
+  desc: 各产线每台良品的计件单价，按生效日期取最新一条。
+  questions: [计件单价, 单价什么时候调的]
+  access: {ADMIN: all, HR: all, MANAGEMENT: all, FINANCE: all, PRODUCTION: all}
+  columns:
+    line_code: 产线
+    rate: 每台良品计件单价（元）
+    effective_from: 生效日期
+    remark: 备注
+
+mes_line:
+  title: 产线
+  desc: 产线主数据。L1 罩极、L2 贯流、L3 无刷、L4 步进、L5 伺服、L6 减速、L7 伺服组件、L8 冲压叠片。
+  access: {"*": all}
+  columns:
+    line_code: 产线编码
+    name: 产线名称
+    series: 生产的产品系列
+    daily_capacity: 日产能
+    shifts: 班次数
+
+v_wo_report:
+  title: 生产报工
+  desc: 每次报工一行。查产量、良品数、报废数、良率用这张。
+  questions: [产量, 良品数, 良率, 报废]
+  date_col: report_date
+  access: {ADMIN: all, MANAGEMENT: all, FINANCE: all, HR: all, QUALITY: all, PRODUCTION: dept}
+  row_scope: {line_code: line_code}
+  columns:
+    report_date: 报工日期
+    good_qty: 良品数
+    scrap_qty: 报废数
+    defect_code: 不良代码
+    wo_no: 工单号
+    line_code: 产线
+    item_type: 类型，PRODUCT 成品 / MATERIAL 组件
+    product_code: 产品型号
+    product_name: 产品名称
+
+v_work_order:
+  title: 生产工单
+  desc: 每张工单一行，含计划数、良品数、材料成本和加工成本。
+  date_col: plan_start
+  access: {ADMIN: all, MANAGEMENT: all, FINANCE: all, QUALITY: all, PRODUCTION: dept}
+  row_scope: {line_code: line_code}
+  sensitive:
+    material_cost: [ADMIN, FINANCE, MANAGEMENT]
+    conversion_cost: [ADMIN, FINANCE, MANAGEMENT]
+  columns:
+    wo_no: 工单号
+    item_type: 类型，PRODUCT 成品 / MATERIAL 组件
+    line_code: 产线
+    planned_qty: 计划数量
+    good_qty: 良品数
+    scrap_qty: 报废数
+    status: 状态
+    plan_start: 计划开工日期
+    actual_end: 实际完工日期
+    material_cost: 材料成本
+    conversion_cost: 加工成本
+    product_code: 产品型号
+    series: 产品系列
+    yield_rate: 良率
+
+v_line_day:
+  title: 产线日结
+  desc: 每条产线每天一行，含 OEE 三要素和劳动效率。
+  questions: [OEE, 稼动率, 劳动效率]
+  date_col: work_date
+  access: {ADMIN: all, MANAGEMENT: all, FINANCE: all, HR: all, QUALITY: all, PRODUCTION: dept}
+  row_scope: {line_code: line_code}
+  columns:
+    line_code: 产线
+    work_date: 日期
+    planned_min: 计划生产时间（分钟）
+    loss_min: 停机损失时间（分钟）
+    total_qty: 总产量
+    good_qty: 良品数
+    std_hours: 标准工时
+    actual_hours: 实际工时
+    availability: 时间稼动率
+    performance: 性能稼动率
+    quality: 良品率
+    oee: 设备综合效率 OEE
+    labor_efficiency: 劳动效率 = 标准工时 / 实际工时
+
+v_sales_fact:
+  title: 销售事实表
+  desc: 每条发货明细一行，按发货日期确认收入。查收入、销量、成本、毛利用这张。
+  questions: [销售收入, 销量, 毛利, 毛利率, 哪个客户贡献最大]
+  date_col: delivery_date
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all, SALES: all}
+  sensitive:
+    cost_cny: [ADMIN, FINANCE, MANAGEMENT]
+    gross_profit_cny: [ADMIN, FINANCE, MANAGEMENT]
+  columns:
+    delivery_no: 发货单号
+    delivery_date: 发货日期
+    month: 月份 YYYY-MM
+    quarter: 季度，如 2026-Q3
+    customer_name: 客户名称
+    industry: 客户行业
+    region: 客户区域
+    is_domestic: 是否内销，1 内销 / 0 外销
+    product_code: 产品型号
+    product_name: 产品名称
+    series: 产品系列，SHADED_POLE 罩极 / CROSSFLOW 贯流 / BLDC 无刷 / STEPPER 步进 / SERVO 伺服 / GEAR 减速
+    business_unit: 事业部，家电电机事业部 / 智能驱控事业部
+    qty: 销量（台）
+    revenue_cny: 销售收入（人民币）
+    cost_cny: 销售成本（人民币）
+    gross_profit_cny: 毛利（人民币）
+
+v_sales_order:
+  title: 销售订单
+  desc: 每张订单一行。
+  date_col: order_date
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all, SALES: all}
+  columns:
+    order_no: 订单号
+    customer_name: 客户名称
+    industry: 客户行业
+    order_date: 下单日期
+    required_date: 要求交期
+    status: 订单状态
+    salesperson: 业务员
+    amount_cny: 订单金额（人民币）
+    total_qty: 订单数量
+    shipped_qty: 已发货数量
+
+v_sales_invoice:
+  title: 销售发票与应收
+  desc: 每张发票一行，含未收金额和逾期天数。查应收、逾期用这张。
+  questions: [应收账款, 哪些客户逾期, 逾期金额]
+  date_col: invoice_date
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all, SALES: all}
+  columns:
+    invoice_no: 发票号
+    invoice_date: 开票日期
+    due_date: 到期日
+    total_cny: 发票金额（含税，人民币）
+    received_cny: 已收金额
+    outstanding_cny: 未收金额
+    overdue_days: 逾期天数，未逾期为 0 或负数
+    status: 状态，OPEN 未收 / PARTIAL 部分收款 / PAID 已收清
+    customer_name: 客户名称
+    industry: 客户行业
+    region: 客户区域
+
+v_receipt:
+  title: 回款记录
+  desc: 每笔收款一行。
+  questions: [本月回款多少, 回款方式]
+  date_col: receipt_date
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all}
+  columns:
+    receipt_no: 收款单号
+    receipt_date: 收款日期
+    amount_cny: 收款金额（人民币）
+    method: 收款方式，BANK 银行转账 / ACCEPTANCE 承兑汇票
+    customer_name: 客户名称
+    invoice_no: 对应发票号
+
+v_price_variance:
+  title: 采购价差
+  desc: 采购发票价和订单价的差异，按物料类别看原材料涨价对成本的影响。
+  questions: [铜价涨了多少, 采购价差]
+  date_col: invoice_date
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all}
+  columns:
+    invoice_date: 发票日期
+    month: 月份 YYYY-MM
+    supplier_name: 供应商
+    material_code: 物料编码
+    material_name: 物料名称
+    category: 物料类别，COPPER 铜材 / MAGNET 磁钢
+    qty: 数量
+    po_price: 订单价
+    invoice_price: 发票价
+    variance: 价差金额
+    variance_rate: 价差率
+    variance_cogs: 计入销售成本的价差
+
+md_product:
+  title: 产品主数据
+  desc: 每个产品型号一行。
+  access: {"*": all}
+  sensitive:
+    conversion_cost: [ADMIN, FINANCE, MANAGEMENT]
+  columns:
+    code: 产品型号
+    name: 产品名称
+    series: 产品系列
+    business_unit: 事业部
+    list_price: 标准售价
+    conversion_cost: 单位加工费
+    status: 状态
+
+md_customer:
+  title: 客户主数据
+  desc: 每个客户一行。
+  access: {ADMIN: all, FINANCE: all, MANAGEMENT: all, SALES: all}
+  sensitive:
+    credit_limit: [ADMIN, FINANCE, MANAGEMENT, SALES]
+  columns:
+    code: 客户编码
+    name: 客户名称
+    industry: 行业
+    region: 区域
+    is_domestic: 是否内销
+    credit_limit: 信用额度
+    payment_terms_days: 账期天数
+    status: 状态

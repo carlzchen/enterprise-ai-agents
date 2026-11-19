@@ -1,0 +1,55 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: minierp
+      MYSQL_USER: minierp
+      MYSQL_PASSWORD: ${DB_PASSWORD:-minierp}
+      TZ: Asia/Shanghai
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci", "--innodb-flush-log-at-trx-commit=2"]
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      # 首次初始化时为技术助手建库与账号（已有数据卷时需手动执行一次该脚本）
+      - ./assistant/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-root}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: mysql
+      DB_PASSWORD: ${DB_PASSWORD:-minierp}
+      JWT_SECRET: ${JWT_SECRET:-local-dev-secret-change-me-0123456789abcdef0123456789}
+      SEED_ENABLED: "true"
+      SEED_END: ${SEED_END:-2026-09-28}
+      PLM_STORAGE: /data/plm
+      LOG_DIR: /app/logs
+      TZ: Asia/Shanghai
+    volumes:
+      - plm-files:/data/plm
+      - ./logs/backend:/app/logs
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NPM_REGISTRY: ${NPM_REGISTRY:-https://registry.npmjs.org}
+    depends_on:
+      - backend
+    ports:
+      - "5180:80"
+
+volumes:
+  mysql-data:
+  plm-files:

@@ -1,0 +1,22 @@
+# Prometheus 抓取配置：每 15 秒到各服务的 /metrics 取一次数
+global:
+  scrape_interval: 15s
+  evaluation_interval: 30s
+
+rule_files:
+  - /etc/prometheus/alerts.yml
+
+scrape_configs:
+  - job_name: kbase            # 知识库服务
+    static_configs:
+      - targets: ["host.docker.internal:8094"]
+  - job_name: copilot          # 问数服务
+    static_configs:
+      - targets: ["host.docker.internal:8093"]
+  - job_name: rabbitmq         # 消息队列自带的指标
+    static_configs:
+      - targets: ["rabbitmq:15692"]
+  # 换成自建 vLLM 后把下面的注释打开：vLLM 自带排队数、首字时间、吞吐等指标
+  # - job_name: vllm
+  #   static_configs:
+  #     - targets: ["gpu-server:8000"]

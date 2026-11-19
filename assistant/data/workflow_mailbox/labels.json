@@ -1,0 +1,484 @@
+{
+ "inq01": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 1,
+  "fields": {
+   "power_w": 12,
+   "voltage_v": 220,
+   "annual_volume": 50000
+  }
+ },
+ "inq02": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 2,
+  "fields": {
+   "model": "KL-SP-YJ68-25W-220",
+   "annual_volume": 30000
+  }
+ },
+ "inq03": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 18,
+  "fields": {
+   "power_w": 750,
+   "voltage_v": 220,
+   "speed_rpm": 3000,
+   "annual_volume": 6000
+  }
+ },
+ "inq04": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 5,
+  "fields": {}
+ },
+ "inq05": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 7,
+  "fields": {
+   "power_w": 90,
+   "voltage_v": 310,
+   "annual_volume": 20000,
+   "target_price": 85
+  }
+ },
+ "inq06": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 9,
+  "fields": {
+   "power_w": 1500,
+   "voltage_v": 220,
+   "torque_nm": 4.5,
+   "annual_volume": 1200
+  }
+ },
+ "inq07": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 3,
+  "fields": {
+   "voltage_v": 220,
+   "annual_volume": 15000
+  }
+ },
+ "inq08": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 11,
+  "fields": {
+   "power_w": 12,
+   "voltage_v": 12,
+   "annual_volume": 40000
+  }
+ },
+ "inq09": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 12,
+  "fields": {
+   "model": "KL-SV-60-200W",
+   "annual_volume": 3000
+  },
+  "items": 2
+ },
+ "ctr01": {
+  "intents": [
+   "counter_offer"
+  ],
+  "customer": 4,
+  "fields": {
+   "target_price": 190,
+   "qty": 8000
+  }
+ },
+ "ctr02": {
+  "intents": [
+   "counter_offer"
+  ],
+  "customer": 6,
+  "fields": {
+   "target_price": 72,
+   "model": "KL-BL-60W-310"
+  }
+ },
+ "ctr03": {
+  "intents": [
+   "counter_offer"
+  ],
+  "customer": 8,
+  "fields": {
+   "quote_no": "Q-2610-0031",
+   "target_price": null
+  }
+ },
+ "ctr04": {
+  "intents": [
+   "counter_offer"
+  ],
+  "customer": 10,
+  "fields": {
+   "target_price": 30.5,
+   "model": "KL-ST-42x48"
+  }
+ },
+ "ctr05": {
+  "intents": [
+   "counter_offer"
+  ],
+  "customer": 13,
+  "fields": {
+   "target_price": 38,
+   "model": "KL-CF-60X360",
+   "qty": 10000
+  }
+ },
+ "po01": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 1,
+  "fields": {
+   "po_no": "PO-HL-261001",
+   "model": "KL-SP-YJ48-5W-220",
+   "qty": 12000,
+   "unit_price": 17.5,
+   "required_date": "2026-11-21",
+   "payment_days": 90
+  }
+ },
+ "po02": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 2,
+  "fields": {
+   "po_no": "4500012345",
+   "model": "KL-SP-YJ61-12W-220",
+   "qty": 8000,
+   "unit_price": 21.8,
+   "required_date": "2026-11-16",
+   "payment_days": 90
+  }
+ },
+ "po03": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 18,
+  "fields": {
+   "po_no": "PO-EU-7781",
+   "model": "KL-SV-80-750W",
+   "qty": 500,
+   "unit_price": 285,
+   "required_date": "2026-12-01",
+   "payment_days": 60
+  }
+ },
+ "po04": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 5,
+  "fields": {
+   "po_no": "NB-PO-0926",
+   "model": "KL-BL-36W-310",
+   "qty": 3000,
+   "unit_price": 73,
+   "required_date": "2026-11-11"
+  },
+  "items": 2
+ },
+ "po05": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 9,
+  "fields": {
+   "po_no": "ZD20261012-03",
+   "model": "KL-SV-130-1500W",
+   "qty": 200,
+   "unit_price": 405,
+   "required_date": "2026-11-06"
+  }
+ },
+ "po06": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 7,
+  "fields": {
+   "po_no": "JH-2610-88",
+   "model": "KL-BL-90W-310",
+   "qty": 5000,
+   "unit_price": 92
+  }
+ },
+ "dlv01": {
+  "intents": [
+   "delivery_query"
+  ],
+  "customer": 1,
+  "fields": {
+   "order_no": "SO2609240001"
+  }
+ },
+ "dlv02": {
+  "intents": [
+   "delivery_query"
+  ],
+  "customer": 2,
+  "fields": {
+   "order_no": "SO2609180001",
+   "new_date": "2026-10-17"
+  }
+ },
+ "dlv03": {
+  "intents": [
+   "delivery_query"
+  ],
+  "customer": 18,
+  "fields": {
+   "po_no": "PO-EU-7781"
+  }
+ },
+ "dlv04": {
+  "intents": [
+   "delivery_query"
+  ],
+  "customer": 3,
+  "fields": {
+   "order_no": "SO2609230002"
+  }
+ },
+ "dlv05": {
+  "intents": [
+   "delivery_query"
+  ],
+  "customer": 6,
+  "fields": {}
+ },
+ "smp01": {
+  "intents": [
+   "sample"
+  ],
+  "customer": 4
+ },
+ "smp02": {
+  "intents": [
+   "sample"
+  ],
+  "customer": 8
+ },
+ "smp03": {
+  "intents": [
+   "sample"
+  ],
+  "customer": 18
+ },
+ "smp04": {
+  "intents": [
+   "sample"
+  ],
+  "customer": 10
+ },
+ "tnd01": {
+  "intents": [
+   "tender"
+  ],
+  "customer": 1
+ },
+ "tnd02": {
+  "intents": [
+   "tender"
+  ],
+  "customer": 2
+ },
+ "tnd03": {
+  "intents": [
+   "tender"
+  ],
+  "customer": 18
+ },
+ "cmp01": {
+  "intents": [
+   "complaint"
+  ],
+  "customer": 3
+ },
+ "cmp02": {
+  "intents": [
+   "complaint"
+  ],
+  "customer": 18
+ },
+ "cmp03": {
+  "intents": [
+   "complaint"
+  ],
+  "customer": 11
+ },
+ "sup01": {
+  "intents": [
+   "supplier_reply"
+  ],
+  "supplier": true
+ },
+ "sup02": {
+  "intents": [
+   "supplier_reply"
+  ],
+  "supplier": true
+ },
+ "sup03": {
+  "intents": [
+   "supplier_reply"
+  ],
+  "supplier": true
+ },
+ "sup04": {
+  "intents": [
+   "supplier_reply"
+  ],
+  "supplier": true
+ },
+ "inv01": {
+  "intents": [
+   "invoice"
+  ],
+  "supplier": true
+ },
+ "inv02": {
+  "intents": [
+   "invoice"
+  ],
+  "supplier": true
+ },
+ "inv03": {
+  "intents": [
+   "invoice"
+  ],
+  "customer": 1
+ },
+ "oth01": {
+  "intents": [
+   "other"
+  ]
+ },
+ "oth02": {
+  "intents": [
+   "other"
+  ]
+ },
+ "oth03": {
+  "intents": [
+   "other"
+  ],
+  "customer": 5
+ },
+ "oth04": {
+  "intents": [
+   "other"
+  ]
+ },
+ "mul01": {
+  "intents": [
+   "purchase_order"
+  ],
+  "customer": 4,
+  "fields": {
+   "po_no": "PO-MS-2610-07",
+   "model": "KL-SV-80-400W",
+   "qty": 8000,
+   "unit_price": 189
+  }
+ },
+ "mul02": {
+  "intents": [
+   "delivery_query",
+   "new_inquiry"
+  ],
+  "customer": 2,
+  "fields": {
+   "power_w": 18,
+   "voltage_v": 220,
+   "annual_volume": 20000
+  }
+ },
+ "mul03": {
+  "intents": [
+   "sample",
+   "counter_offer"
+  ],
+  "customer": 8,
+  "fields": {
+   "target_price": 95
+  }
+ },
+ "mul04": {
+  "intents": [
+   "complaint",
+   "purchase_order"
+  ],
+  "customer": 3,
+  "fields": {
+   "po_no": "PO-FS-1012",
+   "model": "KL-CF-65X480",
+   "qty": 2000,
+   "unit_price": 43
+  }
+ },
+ "unk01": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "unknown": true,
+  "fields": {
+   "model": "KL-SV-60-200W"
+  }
+ },
+ "unk02": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "unknown": true,
+  "fields": {
+   "power_w": 120,
+   "voltage_v": 310,
+   "annual_volume": 10000
+  }
+ },
+ "fwd01": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 6,
+  "fields": {
+   "model": "KL-BL-120W-310",
+   "annual_volume": 6000
+  }
+ },
+ "inj01": {
+  "intents": [
+   "new_inquiry"
+  ],
+  "customer": 12,
+  "fields": {
+   "model": "KL-SV-80-400W",
+   "annual_volume": 2000
+  }
+ }
+}

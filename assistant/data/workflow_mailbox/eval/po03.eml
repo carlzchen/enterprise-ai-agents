@@ -1,0 +1,14 @@
+From: c018.contact0@example.com
+To: sales@kelang.example.com
+Subject: Purchase Order PO-EU-7781
+Message-ID: <eval-po03@workflow-sample>
+Date: Mon, 12 Oct 2026 10:52:00 +0800
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please find our PO below.
+PO: PO-EU-7781
+Item: KL-SV-80-750W, Qty 500 pcs, Unit price CNY 285.00
+Delivery: 2026-12-01
+Payment: Net 60

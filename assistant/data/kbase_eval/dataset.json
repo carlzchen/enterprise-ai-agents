@@ -1,0 +1,3898 @@
+[
+ {
+  "id": "P001",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-GR-GM25 的工作环境温度是多少？",
+  "ground_truth": "KL-GR-GM25 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-GR-GM25",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300031"
+  ]
+ },
+ {
+  "id": "P002",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W效率多少",
+  "ground_truth": "KL-SV-130-1500W 的效率是 ≥ 88%。",
+  "expected": "≥ 88%",
+  "model": "KL-SV-130-1500W",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300026"
+  ]
+ },
+ {
+  "id": "P003",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-1500W 这款的寿命是多少",
+  "ground_truth": "KL-SV-130-1500W 的寿命是 ≥ 20000h。",
+  "expected": "≥ 20000h",
+  "model": "KL-SV-130-1500W",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300026"
+  ]
+ },
+ {
+  "id": "P004",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SP-YJ48-5W-220 的噪声",
+  "ground_truth": "KL-SP-YJ48-5W-220 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-SP-YJ48-5W-220",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300001"
+  ]
+ },
+ {
+  "id": "P005",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-60W-310 的额定功率是多少？",
+  "ground_truth": "KL-BL-60W-310 的额定功率是 60 W。",
+  "expected": "60 W",
+  "model": "KL-BL-60W-310",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "DOC2409300013",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P006",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-GR-TYD49额定转速多少",
+  "ground_truth": "KL-GR-TYD49 的额定转速是 30 rpm。",
+  "expected": "30 rpm",
+  "model": "KL-GR-TYD49",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300028",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P007",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-80-750W 这款的额定转矩是多少",
+  "ground_truth": "KL-SV-80-750W 的额定转矩是 2.388 N·m。",
+  "expected": "2.388 N·m",
+  "model": "KL-SV-80-750W",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300024",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P008",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-57x76 的额定电压",
+  "ground_truth": "KL-ST-57x76 的额定电压是 24VDC。",
+  "expected": "24VDC",
+  "model": "KL-ST-57x76",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300020",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P009",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-90W-310 的温升是多少？",
+  "ground_truth": "KL-BL-90W-310 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-BL-90W-310",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300014"
+  ]
+ },
+ {
+  "id": "P010",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ58-8W-220绝缘等级多少",
+  "ground_truth": "KL-SP-YJ58-8W-220 的绝缘等级是 B 级。",
+  "expected": "B 级",
+  "model": "KL-SP-YJ58-8W-220",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300002",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P011",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-1500W 这款的法兰边长是多少",
+  "ground_truth": "KL-SV-130-1500W 的法兰边长是 130 mm。",
+  "expected": "130",
+  "model": "KL-SV-130-1500W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P012",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-80-400W 的安装孔数量",
+  "ground_truth": "KL-SV-80-400W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-80-400W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P013",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 的安装孔直径是多少？",
+  "ground_truth": "KL-SV-80-400W 的安装孔直径是 6 mm。",
+  "expected": "6",
+  "model": "KL-SV-80-400W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P014",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W安装孔分度圆多少",
+  "ground_truth": "KL-SV-110-1200W 的安装孔分度圆是 130 mm。",
+  "expected": "130",
+  "model": "KL-SV-110-1200W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P015",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-110-1200W 这款的防护等级是多少",
+  "ground_truth": "KL-SV-110-1200W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-110-1200W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300025",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P016",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-60-200W 的轴径",
+  "ground_truth": "KL-SV-60-200W 的轴径是 14（+0.008/-0.003） mm。",
+  "expected": "14（+0.008/-0.003）",
+  "model": "KL-SV-60-200W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P017",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 的轴伸长度是多少？",
+  "ground_truth": "KL-SV-110-1200W 的轴伸长度是 40 mm。",
+  "expected": "40",
+  "model": "KL-SV-110-1200W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P018",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W止口直径多少",
+  "ground_truth": "KL-SV-80-750W 的止口直径是 70（+0/-0.03） mm。",
+  "expected": "70（+0/-0.03）",
+  "model": "KL-SV-80-750W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P019",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-CF-80X600 这款的工作环境温度是多少",
+  "ground_truth": "KL-CF-80X600 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-CF-80X600",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300011"
+  ]
+ },
+ {
+  "id": "P020",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-80-750W 的效率",
+  "ground_truth": "KL-SV-80-750W 的效率是 ≥ 88%。",
+  "expected": "≥ 88%",
+  "model": "KL-SV-80-750W",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300024"
+  ]
+ },
+ {
+  "id": "P021",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-ST-57x76 的寿命是多少？",
+  "ground_truth": "KL-ST-57x76 的寿命是 ≥ 20000h。",
+  "expected": "≥ 20000h",
+  "model": "KL-ST-57x76",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300020"
+  ]
+ },
+ {
+  "id": "P022",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-90W-310噪声多少",
+  "ground_truth": "KL-BL-90W-310 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-BL-90W-310",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300014"
+  ]
+ },
+ {
+  "id": "P023",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ72-30W-220 这款的额定功率是多少",
+  "ground_truth": "KL-SP-YJ72-30W-220 的额定功率是 30 W。",
+  "expected": "30 W",
+  "model": "KL-SP-YJ72-30W-220",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "DOC2409300008",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P024",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-CF-65x480 的额定转速",
+  "ground_truth": "KL-CF-65x480 的额定转速是 1300 rpm。",
+  "expected": "1300 rpm",
+  "model": "KL-CF-65x480",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300010",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P025",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-CF-80x600 的额定转矩是多少？",
+  "ground_truth": "KL-CF-80x600 的额定转矩是 0.147 N·m。",
+  "expected": "0.147 N·m",
+  "model": "KL-CF-80x600",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300011",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P026",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-90W-310额定电压多少",
+  "ground_truth": "KL-BL-90W-310 的额定电压是 310VDC。",
+  "expected": "310VDC",
+  "model": "KL-BL-90W-310",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300014",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P027",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ48-5W-220 这款的温升是多少",
+  "ground_truth": "KL-SP-YJ48-5W-220 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SP-YJ48-5W-220",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300001"
+  ]
+ },
+ {
+  "id": "P028",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-2000W 的绝缘等级",
+  "ground_truth": "KL-SV-130-2000W 的绝缘等级是 F 级。",
+  "expected": "F 级",
+  "model": "KL-SV-130-2000W",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300027",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P029",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 的法兰边长是多少？",
+  "ground_truth": "KL-SV-130-2000W 的法兰边长是 130 mm。",
+  "expected": "130",
+  "model": "KL-SV-130-2000W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P030",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W安装孔数量多少",
+  "ground_truth": "KL-SV-130-2000W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-130-2000W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P031",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-80-750W 这款的安装孔直径是多少",
+  "ground_truth": "KL-SV-80-750W 的安装孔直径是 6 mm。",
+  "expected": "6",
+  "model": "KL-SV-80-750W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P032",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-80-400W 的安装孔分度圆",
+  "ground_truth": "KL-SV-80-400W 的安装孔分度圆是 90 mm。",
+  "expected": "90",
+  "model": "KL-SV-80-400W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P033",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 的防护等级是多少？",
+  "ground_truth": "KL-SV-130-2000W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-130-2000W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300027",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P034",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W轴径多少",
+  "ground_truth": "KL-SV-110-1200W 的轴径是 19（+0.009/-0.004） mm。",
+  "expected": "19（+0.009/-0.004）",
+  "model": "KL-SV-110-1200W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P035",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-80-750W 这款的轴伸长度是多少",
+  "ground_truth": "KL-SV-80-750W 的轴伸长度是 35 mm。",
+  "expected": "35",
+  "model": "KL-SV-80-750W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P036",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-2000W 的止口直径",
+  "ground_truth": "KL-SV-130-2000W 的止口直径是 110（+0/-0.035） mm。",
+  "expected": "110（+0/-0.035）",
+  "model": "KL-SV-130-2000W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P037",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-GR-TYD50 的工作环境温度是多少？",
+  "ground_truth": "KL-GR-TYD50 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-GR-TYD50",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300029"
+  ]
+ },
+ {
+  "id": "P038",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-ST-57x76效率多少",
+  "ground_truth": "KL-ST-57x76 的效率是 —（保持转矩见下表）。",
+  "expected": "—（保持转矩见下表）",
+  "model": "KL-ST-57x76",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300020"
+  ]
+ },
+ {
+  "id": "P039",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ68-25W-220 这款的寿命是多少",
+  "ground_truth": "KL-SP-YJ68-25W-220 的寿命是 ≥ 10000h。",
+  "expected": "≥ 10000h",
+  "model": "KL-SP-YJ68-25W-220",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300006"
+  ]
+ },
+ {
+  "id": "P040",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-57x76 的噪声",
+  "ground_truth": "KL-ST-57x76 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-ST-57x76",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300020"
+  ]
+ },
+ {
+  "id": "P041",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-36W-310 的额定功率是多少？",
+  "ground_truth": "KL-BL-36W-310 的额定功率是 36 W。",
+  "expected": "36 W",
+  "model": "KL-BL-36W-310",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "DOC2409300012",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P042",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-GR-GM25额定转速多少",
+  "ground_truth": "KL-GR-GM25 的额定转速是 30 rpm。",
+  "expected": "30 rpm",
+  "model": "KL-GR-GM25",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300031",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P043",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-BL-36W-310 这款的额定转矩是多少",
+  "ground_truth": "KL-BL-36W-310 的额定转矩是 0.287 N·m。",
+  "expected": "0.287 N·m",
+  "model": "KL-BL-36W-310",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300012",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P044",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-BL-36W-310 的额定电压",
+  "ground_truth": "KL-BL-36W-310 的额定电压是 310VDC。",
+  "expected": "310VDC",
+  "model": "KL-BL-36W-310",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300012",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P045",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 的温升是多少？",
+  "ground_truth": "KL-SV-110-1200W 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SV-110-1200W",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300025"
+  ]
+ },
+ {
+  "id": "P046",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-CF-80x600绝缘等级多少",
+  "ground_truth": "KL-CF-80x600 的绝缘等级是 B 级。",
+  "expected": "B 级",
+  "model": "KL-CF-80x600",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300011",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P047",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-110-1200W 这款的法兰边长是多少",
+  "ground_truth": "KL-SV-110-1200W 的法兰边长是 110 mm。",
+  "expected": "110",
+  "model": "KL-SV-110-1200W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P048",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-110-1200W 的安装孔数量",
+  "ground_truth": "KL-SV-110-1200W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-110-1200W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P049",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 的安装孔直径是多少？",
+  "ground_truth": "KL-SV-110-1200W 的安装孔直径是 9 mm。",
+  "expected": "9",
+  "model": "KL-SV-110-1200W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P050",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W安装孔分度圆多少",
+  "ground_truth": "KL-SV-130-1500W 的安装孔分度圆是 145 mm。",
+  "expected": "145",
+  "model": "KL-SV-130-1500W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P051",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-80-750W 这款的防护等级是多少",
+  "ground_truth": "KL-SV-80-750W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-80-750W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300024",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P052",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-1500W 的轴径",
+  "ground_truth": "KL-SV-130-1500W 的轴径是 22（+0.009/-0.004） mm。",
+  "expected": "22（+0.009/-0.004）",
+  "model": "KL-SV-130-1500W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P053",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 的轴伸长度是多少？",
+  "ground_truth": "KL-SV-60-200W 的轴伸长度是 30 mm。",
+  "expected": "30",
+  "model": "KL-SV-60-200W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P054",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W止口直径多少",
+  "ground_truth": "KL-SV-110-1200W 的止口直径是 95（+0/-0.035） mm。",
+  "expected": "95（+0/-0.035）",
+  "model": "KL-SV-110-1200W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ]
+ },
+ {
+  "id": "P055",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ61-12W-120 这款的工作环境温度是多少",
+  "ground_truth": "KL-SP-YJ61-12W-120 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-SP-YJ61-12W-120",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300004"
+  ]
+ },
+ {
+  "id": "P056",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-42x40 的效率",
+  "ground_truth": "KL-ST-42x40 的效率是 —（保持转矩见下表）。",
+  "expected": "—（保持转矩见下表）",
+  "model": "KL-ST-42x40",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300017"
+  ]
+ },
+ {
+  "id": "P057",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-36W-310 的寿命是多少？",
+  "ground_truth": "KL-BL-36W-310 的寿命是 ≥ 20000h。",
+  "expected": "≥ 20000h",
+  "model": "KL-BL-36W-310",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300012"
+  ]
+ },
+ {
+  "id": "P058",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-36W-310噪声多少",
+  "ground_truth": "KL-BL-36W-310 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-BL-36W-310",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300012"
+  ]
+ },
+ {
+  "id": "P059",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-1500W 这款的额定功率是多少",
+  "ground_truth": "KL-SV-130-1500W 的额定功率是 1500 W。",
+  "expected": "1500 W",
+  "model": "KL-SV-130-1500W",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "DOC2409300026",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P060",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SP-YJ68-25W-220 的额定转速",
+  "ground_truth": "KL-SP-YJ68-25W-220 的额定转速是 2600 rpm。",
+  "expected": "2600 rpm",
+  "model": "KL-SP-YJ68-25W-220",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300006",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P061",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ58-8W-220 的额定转矩是多少？",
+  "ground_truth": "KL-SP-YJ58-8W-220 的额定转矩是 0.029 N·m。",
+  "expected": "0.029 N·m",
+  "model": "KL-SP-YJ58-8W-220",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300002",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P062",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ72-30W-220额定电压多少",
+  "ground_truth": "KL-SP-YJ72-30W-220 的额定电压是 220V。",
+  "expected": "220V",
+  "model": "KL-SP-YJ72-30W-220",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300008",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P063",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ61-12W-220 这款的温升是多少",
+  "ground_truth": "KL-SP-YJ61-12W-220 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SP-YJ61-12W-220",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300003"
+  ]
+ },
+ {
+  "id": "P064",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-57x56 的绝缘等级",
+  "ground_truth": "KL-ST-57x56 的绝缘等级是 B 级。",
+  "expected": "B 级",
+  "model": "KL-ST-57x56",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300019",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P065",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 的法兰边长是多少？",
+  "ground_truth": "KL-SV-80-750W 的法兰边长是 80 mm。",
+  "expected": "80",
+  "model": "KL-SV-80-750W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P066",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W安装孔数量多少",
+  "ground_truth": "KL-SV-60-200W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-60-200W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P067",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-1500W 这款的安装孔直径是多少",
+  "ground_truth": "KL-SV-130-1500W 的安装孔直径是 9 mm。",
+  "expected": "9",
+  "model": "KL-SV-130-1500W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P068",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-2000W 的安装孔分度圆",
+  "ground_truth": "KL-SV-130-2000W 的安装孔分度圆是 145 mm。",
+  "expected": "145",
+  "model": "KL-SV-130-2000W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P069",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 的防护等级是多少？",
+  "ground_truth": "KL-SV-80-400W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-80-400W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300023",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P070",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W轴径多少",
+  "ground_truth": "KL-SV-80-750W 的轴径是 19（+0.009/-0.004） mm。",
+  "expected": "19（+0.009/-0.004）",
+  "model": "KL-SV-80-750W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P071",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-2000W 这款的轴伸长度是多少",
+  "ground_truth": "KL-SV-130-2000W 的轴伸长度是 55 mm。",
+  "expected": "55",
+  "model": "KL-SV-130-2000W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P072",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-80-400W 的止口直径",
+  "ground_truth": "KL-SV-80-400W 的止口直径是 70（+0/-0.03） mm。",
+  "expected": "70（+0/-0.03）",
+  "model": "KL-SV-80-400W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P073",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-CF-60X360 的工作环境温度是多少？",
+  "ground_truth": "KL-CF-60X360 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-CF-60X360",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300009"
+  ]
+ },
+ {
+  "id": "P074",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-60W-310效率多少",
+  "ground_truth": "KL-BL-60W-310 的效率是 80%~88%。",
+  "expected": "80%~88%",
+  "model": "KL-BL-60W-310",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300013"
+  ]
+ },
+ {
+  "id": "P075",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SP-YJ72-30W-220 这款的寿命是多少",
+  "ground_truth": "KL-SP-YJ72-30W-220 的寿命是 ≥ 10000h。",
+  "expected": "≥ 10000h",
+  "model": "KL-SP-YJ72-30W-220",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300008"
+  ]
+ },
+ {
+  "id": "P076",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-42x40 的噪声",
+  "ground_truth": "KL-ST-42x40 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-ST-42x40",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300017"
+  ]
+ },
+ {
+  "id": "P077",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-ST-57x76 的额定功率是多少？",
+  "ground_truth": "KL-ST-57x76 的额定功率是 0 W。",
+  "expected": "0 W",
+  "model": "KL-ST-57x76",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P078",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-220额定转速多少",
+  "ground_truth": "KL-SP-YJ61-12W-220 的额定转速是 2600 rpm。",
+  "expected": "2600 rpm",
+  "model": "KL-SP-YJ61-12W-220",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300003",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P079",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-BL-120W-310 这款的额定转矩是多少",
+  "ground_truth": "KL-BL-120W-310 的额定转矩是 0.955 N·m。",
+  "expected": "0.955 N·m",
+  "model": "KL-BL-120W-310",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300015",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P080",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SP-YJ68-25W-120 的额定电压",
+  "ground_truth": "KL-SP-YJ68-25W-120 的额定电压是 120V。",
+  "expected": "120V",
+  "model": "KL-SP-YJ68-25W-120",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300007",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P081",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-GR-TYD49 的温升是多少？",
+  "ground_truth": "KL-GR-TYD49 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-GR-TYD49",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300028"
+  ]
+ },
+ {
+  "id": "P082",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-220绝缘等级多少",
+  "ground_truth": "KL-SP-YJ68-25W-220 的绝缘等级是 B 级。",
+  "expected": "B 级",
+  "model": "KL-SP-YJ68-25W-220",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300006",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P083",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-80-400W 这款的法兰边长是多少",
+  "ground_truth": "KL-SV-80-400W 的法兰边长是 80 mm。",
+  "expected": "80",
+  "model": "KL-SV-80-400W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P084",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-1500W 的安装孔数量",
+  "ground_truth": "KL-SV-130-1500W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-130-1500W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P085",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 的安装孔直径是多少？",
+  "ground_truth": "KL-SV-60-200W 的安装孔直径是 5.5 mm。",
+  "expected": "5.5",
+  "model": "KL-SV-60-200W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P086",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W安装孔分度圆多少",
+  "ground_truth": "KL-SV-80-750W 的安装孔分度圆是 90 mm。",
+  "expected": "90",
+  "model": "KL-SV-80-750W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P087",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-60-200W 这款的防护等级是多少",
+  "ground_truth": "KL-SV-60-200W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-60-200W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300022",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P088",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-2000W 的轴径",
+  "ground_truth": "KL-SV-130-2000W 的轴径是 22（+0.009/-0.004） mm。",
+  "expected": "22（+0.009/-0.004）",
+  "model": "KL-SV-130-2000W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P089",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 的轴伸长度是多少？",
+  "ground_truth": "KL-SV-80-400W 的轴伸长度是 35 mm。",
+  "expected": "35",
+  "model": "KL-SV-80-400W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P090",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W止口直径多少",
+  "ground_truth": "KL-SV-60-200W 的止口直径是 50（+0/-0.025） mm。",
+  "expected": "50（+0/-0.025）",
+  "model": "KL-SV-60-200W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P091",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-GR-TYD49 这款的工作环境温度是多少",
+  "ground_truth": "KL-GR-TYD49 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-GR-TYD49",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300028"
+  ]
+ },
+ {
+  "id": "P092",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-GR-TYD50 的效率",
+  "ground_truth": "KL-GR-TYD50 的效率是 35%~55%（含减速箱）。",
+  "expected": "35%~55%（含减速箱）",
+  "model": "KL-GR-TYD50",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300029"
+  ]
+ },
+ {
+  "id": "P093",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-120 的寿命是多少？",
+  "ground_truth": "KL-SP-YJ61-12W-120 的寿命是 ≥ 10000h。",
+  "expected": "≥ 10000h",
+  "model": "KL-SP-YJ61-12W-120",
+  "param_key": "life_hours",
+  "gold_docs": [
+   "DOC2409300004"
+  ]
+ },
+ {
+  "id": "P094",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-120噪声多少",
+  "ground_truth": "KL-SP-YJ68-25W-120 的噪声是 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-SP-YJ68-25W-120",
+  "param_key": "noise",
+  "gold_docs": [
+   "DOC2409300007"
+  ]
+ },
+ {
+  "id": "P095",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-CF-60x360 这款的额定功率是多少",
+  "ground_truth": "KL-CF-60x360 的额定功率是 20 W。",
+  "expected": "20 W",
+  "model": "KL-CF-60x360",
+  "param_key": "rated_power",
+  "gold_docs": [
+   "DOC2409300009",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P096",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-ST-57x56 的额定转速",
+  "ground_truth": "KL-ST-57x56 的额定转速是 600 rpm。",
+  "expected": "600 rpm",
+  "model": "KL-ST-57x56",
+  "param_key": "rated_speed",
+  "gold_docs": [
+   "DOC2409300019",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P097",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-220 的额定转矩是多少？",
+  "ground_truth": "KL-SP-YJ61-12W-220 的额定转矩是 0.044 N·m。",
+  "expected": "0.044 N·m",
+  "model": "KL-SP-YJ61-12W-220",
+  "param_key": "rated_torque",
+  "gold_docs": [
+   "DOC2409300003",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P098",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W额定电压多少",
+  "ground_truth": "KL-SV-80-750W 的额定电压是 220VAC。",
+  "expected": "220VAC",
+  "model": "KL-SV-80-750W",
+  "param_key": "rated_voltage",
+  "gold_docs": [
+   "DOC2409300024",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P099",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-BL-36W-310 这款的温升是多少",
+  "ground_truth": "KL-BL-36W-310 的温升是 ≤ 75K（电阻法）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-BL-36W-310",
+  "param_key": "temp_rise",
+  "gold_docs": [
+   "DOC2409300012"
+  ]
+ },
+ {
+  "id": "P100",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-CF-60x360 的绝缘等级",
+  "ground_truth": "KL-CF-60x360 的绝缘等级是 B 级。",
+  "expected": "B 级",
+  "model": "KL-CF-60x360",
+  "param_key": "insulation_class",
+  "gold_docs": [
+   "DOC2409300009",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P101",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 的法兰边长是多少？",
+  "ground_truth": "KL-SV-60-200W 的法兰边长是 60 mm。",
+  "expected": "60",
+  "model": "KL-SV-60-200W",
+  "param_key": "flange_size",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P102",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W安装孔数量多少",
+  "ground_truth": "KL-SV-80-750W 的安装孔数量是 4 个。",
+  "expected": "4",
+  "model": "KL-SV-80-750W",
+  "param_key": "hole_count",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ]
+ },
+ {
+  "id": "P103",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-2000W 这款的安装孔直径是多少",
+  "ground_truth": "KL-SV-130-2000W 的安装孔直径是 9 mm。",
+  "expected": "9",
+  "model": "KL-SV-130-2000W",
+  "param_key": "hole_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ]
+ },
+ {
+  "id": "P104",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-60-200W 的安装孔分度圆",
+  "ground_truth": "KL-SV-60-200W 的安装孔分度圆是 70 mm。",
+  "expected": "70",
+  "model": "KL-SV-60-200W",
+  "param_key": "pcd",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ]
+ },
+ {
+  "id": "P105",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W 的防护等级是多少？",
+  "ground_truth": "KL-SV-130-1500W 的防护等级是 IP65。",
+  "expected": "IP65",
+  "model": "KL-SV-130-1500W",
+  "param_key": "protection_class",
+  "gold_docs": [
+   "DOC2409300026",
+   "SEL-KL-2026"
+  ]
+ },
+ {
+  "id": "P106",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W轴径多少",
+  "ground_truth": "KL-SV-80-400W 的轴径是 19（+0.009/-0.004） mm。",
+  "expected": "19（+0.009/-0.004）",
+  "model": "KL-SV-80-400W",
+  "param_key": "shaft_dia",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ]
+ },
+ {
+  "id": "P107",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "请问 KL-SV-130-1500W 这款的轴伸长度是多少",
+  "ground_truth": "KL-SV-130-1500W 的轴伸长度是 55 mm。",
+  "expected": "55",
+  "model": "KL-SV-130-1500W",
+  "param_key": "shaft_len",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P108",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "查一下 KL-SV-130-1500W 的止口直径",
+  "ground_truth": "KL-SV-130-1500W 的止口直径是 110（+0/-0.035） mm。",
+  "expected": "110（+0/-0.035）",
+  "model": "KL-SV-130-1500W",
+  "param_key": "spigot_dia",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ]
+ },
+ {
+  "id": "P109",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-220 的工作环境温度是多少？",
+  "ground_truth": "KL-SP-YJ68-25W-220 的工作环境温度是 -10℃ ~ +40℃。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-SP-YJ68-25W-220",
+  "param_key": "ambient_temp",
+  "gold_docs": [
+   "DOC2409300006"
+  ]
+ },
+ {
+  "id": "P110",
+  "kind": "PARAM",
+  "role": "ADMIN",
+  "question": "KL-BL-120W-310效率多少",
+  "ground_truth": "KL-BL-120W-310 的效率是 80%~88%。",
+  "expected": "80%~88%",
+  "model": "KL-BL-120W-310",
+  "param_key": "efficiency",
+  "gold_docs": [
+   "DOC2409300015"
+  ]
+ },
+ {
+  "id": "D001",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 这款交流伺服电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300024"
+  ],
+  "gold_parent": "7c29743776d2f3ff540581c8b1d42a57",
+  "gold_chunk": "a3bb38eedd5f3bc0f309b76798239304",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D002",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "寿命要求 ≥ 20000h；噪声要求 ≤ 60 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300025"
+  ],
+  "gold_parent": "5774e613da28b5ea539927d6be5cd84e",
+  "gold_chunk": "566050af397e227cd995bff37a9ddf26",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D003",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ72-30W-220 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300008"
+  ],
+  "gold_parent": "fc91703c14a8e2096d2d0334d03b759e",
+  "gold_chunk": "165f488d4793aed48f0d4d295ae3e9a0",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D004",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-GR-TYD49的时候能不能敲转轴，为什么？",
+  "ground_truth": "不能敲击转轴，因为会损伤轴承与磁钢。",
+  "gold_docs": [
+   "DOC2409300028"
+  ],
+  "gold_parent": "d810b4971642421c56309bc85d786874",
+  "gold_chunk": "1123d84f1b747004944ff1c68a2c4e4d",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D005",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-GR-TYD50的时候能不能敲转轴，为什么？",
+  "ground_truth": "不能敲击转轴，因为会损伤轴承与磁钢。",
+  "gold_docs": [
+   "DOC2409300029"
+  ],
+  "gold_parent": "32cf32ad408160a2755f81e1642cdc5b",
+  "gold_chunk": "3077d3c80e11021ba62e5dd6fbbc5e79",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D006",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-BL-90W-310的时候能不能敲转轴？还有供电电压有什么要求？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300014"
+  ],
+  "gold_parent": "616abd44b0d7aba28101cb529cc15a3a",
+  "gold_chunk": "8e71a43deea24ca03d9f4f39c4f679b4",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D007",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ58-8W-220 这个罩极电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300002"
+  ],
+  "gold_parent": "d0179b472740ff765d6294bd68ecf007",
+  "gold_chunk": "c34531d33402de332430cb061e914412",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D008",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-GR-GM37电机的时候，转轴能不能敲？还有供电电压有什么要求？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300030"
+  ],
+  "gold_parent": "fe0cae4ee4d6d69313be0bc7fdb1573b",
+  "gold_chunk": "dd77ffd40f3df924a0c9b4c5920c5583",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D009",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-CF-65X480的时候能不能敲转轴？还有电压用超了会咋样？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300010"
+  ],
+  "gold_parent": "65b32b4400c6cb3af2d1bf0b303e7364",
+  "gold_chunk": "096f9bfecb8fd4b062af8b4f26533e08",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D010",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 这款电机的寿命和噪声要达到什么标准才算合格？",
+  "ground_truth": "寿命要 ≥ 20000h，噪声要 ≤ 60 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300022"
+  ],
+  "gold_parent": "2c471407bf41dae30aa82fa6f4d3aae4",
+  "gold_chunk": "4b0054504b78dae2d5317dc2611fd638",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D011",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-120 这个罩极电机现在用的是哪个版本的 BOM？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300004"
+  ],
+  "gold_parent": "a6b8bef58b85a2c49bfc954e332473c2",
+  "gold_chunk": "5c83b09f59de4fabb68a56a92abb4997",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D012",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-BL-36W-310 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300012"
+  ],
+  "gold_parent": "a548d76b6d7a5dda72f3c2ffda0eb0f9",
+  "gold_chunk": "d0dccfd3c3c15709dbb065bd0887979f",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D013",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-120 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300007"
+  ],
+  "gold_parent": "a11f91464c12ee1494558e438cacf566",
+  "gold_chunk": "a863911e8809e6956c35e893a9facd30",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D014",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-220 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300003"
+  ],
+  "gold_parent": "a860cd80bfdd7f51a0963f8399441ea0",
+  "gold_chunk": "a85a537b41a1c9d4b1f344b414570c58",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D015",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-220 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300006"
+  ],
+  "gold_parent": "faccc9bd2cfd493be26e90fa035ee274",
+  "gold_chunk": "577b360e6e0c03ff424478dea8fba567",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D016",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W 伺服电机安装和使用时要注意哪些事？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标；须与匹配的伺服驱动器配套使用，编码器线缆长度不超过 20m，并做好屏蔽接地。",
+  "gold_docs": [
+   "DOC2409300026"
+  ],
+  "gold_parent": "bdf7d61aca8b0240cc89e603ae8843a6",
+  "gold_chunk": "a7130c7a7acaed454c452d434459cd60",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D017",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-BL-36W-310的时候能不能敲转轴？还有供电电压有什么要求？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300012"
+  ],
+  "gold_parent": "f1f0522c9a2d551e45ab9726ce35c309",
+  "gold_chunk": "7c3f832905778310a64f9870f4800546",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D018",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 这款交流伺服电机现在用的是哪个 BOM 版本啊？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300025"
+  ],
+  "gold_parent": "da6bff5a579fd97bf8df984e3813611d",
+  "gold_chunk": "b85807fa196f17072b9ea64fe131d4d6",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D019",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-220 这款电机的可靠性要求里，寿命和噪声的判定标准分别是什么？",
+  "ground_truth": "寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300006"
+  ],
+  "gold_parent": "7cea1bb2c65e441ac18379ca84de8953",
+  "gold_chunk": "adbf498ee0c9ce6cdcedadaefd2525e3",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D020",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-GR-GM25的时候能不能敲转轴？还有电压用超了会咋样？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "gold_docs": [
+   "DOC2409300031"
+  ],
+  "gold_parent": "4982303997dc6cf3a7ecc737b5ccaf6f",
+  "gold_chunk": "16bd9f5345dc0a57e8aadd25d2d5df4d",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D021",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W 这款交流伺服电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300026"
+  ],
+  "gold_parent": "cf1b6c231a97dde334dd79d2ace13448",
+  "gold_chunk": "0245ff751d82d8e40aeb37baeb7740a2",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D022",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-BL-36W-310 这款无刷直流电机现在用的是哪个版本的 BOM，归哪个事业部管？",
+  "ground_truth": "KL-BL-36W-310 当前 BOM 版本是 B，所属事业部是智能驱控事业部。",
+  "gold_docs": [
+   "DOC2409300012"
+  ],
+  "gold_parent": "02950be07af0a50c77327eae6ce67ce6",
+  "gold_chunk": "54de384e0be1c0577927e55d6b310386",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D023",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-18W-220 这个罩极电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300005"
+  ],
+  "gold_parent": "a3578c14b01da36a628d361499413a41",
+  "gold_chunk": "2caa318245a979a22304ed40197e0b8f",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D024",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "安装KL-SP-YJ61-12W-120电机时，转轴能不能敲？为什么？",
+  "ground_truth": "不能敲击转轴，因为敲击会损伤轴承与磁钢。",
+  "gold_docs": [
+   "DOC2409300004"
+  ],
+  "gold_parent": "6411437a860b1eb9c5b02d7c4720ceeb",
+  "gold_chunk": "922683b575d4d0c9574cb068d0f05206",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D025",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "1. 安装时请勿敲击转轴，避免轴承与磁钢损伤。2. 请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。3. 须与匹配的伺服驱动器配套使用，编码器线缆长度不超过 20m，并做好屏蔽接地。",
+  "gold_docs": [
+   "DOC2409300025"
+  ],
+  "gold_parent": "dbf32d5f007f4f56664d4b7667d365ba",
+  "gold_chunk": "d20b9ba4f1d5cf74639aecf2a1237f35",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D026",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-GR-TYD50 这个齿轮减速电机是哪个事业部做的，现在用的是哪个版本的BOM？",
+  "ground_truth": "KL-GR-TYD50 属于家电电机事业部，当前 BOM 版本是 A。",
+  "gold_docs": [
+   "DOC2409300029"
+  ],
+  "gold_parent": "b4d690f79a84bde5bb95989fd674c66e",
+  "gold_chunk": "fe5a50b0d60bcecdd7ed2b56e329a76e",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D027",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 伺服电机安装和使用时要注意哪些事项？",
+  "ground_truth": "安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标；须与匹配的伺服驱动器配套使用，编码器线缆长度不超过 20m，并做好屏蔽接地。",
+  "gold_docs": [
+   "DOC2409300027"
+  ],
+  "gold_parent": "c5bfc5f77e206fee83533cc58afa2268",
+  "gold_chunk": "c1a4fb2f35037fad6479472a635eb010",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D028",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-ST-57x56 这款两相混合式步进电机是哪个事业部做的，现在BOM版本到哪一版了？",
+  "ground_truth": "KL-ST-57x56 属于智能驱控事业部，当前 BOM 版本是 A。",
+  "gold_docs": [
+   "DOC2409300019"
+  ],
+  "gold_parent": "1f5e525493a2deeab6b6ba807c9997b8",
+  "gold_chunk": "574c780acad4c4eb6ad57b7a65782add",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D029",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-GR-GM25 齿轮减速电机是哪个事业部做的，现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-GR-GM25 齿轮减速电机属于家电电机事业部，当前 BOM 版本是 A。",
+  "gold_docs": [
+   "DOC2409300031"
+  ],
+  "gold_parent": "c5373db0208f814fce19004dd1235bb3",
+  "gold_chunk": "500e8438a25bdffad4b6b0701a051530",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D030",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-ST-42x40的时候能不能敲转轴？敲了会有什么问题？",
+  "ground_truth": "不能敲击转轴，否则可能损伤轴承与磁钢。",
+  "gold_docs": [
+   "DOC2409300017"
+  ],
+  "gold_parent": "99dfe0099b5b286fc36321b308843d6e",
+  "gold_chunk": "ce4e48d914da2c8ab6c11b0c377e16df",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D031",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-CF-80X600 这款电机的可靠性要求里，寿命和噪声的判定标准分别是多少？",
+  "ground_truth": "寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300011"
+  ],
+  "gold_parent": "5410f5a097e9122dfe12fc8c5f1030d6",
+  "gold_chunk": "d98cbea402992489ff2d0731d045da17",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D032",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-220 这个罩极电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300003"
+  ],
+  "gold_parent": "2c09ffed643a76d9ab4abb33e31d14a8",
+  "gold_chunk": "903166217bf30a208ff50f4eb77ca14b",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D033",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-CF-60X360 这款贯流风机现在用的是哪个 BOM 版本？",
+  "ground_truth": "当前 BOM 版本是 B。",
+  "gold_docs": [
+   "DOC2409300009"
+  ],
+  "gold_parent": "893a8db30e27d79be84f83a632254d18",
+  "gold_chunk": "78e6d754a37d6865ccf2bcbfc2141fcf",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D034",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "咱们KL-SV-80-750W这款交流伺服电机的寿命和噪声要达到什么标准才算合格？",
+  "ground_truth": "寿命要求≥20000h，噪声要求≤60 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300024"
+  ],
+  "gold_parent": "70aa16f0de9106afac4a3d37ae410812",
+  "gold_chunk": "55829e6e45ab46725b6e3ac9c32cfa65",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D035",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-CF-65X480 这款电机的可靠性要求里，寿命和噪声的判定标准分别是多少？",
+  "ground_truth": "寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300010"
+  ],
+  "gold_parent": "5f763c1b3862eb7db48de1fd5bdede47",
+  "gold_chunk": "cefe8aac680bd5d66155622787a8a6ed",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D036",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "装KL-ST-57x76电机的时候，能不能敲转轴？为什么？",
+  "ground_truth": "不能敲击转轴，因为敲击会损伤轴承与磁钢。",
+  "gold_docs": [
+   "DOC2409300020"
+  ],
+  "gold_parent": "1adf68158ce919e744fa0740801d76b0",
+  "gold_chunk": "1fb340f85c33848479817511e4f511ba",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D037",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-ST-86x98 这个型号的步进电机是哪个事业部负责的，现在BOM版本到哪一版了？",
+  "ground_truth": "KL-ST-86x98 属于智能驱控事业部，当前 BOM 版本是 A。",
+  "gold_docs": [
+   "DOC2409300021"
+  ],
+  "gold_parent": "1f4268e0db082aac39e1c4899f67bf5a",
+  "gold_chunk": "0b8db79d4fcae6525663ff1a8ca3e58e",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D038",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-120 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "gold_docs": [
+   "DOC2409300007"
+  ],
+  "gold_parent": "4fccbe8effd93d817d49554850f31a10",
+  "gold_chunk": "40d1f6e12d9fee7b3d22a0480e23506a",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "D039",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "PACKING 类物料来料检验标准里，同一供应商连续几批判退就要提交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退，须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300043"
+  ],
+  "gold_parent": "a6a1964095ec3b0106bb36c1e65a1ada",
+  "gold_chunk": "205cdaec083565b490186bc155a2a296",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D040",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "STEEL 类物料来料检验标准里，同一供应商连续几批被判退就要交 8D 报告并启动供应商审核啊？",
+  "ground_truth": "同一供应商连续 3 批判退，须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300048"
+  ],
+  "gold_parent": "fccc6961425d832d8f0576b73a51fef7",
+  "gold_chunk": "63af3f009d11c1b41b3ca5e878ff963e",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D041",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "COPPER 类物料来料检验标准里，同一供应商连续几批判退要交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退，须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300039"
+  ],
+  "gold_parent": "4dcb5407c2eb6ca237b9bc803f755525",
+  "gold_chunk": "c0b4d30469fc304d3a5e176392aea787",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D042",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按SHAFT类物料来料检验标准，同一供应商连续几批被判退就得交8D报告并启动供应商审核啊？",
+  "ground_truth": "同一供应商连续3批判退，就须提交8D报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300046"
+  ],
+  "gold_parent": "4765f61e9473788d4be958a27bc51d69",
+  "gold_chunk": "69e15344fea5527832a41895073cfe26",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D043",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "GEAR 类物料来料检验的抽样方案是怎么定的？抽检不良率到多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300041"
+  ],
+  "gold_parent": "cee25c089e44c4f557185252fe123e3e",
+  "gold_chunk": "8111099fae7e4953a3b1e3757f03167c",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D044",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "GEAR 类物料来料检验标准里，同一供应商连续几批被判退就要交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退，须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300041"
+  ],
+  "gold_parent": "194ae743c4b0f54f36fea31a4f01e50b",
+  "gold_chunk": "08368396a16aeefc46ecdeeee237a8c5",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D045",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "COPPER 类物料来料检验标准里，抽样方案是怎么定的？抽样不良率到多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 就整批判退。",
+  "gold_docs": [
+   "DOC2409300039"
+  ],
+  "gold_parent": "c9c7655b25f4ac6c04af9b6e21ba8504",
+  "gold_chunk": "6b233c126d3bc88c84c3144af2192219",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D046",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "MAGNET 类物料来料检验按什么抽样方案执行，抽检不良率到多少整批会被判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II、AQL = 2.0% 执行抽样；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300042"
+  ],
+  "gold_parent": "46585cb187b0bc598c8fed54c5ed8786",
+  "gold_chunk": "59ab0028c20a2a4bdd15d94d133a13ca",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D047",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "BEARING 类物料来料检验标准里，同一供应商连续几批判退要交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300038"
+  ],
+  "gold_parent": "11409bf3a14c716c6a41b0673e5f068f",
+  "gold_chunk": "307f59f930a44489269ff5f8aa410c46",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D048",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按PCB类物料来料检验标准，同一供应商连续3批被判退的话，我们这边要怎么处理？",
+  "ground_truth": "同一供应商连续3批判退，须要求其提交8D报告并启动供应商审核；判退批次由采购通知供应商退货。",
+  "gold_docs": [
+   "DOC2409300044"
+  ],
+  "gold_parent": "6ec6ab40e99680a739d276c856fb15c7",
+  "gold_chunk": "6a599be1b92cfd11737e6363f68aa727",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D049",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "MAGNET 类物料来料检验判退批次，同一供应商连续几批被退就要交8D报告和启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300042"
+  ],
+  "gold_parent": "6bbc8164ecabe323d4f1539fd1c97b98",
+  "gold_chunk": "4daf65234d6ee828031721e18a7f6c02",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D050",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "咱们PCB类物料来料检验的抽样方案是怎么定的，抽检不良率到多少就要整批判退？",
+  "ground_truth": "按GB/T 2828.1一般检验水平II执行，AQL=2.0%，抽样不良率超过2%就整批判退。",
+  "gold_docs": [
+   "DOC2409300044"
+  ],
+  "gold_parent": "643d5e4eca948b111a4fa7c83c650e98",
+  "gold_chunk": "58bf8781be68a97b18b3d997dded66ea",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D051",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "PLASTIC 类物料来料检验标准里，抽样方案是怎么定的？抽样不良率到多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 就整批判退。",
+  "gold_docs": [
+   "DOC2409300045"
+  ],
+  "gold_parent": "fba62c30a26808269ca4acd603315733",
+  "gold_chunk": "6dd8f1cba6e3cc4de80c4698e6899ff3",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D052",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "BEARING 类物料来料检验标准里，抽样方案是怎么定的？抽样不良率超过多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300038"
+  ],
+  "gold_parent": "614fa3bf1935412ef93640d367397061",
+  "gold_chunk": "1c879c09492f3da52d890b3f077f06ee",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D053",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "SPARE 类物料来料检验判退后，同一供应商连续几批被退就要交8D报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300047"
+  ],
+  "gold_parent": "cf00a7b9ad493516942c060a446301ab",
+  "gold_chunk": "38874c1aa8952d8c1e021a65384bb02a",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D054",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "ENCODER 类物料来料检验标准里，同一供应商连续几批判退要提交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300040"
+  ],
+  "gold_parent": "ebc4060fd0fafb0163fdfc16aaeac6a1",
+  "gold_chunk": "bc681c09db104a2f36a3f5d5ea979afb",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D055",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "STEEL 类物料来料检验按什么抽样方案执行，判定标准是什么？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300048"
+  ],
+  "gold_parent": "6a348b221e8611a242af28e69bcf0dde",
+  "gold_chunk": "50338b8ce70796e759a793a053de0c34",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D056",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "SPARE 类物料来料检验的抽样方案是怎么定的，整批退掉的标准是什么？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 就整批判退。",
+  "gold_docs": [
+   "DOC2409300047"
+  ],
+  "gold_parent": "d71dbfc469d39320e7c57a8ee6bf9dfc",
+  "gold_chunk": "5e6cdb7bf9a768410af408491dc0e6c3",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D057",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "ENCODER 类物料来料检验的抽样方案是怎么定的？抽样不良率到多少整批就要退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300040"
+  ],
+  "gold_parent": "26ddfd0174919234506f71dff07e400c",
+  "gold_chunk": "ff6de0a99e5bde10cc131b76243e0fa1",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D058",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "SHAFT 类物料来料检验的抽样方案是怎么定的？抽检不良率到多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 时整批判退。",
+  "gold_docs": [
+   "DOC2409300046"
+  ],
+  "gold_parent": "d5ca80a66e5d265553695354b82f332f",
+  "gold_chunk": "46d6a63e6e6fe3a46f1292e0b47c3d56",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D059",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "PLASTIC 类物料来料检验判退批次，同一供应商连续几批要交 8D 报告并启动供应商审核？",
+  "ground_truth": "同一供应商连续 3 批判退须提交 8D 报告并启动供应商审核。",
+  "gold_docs": [
+   "DOC2409300045"
+  ],
+  "gold_parent": "54c49fffc7d0222cf4069508c07c42ea",
+  "gold_chunk": "536b6fadff9de151e14936f236cc1283",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D060",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "PACKING 类物料来料检验标准里，抽样方案是怎么定的？抽样不良率到多少就要整批判退？",
+  "ground_truth": "按 GB/T 2828.1 一般检验水平 II 抽样，AQL = 2.0%；抽样不良率超过 2% 就整批判退。",
+  "gold_docs": [
+   "DOC2409300043"
+  ],
+  "gold_parent": "cfb2d03f6cf805c80146939a336b28b4",
+  "gold_chunk": "02cbc90ba849d42b32bac94f94ee1bf0",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D061",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "MAGNET 类物料来料检验标准里，检验项目都包括哪些，磁通一致性的要求是什么？",
+  "ground_truth": "检验项目包括：尺寸、表面磁通（高斯计）、磁通一致性、镀层盐雾。其中磁通一致性要求为 ±5%，加严规格为 ±3%。",
+  "gold_docs": [
+   "DOC2409300042"
+  ],
+  "gold_parent": "ce7f2e9644712515040db7415c8044bd",
+  "gold_chunk": "f7e0f1e339449a29fd44bb3641f0f00b",
+  "doc_type": "INSPECTION"
+ },
+ {
+  "id": "D062",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.040过载，一般是什么原因引起的，我该怎么处理？",
+  "ground_truth": "可能原因：负载超过额定转矩长时间运行；机械卡滞；增益设置过高引起振荡。处理方法：检查机械传动是否卡滞；重新核算负载转矩与有效转矩；降低速度环增益（P2-00）后重新自整定。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "f8c7c8808477822b8519d17c048ef07a",
+  "gold_chunk": "0d90a5be4d5624fc28916bc60214b7e5",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D063",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.010过电流，我断电后用万用表测电机动力线U/V/W相间和对地绝缘，电阻得达到多少才算正常？",
+  "ground_truth": "应大于10MΩ。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "f30128157ddc47d07ee0cb7345761a95",
+  "gold_chunk": "c4fcb920e3e7c64fb65189b9d9620842",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D064",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL系列交流伺服电机选型手册里那个转矩-转速特性曲线，短时工作区到底能不能长期跑，还是只能用在加减速的时候？",
+  "ground_truth": "短时工作区仅允许加减速阶段使用，不能长期运行；连续工作区内才可以长期运行。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "5580882798182d461f9fbf1003c102c5",
+  "gold_chunk": "a3722b226aff09fa9176a8aac21ba051",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D065",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我们现场有台KD系列伺服驱动器报了AL.060驱动器过热，按手册里说的该怎么处理、安装间距有啥要求？",
+  "ground_truth": "处理方法：改善通风，驱动器左右间距不小于20 mm；检查风扇运转。可能原因包括环境温度超过55℃、散热风扇故障、安装间距不足。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "d737d1428b91b239bc56f02c3c131930",
+  "gold_chunk": "91614486199dca9ed8e88aa216891b96",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D066",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL系列交流伺服电机选型手册里，KL-SV-130-1500W和KL-SV-130-2000W这两个型号的法兰和编码器配置是不是一样的？",
+  "ground_truth": "是一样的。两个型号的法兰都是130，编码器都是17位绝对值。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "2c1fdfa57f3aa4789c99afe34af08004",
+  "gold_chunk": "bd85aa2ac8128baa30648a57e81a3ce3",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D067",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.070超速，一般是什么原因引起的，该怎么处理？",
+  "ground_truth": "可能原因：电机转速超过最高转速5000 rpm的1.2倍；编码器零位错误；速度指令异常。处理方法：检查速度指令与电子齿轮比设置；重新做编码器零位校准。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "11045b57574c32cdc9ca12d7aa9910c8",
+  "gold_chunk": "d76aecb1bf97955ee4f74d207aeb27d7",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D068",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我们KL系列交流伺服电机选型手册里写的法兰规格和功率范围是啥，配KD系列驱动器的话，过载能力能撑多久？",
+  "ground_truth": "KL系列交流伺服电机法兰规格为60/80/110/130，功率200W~2kW，适配KD系列伺服驱动器，过载能力为3倍额定转矩，持续3秒。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "ab7b2d307d56183f12633eec2019725d",
+  "gold_chunk": "6f375c8060a1267e3401cfe0cd5521a6",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D069",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "看KL系列交流伺服电机选型手册里，KL-SV-80-750W这款电机的编码器配置跟同系列其他80机座型号比有什么不一样，选型时要注意啥？",
+  "ground_truth": "KL-SV-80-750W配的是17位绝对值编码器，而同系列其他80机座型号（如KL-SV-80-400W等）配的是2500线增量式编码器。选型时要注意这款型号的编码器类型与同机座其他功率型号不同。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "2c1fdfa57f3aa4789c99afe34af08004",
+  "gold_chunk": "03f50538c20284b6edd4be7350de467c",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D070",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按KL系列交流伺服电机选型手册做选型计算时，有效转矩（均方根转矩）跟额定转矩比要满足什么要求？",
+  "ground_truth": "有效转矩（均方根转矩）应小于额定转矩，并留1.5倍安全系数。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "6e4985b0a8a5b786dcc6ceb2fb5e13d8",
+  "gold_chunk": "909b9177225024b3decbed64a60722ef",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D071",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.031编码器数据校验错误，一般是什么原因引起的，该怎么处理？",
+  "ground_truth": "可能原因：编码器受强干扰；编码器损坏。处理方法：动力线与编码器线分开走线；更换编码器线缆后仍报警则返厂检测编码器。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "04e07783eaf1c835e01eada4e18a9778",
+  "gold_chunk": "7e0568e7cc0093e7046483ebc5f17e65",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D072",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报警代码手册里，编码器通信异常和编码器数据校验错误分别对应哪个报警代码？",
+  "ground_truth": "编码器通信异常对应AL.030，编码器数据校验错误对应AL.031。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "34b477e0c18eba6beef074f986c898b9",
+  "gold_chunk": "475537e12378c4fdfe9576bdbd484316",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D073",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我们现场用的KD系列伺服驱动器报AL.021主回路欠电压，按手册里说的该怎么处理？",
+  "ground_truth": "检查输入电源与接线端子紧固，必要时加装稳压电源。该报警的可能原因包括：输入电压低于AC 170V、瞬时停电、接线松动。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "456e5a370d384e9d0ed386f01a7a3a71",
+  "gold_chunk": "42022519bac2f76d09654a8bd2c9296f",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D074",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.050位置偏差过大，我该咋处理啊？",
+  "ground_truth": "可适当提高位置环增益（P2-02），降低加速度，并检查偏差阈值参数P1-50（默认3圈）。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "e5fd623eefd85be9b1f67a18058e7127",
+  "gold_chunk": "de364694936e1633dcbd8e1ca3a23f14",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D075",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.020主回路过电压，一般是什么原因引起的，该怎么处理？",
+  "ground_truth": "可能原因：减速过快导致再生能量过大；未接制动电阻或制动电阻阻值过大；输入电压超过AC 264V。处理方法：延长减速时间（参数P1-35）；按负载惯量外接制动电阻（750W推荐50Ω/200W）；检查供电电压。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "664da2aef0c8951c44ac91e318a24452",
+  "gold_chunk": "7ff4cb4ba36c27e49d02962813f6975d",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D076",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "听说KL系列交流伺服电机2026年2月起编码器插接工艺有变化，具体改成什么了，对咱们抗振和报警有啥好处？",
+  "ground_truth": "2026年2月起（ECN2601120001），编码器插接由手工焊接改为压接端子组件，抗振性能提升，编码器通信类报警（AL.030）发生率显著下降。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "2c1fdfa57f3aa4789c99afe34af08004",
+  "gold_chunk": "055383803e60f69ecca41f40e38c61ca",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D077",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我们客户那台步进电机低速跑的时候振动和噪声特别大，按《步进电机与驱动器应用指南》里说的该怎么处理？",
+  "ground_truth": "低速共振区通常在 100~200 rpm。提高细分数（建议 ≥ 8）、适当降低电流或增加阻尼可明显改善。",
+  "gold_docs": [
+   "MAN-ST-GUIDE"
+  ],
+  "gold_parent": "e5e22740efc08b4b1565c71a5554ede4",
+  "gold_chunk": "2de9859fb3bf1465b0a11abb4e250f71",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D078",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报警代码手册里，操作面板上显示编码器通信异常报警时，面板上会显示什么？",
+  "ground_truth": "KD驱动器操作面板会显示编码器通信异常报警。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "dd829fa8c034680f8d3c8a8633f8111b",
+  "gold_chunk": "75df1ce2557df51ad6f2f2f1f69d07f1",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D079",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报AL.030编码器通信异常，如果是2026年2月前出厂的电机在振动工况下反复报警，该怎么处理？",
+  "ground_truth": "先检查编码器线缆与插头，重新插拔并紧固，确认屏蔽层单端接地；若2026年2月前批次电机在振动工况反复报警，请联系售后更换为压接端子版本（ECN2601120001）。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "0a44a55754c6554592980dd68226becc",
+  "gold_chunk": "5d3fd744062a916b092de527ea5304fe",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D080",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按KL系列交流伺服电机选型手册里接线与编码器线缆那部分，动力线和编码器线走线时要注意什么，编码器线缆最长能拉多长、屏蔽层怎么接？",
+  "ground_truth": "动力线 U/V/W/PE 与编码器线必须分开走线，间距不小于 30 cm；编码器线缆长度不超过 20m，屏蔽层单端接驱动器侧 FG。若现场振动较大，请确认编码器插头为压接端子版本（2026 年 2 月后出厂产品）。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "1eabecac124ce9f72081aadf35dd4a49",
+  "gold_chunk": "a8e5e9544569e1f8da46137a96dca5b5",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D081",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按KL系列交流伺服电机选型手册里的选型计算步骤，算完负载转矩和加速转矩后，峰值需求要控制在电机峰值转矩的多少以内，惯量比一般应用和高响应定位分别建议不超过多少倍？",
+  "ground_truth": "峰值需求T_I+T_a应小于电机峰值转矩的80%；惯量比J_L/J_M一般应用≤10倍，高响应定位（如机器人关节）建议≤5倍。",
+  "gold_docs": [
+   "MAN-SV-SELECT"
+  ],
+  "gold_parent": "6e4985b0a8a5b786dcc6ceb2fb5e13d8",
+  "gold_chunk": "78b6f3057db7d976f557d87122bb4d86",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D082",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "《步进电机与驱动器应用指南》里说KL-ST系列两相混合式步进电机反转时该怎么接线？",
+  "ground_truth": "两相四线接法为A+（红）、A-（蓝）、B+（绿）、B-（黑）；电机反转时，交换A+与A-即可。",
+  "gold_docs": [
+   "MAN-ST-GUIDE"
+  ],
+  "gold_parent": "e5e22740efc08b4b1565c71a5554ede4",
+  "gold_chunk": "bd3fb246eb87f4fc525a995ff1f87584",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D083",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KD系列伺服驱动器报警时面板会显示啥、电机咋反应，排除故障后怎么复位？",
+  "ground_truth": "驱动器检测到异常时，面板数码管显示报警代码（如AL.030），同时报警输出信号ALM断开，电机进入自由停车状态；排除故障后，通过面板SET键或外部ARST信号复位。",
+  "gold_docs": [
+   "MAN-KD-ALARM"
+  ],
+  "gold_parent": "8b674ccafa659151cb264b20520b704a",
+  "gold_chunk": "43cbf209c5b7c44ffe8791f7fc2d237e",
+  "doc_type": "MANUAL"
+ },
+ {
+  "id": "D084",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 安装尺寸图里对前法兰表面处理有什么要求？",
+  "ground_truth": "前法兰表面阳极氧化，黑色，膜厚 8~12μm。",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ],
+  "gold_parent": "7c973e053ba7f784668b973397cb386e",
+  "gold_chunk": "590129e0f0faada15b8eabf3fd45bb74",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D085",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 安装尺寸图一致性校验时，发现图纸轴径和明细表物料对不上，这种情况该怎么处理？",
+  "ground_truth": "图纸轴径 Φ19 与明细表物料 M-SH-14（转轴 Φ14）的轴径 Φ14 不一致，需工程确认。",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ],
+  "gold_parent": "4d217b894dd96ae44ad3e43d11fab384",
+  "gold_chunk": "f056275012f04375e7cc68a7cb364cd9",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D086",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要查KL-SV-60-200W交流伺服电机60法兰200W的安装尺寸图，图号和版本号分别是多少？",
+  "ground_truth": "图号是DWG-KL-SV-60-200W-01，版本是B。",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ],
+  "gold_parent": "4420b9b655f20c978c73116421bea564",
+  "gold_chunk": "dcfc17ae27b5c217a05b70639ee30010",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D087",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时怎么判定合格？",
+  "ground_truth": "止口直径公称值110 mm，上偏差0.0、下偏差-0.035 mm，即合格范围110.000～109.965 mm；轴径公称值22 mm，上偏差0.009、下偏差-0.004 mm，即合格范围22.009～21.996 mm。实测值落在各自范围内即判定合格。",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ],
+  "gold_parent": "aa0cbe139be5549bd07c5ee8260e6f78",
+  "gold_chunk": "bb8a2e2d07ee1fb731b6a0486894371c",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D088",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W 安装尺寸图一致性校验时，发现图纸轴径和明细表物料对不上，这种情况该怎么处理？",
+  "ground_truth": "图纸轴径 Φ22 与明细表物料 M-SH-14（转轴 Φ14）的轴径 Φ14 不一致，需工程确认。",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ],
+  "gold_parent": "95fee43262af7ef755e78184aa35729b",
+  "gold_chunk": "134d74a6493d2088925ba8f28f1402d7",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D089",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 安装尺寸图的一致性校验里，图纸轴径和明细表物料对不上，这种情况该怎么处理？",
+  "ground_truth": "图纸轴径 Φ19 与明细表物料 M-SH-14（转轴 Φ14）的轴径 Φ14 不一致，需工程确认。",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ],
+  "gold_parent": "31c0aa6eed6a687825c1af14b1de225d",
+  "gold_chunk": "ba0f2bb3b1e906cd8aca94ff235aa3dc",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D090",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要查KL-SV-80-400W这款交流伺服电机80法兰400W的安装尺寸图，图号和版本号分别是多少？",
+  "ground_truth": "图号是DWG-KL-SV-80-400W-01，版本是B。",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ],
+  "gold_parent": "fd8ee70986a6f7d1cd71f046dfc2791e",
+  "gold_chunk": "7655a241ad7eaf24bd1408a21a2054e0",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D091",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-110-1200W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时按什么标准判定合格？",
+  "ground_truth": "止口直径公称值95mm，上偏差0.0，下偏差-0.035mm，合格范围是95.000～94.965mm；轴径公称值19mm，上偏差0.009，下偏差-0.004mm，合格范围是19.009～18.996mm。",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ],
+  "gold_parent": "08974908d201c2b06783ff7e41afaa41",
+  "gold_chunk": "617ad10db7dad071f887e1983e28d877",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D092",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要查KL-SV-80-750W这款交流伺服电机80法兰750W的安装尺寸图，图号、版本、比例、设计人和日期分别是啥？",
+  "ground_truth": "图号是DWG-KL-SV-80-750W-01，版本是B，比例是1:2，设计是eng01，日期是2024-09-30。",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ],
+  "gold_parent": "5d71639402d206f57bb5a56d20f548b9",
+  "gold_chunk": "48fdfa8da43f3b985bc014c896c068e9",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D093",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 伺服电机的安装尺寸图明细表里，转子组件和定子组件下面都挂了哪些零件，各用多少数量？",
+  "ground_truth": "伺服转子组件 80-400W（充磁）1 个，下面挂：伺服转子铁芯 80 法兰 1 个、钕铁硼磁钢 N42SH 10 个、转轴 Φ14 1 个；伺服定子组件 80-400W（嵌线浸漆）1 个，下面挂：漆包铜线 QZ-2 Φ0.63 0.45、冷轧硅钢片 50W470 0.98。另外还有编码器压接端子组件 1 个。",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ],
+  "gold_parent": "cccdec0e3ca9f938d59e50c5418f5fd1",
+  "gold_chunk": "e73443ff5949671dab88bf99a71927f7",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D094",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时按什么标准判定合格？",
+  "ground_truth": "止口直径公称值70mm，上偏差0.0，下偏差-0.03mm，合格范围是70.00～69.97mm；轴径公称值19mm，上偏差0.009，下偏差-0.004mm，合格范围是19.009～18.996mm。",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ],
+  "gold_parent": "efaf888d9863243e9634a17ba0d07c60",
+  "gold_chunk": "44c2035fb261069117099c887294eee7",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D095",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-130-1500W 安装尺寸图的技术要求里，前法兰表面处理是怎么规定的？",
+  "ground_truth": "前法兰表面阳极氧化，黑色，膜厚 8~12μm。",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ],
+  "gold_parent": "da96cca6b3d49832e1ac37117940eb6e",
+  "gold_chunk": "02adc9ead2d653a2c9208f4a25d07e15",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D096",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 安装尺寸图的技术要求里，前法兰表面处理有什么要求？",
+  "ground_truth": "前法兰表面阳极氧化，黑色，膜厚 8~12μm。",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ],
+  "gold_parent": "ff84e07ecc3f18f2dbe7b909edf85829",
+  "gold_chunk": "f57dea3a3367afd5bc4ef0297641497a",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D097",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 安装尺寸图的技术要求里，前法兰表面处理有什么要求？",
+  "ground_truth": "前法兰表面阳极氧化，黑色，膜厚 8~12μm。",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ],
+  "gold_parent": "102c48ff2f667695e1934c404f9f1e36",
+  "gold_chunk": "47f81b76b665a1101f365b21f82b1a70",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "D098",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L2贯流风机装配作业指导书里写的工艺流程是按什么顺序走的？",
+  "ground_truth": "铁芯叠压 → 绕线 → 嵌线整形 → 浸漆 → 总装 → 耐压测试 → 转速/电流测试 → 包装",
+  "gold_docs": [
+   "DOC2409300032"
+  ],
+  "gold_parent": "06dfcb3c940de40e8601e1ae6082811f",
+  "gold_chunk": "32da980bf415e458320f1ede6a7d941b",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D099",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "做L1罩极电机装配时，耐压测试的电压、时间和漏电流判定标准是怎么要求的？",
+  "ground_truth": "耐压测试要求AC 1500V/1s，漏电流≤5mA。",
+  "gold_docs": [
+   "DOC2409300034"
+  ],
+  "gold_parent": "724859d09926e67712d53805166d972b",
+  "gold_chunk": "fbc43e099b0ecfeed856b1898be3624b",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D100",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L6齿轮减速电机装配作业指导书里的工艺流程是按什么顺序走的？",
+  "ground_truth": "铁芯叠压 → 绕线 → 嵌线整形 → 浸漆 → 总装 → 耐压测试 → 转速/电流测试 → 包装",
+  "gold_docs": [
+   "DOC2409300036"
+  ],
+  "gold_parent": "16abd847d855eec926417121fcce2e7f",
+  "gold_chunk": "0f20472c13decee435f2c83b817fde35",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D101",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L5 交流伺服电机装配作业指导书里，耐压测试的判定标准是什么，抽检和异常停线又该怎么执行？",
+  "ground_truth": "耐压测试：AC 1500V/1s，漏电流 ≤ 5mA。每 2 小时抽检 5 台，记录于报工系统，不良按不良代码登记。异常停线：连续 3 台同类不良立即通知质量部。",
+  "gold_docs": [
+   "DOC2409300035"
+  ],
+  "gold_parent": "5b702cde22f49db2105c45e3fa5a6afc",
+  "gold_chunk": "e57061295bc36e069884c2a09f2bf084",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D102",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "做L4步进电机装配时，耐压测试的电压、时间和漏电流判定标准是什么？",
+  "ground_truth": "耐压测试：AC 1500V/1s，漏电流 ≤ 5mA。",
+  "gold_docs": [
+   "DOC2409300033"
+  ],
+  "gold_parent": "0789545563c3031d7dc258b575f65841",
+  "gold_chunk": "3003f92be5e851771cb84fbb256ec143",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D103",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L3 无刷直流电机装配作业指导书里写的工艺流程，从定子叠压到包装一共要走哪几步？",
+  "ground_truth": "定子叠压 → 自动绕线 → 转子磁钢装配 → 驱动板焊接 → 总装 → 反电势与噪声测试 → 包装。",
+  "gold_docs": [
+   "DOC2409300037"
+  ],
+  "gold_parent": "2c2991e5b87af914e5c0ea255c3214df",
+  "gold_chunk": "7adf18ad43ee8ce26d195a96a5403114",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D104",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L6 齿轮减速电机装配时，耐压测试的电压、时间和漏电流判定标准是什么？",
+  "ground_truth": "耐压测试：AC 1500V/1s，漏电流 ≤ 5mA。",
+  "gold_docs": [
+   "DOC2409300036"
+  ],
+  "gold_parent": "0addca2c058d6b52ce3a0cf9da9142f5",
+  "gold_chunk": "e88b44a4846bab72135a8f533f39fbfc",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D105",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "做L2贯流风机装配时，耐压测试的电压、时间和漏电流判定标准是什么？",
+  "ground_truth": "耐压测试：AC 1500V/1s，漏电流 ≤ 5mA。",
+  "gold_docs": [
+   "DOC2409300032"
+  ],
+  "gold_parent": "bf643ab5f395ec578a26ad3482ad1dd0",
+  "gold_chunk": "e83b0c4748b5e23eb8084e5653ca58c2",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D106",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L4 步进电机装配作业指导书里写的工艺流程，从定子叠压到包装一共要走哪几步？",
+  "ground_truth": "定子叠压 → 自动绕线 → 转子压装 → 总装 → 保持转矩测试 → 噪声测试 → 包装。",
+  "gold_docs": [
+   "DOC2409300033"
+  ],
+  "gold_parent": "5ce196df2829b61c8c87f44ea906f5ad",
+  "gold_chunk": "4d6602e6cd57dc48dd177fead5b41a90",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D107",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L1 罩极电机装配作业指导书里写的工艺流程一共分哪几步，先后顺序是啥？",
+  "ground_truth": "共八步，顺序为：铁芯叠压 → 绕线 → 嵌线整形 → 浸漆 → 总装 → 耐压测试 → 转速/电流测试 → 包装。",
+  "gold_docs": [
+   "DOC2409300034"
+  ],
+  "gold_parent": "464cb5bdf3a7f4bfb5f33f49cb207cdb",
+  "gold_chunk": "84bf046acaa43d8eefdaf38fa69ae3db",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D108",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "做L3无刷直流电机装配时，耐压测试的电压、时间和漏电流判定标准是什么？",
+  "ground_truth": "耐压测试：AC 1500V/1s，漏电流 ≤ 5mA。",
+  "gold_docs": [
+   "DOC2409300037"
+  ],
+  "gold_parent": "0da10a1b6d572c3f7592666c165e5094",
+  "gold_chunk": "e725389f16f5cd12ac3296ec9e611fa0",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D109",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "L5 交流伺服电机装配作业指导书里，从定子冲片叠压到包装的工艺流程顺序是怎样的？",
+  "ground_truth": "定子冲片叠压 → 嵌线绕组 → 浸漆烘干 → 转子磁钢粘接与充磁 → 编码器安装与零位校准 → 总装 → 耐压/绝缘测试 → 空载与负载测试 → 振动老化 → 包装。",
+  "gold_docs": [
+   "DOC2409300035"
+  ],
+  "gold_parent": "9836a6677572e270a7ed9568b2c9a29b",
+  "gold_chunk": "77aca41590d1b810e5232d792b64b264",
+  "doc_type": "SOP"
+ },
+ {
+  "id": "D110",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "做伺服电机定子嵌线与浸漆的时候，浸漆间安全上有什么要求，操作人员需要戴什么防护用品？",
+  "ground_truth": "浸漆间必须开启排风，操作人员佩戴防毒口罩和丁腈手套；绝缘漆属于危险化学品，按危化品管理规定存放，严禁明火。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "5fe545104adf1a76cce35b2d86ef11b3",
+  "gold_chunk": "19933a2dc0c3d708fd62ce881f6aec71",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D111",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按《伺服电机定子嵌线与浸漆工艺规程》，浸漆工序的真空度和加压要求分别是什么？",
+  "ground_truth": "浸漆工序真空度要求不高于100Pa；加压要求0.4MPa，30分钟。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "822238b8b389f1120c185e259f203ff9",
+  "gold_chunk": "65cbbdbb69a09db5d72c9ed8901b62df",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D112",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "伺服电机定子嵌线与浸漆工艺规程里，整形与绑扎时端部高度和端部与机壳的间隙有什么要求？",
+  "ground_truth": "线圈端部整形后高度不得超过图纸规定的端部尺寸，端部与机壳的最小间隙不小于4mm。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "053c4fc64afcc6b1bfff86aa29b6c442",
+  "gold_chunk": "5c97bc8a1e3fa7fcaf9282192cb2ba83",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D113",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "咱们KL-SV系列交流伺服电机的定子嵌线与浸漆工艺规程，文件编号和版本号是多少，归口哪个部门管？",
+  "ground_truth": "文件编号是WI-SV-012，版本是2，归口部门是工艺部。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "1a049d031aa36261c575333f16c5a756",
+  "gold_chunk": "d6fd484a9a30f8ffc2292bed26d35b44",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D114",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "按《伺服电机定子嵌线与浸漆工艺规程》做浸漆和烘干，整个流程是怎么走的，出烘箱后要注意什么？",
+  "ground_truth": "采用真空压力浸漆（VPI）：真空度不高于100Pa，保持20分钟；加压0.4MPa，保持30分钟。滴干30分钟后进烘箱，分两段固化：第一段90℃保温2小时，第二段140℃保温4小时。出烘箱后自然冷却到50℃以下才能转序。浸漆后绝缘电阻不低于100MΩ（500V兆欧表）。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "9e7f1bff2f2b8db0c04a54fede0e268f",
+  "gold_chunk": "25b6232ed7173106da9176f87e78a125",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D115",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "伺服电机定子嵌线前，铁芯槽和槽绝缘纸有什么要求？",
+  "ground_truth": "嵌线前检查铁芯槽内无毛刺、无油污，槽绝缘纸高出铁芯两端各3mm。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "2c1763ecd996fe4155897e5267f6e253",
+  "gold_chunk": "08261a3bd2aad2aedf9cf1cd4c13591a",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D116",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "伺服电机定子嵌线与浸漆工艺规程里，60、80、110、130法兰伺服电机定子组件生产时，嵌线、整形、绑扎、浸漆、烘干这些工序都要遵守哪些操作要求和检验标准？",
+  "ground_truth": "该规程规定了伺服电机定子嵌线、整形、绑扎、浸漆、烘干各工序的操作要求和检验标准，适用于60、80、110、130法兰伺服电机定子组件的生产。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "b7067e2731dd5850f2bb00dffb6d299c",
+  "gold_chunk": "ca4638f493b0bb26f0d9e398836bdda1",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D117",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "伺服电机定子嵌线与浸漆工艺规程里，耐压试验的电压、时间和漏电流要求是什么，怎么判定合格？",
+  "ground_truth": "耐压试验要求1800V AC，持续1分钟，漏电流不大于5mA，且无击穿和闪络，满足这些即为合格。",
+  "gold_docs": [
+   "WI-SV-012"
+  ],
+  "gold_parent": "9b0359b84602c79ec8dba6991be6e2a9",
+  "gold_chunk": "186fc5d1c20816a16162f517f72d5d44",
+  "doc_type": "PROCESS"
+ },
+ {
+  "id": "D118",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要给120V供电的设备选一款KL系列罩极电机，12W和25W分别对应哪个型号？",
+  "ground_truth": "120V供电的12W罩极电机型号是KL-SP-YJ61-12W-120；120V供电的25W罩极电机型号是KL-SP-YJ68-25W-120。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "8f0396d9dafbd15393fc86ca6d689461",
+  "gold_chunk": "5b6dba8a612d3c3cdaf140c18d98bf32",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D119",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要给KL系列电机选型表里那几款齿轮减速电机做质检，它们的防护等级和绝缘等级是不是都一个标准？",
+  "ground_truth": "是。KL-GR-GM25、KL-GR-GM37、KL-GR-TYD49、KL-GR-TYD50这四款齿轮减速电机的防护等级都是IP44，绝缘等级都是B级。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "d2b06f45bad5f9046f5924494cac91dc",
+  "gold_chunk": "7fe2a37637641443eeb4e6de20b9faaf",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D120",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL系列电机选型表里贯流风机的KL-CF-60x360、KL-CF-65x480、KL-CF-80x600这三款，防护等级和绝缘等级是不是都一样？",
+  "ground_truth": "是的，都一样。这三款贯流风机的防护等级都是IP44，绝缘等级都是B级。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "dcedb9ac691f818ca56e992291745342",
+  "gold_chunk": "e92e7e95508076c15bccb2ff9aa1944e",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D121",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "KL系列电机选型表里那几款310V无刷直流电机，防护等级和绝缘等级是不是都一样的？",
+  "ground_truth": "是一样的。KL-BL-120W-310、KL-BL-36W-310、KL-BL-60W-310、KL-BL-90W-310这四款的防护等级都是IP54，绝缘等级都是F级。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "abb881d723e12c10bba151a1f520a17a",
+  "gold_chunk": "5e819bee43e1867ed2cd628b1ca88944",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D122",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要给KL系列电机选型表里这几款交流伺服电机做质检，它们的防护等级和绝缘等级是不是都一个标准？",
+  "ground_truth": "是的，KL-SV-110-1200W、KL-SV-130-1500W、KL-SV-130-2000W、KL-SV-60-200W、KL-SV-80-400W、KL-SV-80-750W这六款交流伺服电机的防护等级都是IP65，绝缘等级都是F级，执行同一个标准。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "ed24557a710cb865d4aabbb29e2bd2eb",
+  "gold_chunk": "dfc65108cfef7256938519c6b6b64df6",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D123",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "我要在KL系列电机选型表里挑一款罩极电机，220V供电、2600转、IP44防护、B级绝缘，25W和30W这两个型号除了功率和转矩还有啥区别，选哪个合适？",
+  "ground_truth": "KL-SP-YJ68-25W-220和KL-SP-YJ72-30W-220的额定电压都是220V，额定转速都是2600 rpm，防护等级都是IP44，绝缘等级都是B级；区别在额定功率和额定转矩：前者25W、0.092 N·m，后者30W、0.11 N·m。需要更大功率和转矩就选30W的KL-SP-YJ72-30W-220，否则选25W的KL-SP-YJ68-25W-220。",
+  "gold_docs": [
+   "SEL-KL-2026"
+  ],
+  "gold_parent": "8f0396d9dafbd15393fc86ca6d689461",
+  "gold_chunk": "98efdfaaef3cacfcba5a06614ee11f75",
+  "doc_type": "SELECTION"
+ },
+ {
+  "id": "D124",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "咱们做伺服系统售后去客户现场时，按《伺服系统常见故障与售后处理培训》里的客户现场信息收集清单，到底要收集哪些信息啊？",
+  "ground_truth": "要收集：电机型号和序列号、驱动器型号和固件版本；报警代码和出现的时机（上电、启动、运行中、停止）；负载类型、减速比、运行曲线；线缆长度、接地方式、现场照片。",
+  "gold_docs": [
+   "TRN-SV-001"
+  ],
+  "gold_parent": "494bac817a595ada67061428b4075983",
+  "gold_chunk": "9a8b69bb723a534b7f8142e671c45d62",
+  "doc_type": "TRAINING"
+ },
+ {
+  "id": "D125",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "在《伺服系统常见故障与售后处理培训》里，保修期内出现质量问题要走退换货流程的话，具体是怎么操作的？",
+  "ground_truth": "保修期内的质量问题：售后开服务工单，优先发备机，故障件返回后质量部做 8D 分析。所有 RMA 必须带序列号，仓库凭 RMA 单收货。",
+  "gold_docs": [
+   "TRN-SV-001"
+  ],
+  "gold_parent": "22cc81a7d1f318df1039b6df21291ee1",
+  "gold_chunk": "7f2da5bffb2f3c0a1ca7f74c2fd0b5c0",
+  "doc_type": "TRAINING"
+ },
+ {
+  "id": "D126",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "伺服系统常见故障与售后处理培训里说，上电报编码器通讯异常或运行中位置跳变，我们售后到现场该按什么顺序查、注意哪些点？",
+  "ground_truth": "先查编码器线缆屏蔽层是否单端接地，线缆长度是否超过20米；再查接插件，2026年1月之后的B版BOM已改为压接端子，之前批次为焊接，虚焊概率更高；确认是电机本体问题时，按序列号查保修，走先换后修流程。",
+  "gold_docs": [
+   "TRN-SV-001"
+  ],
+  "gold_parent": "00a01559437d2be033229214db484b8c",
+  "gold_chunk": "e400994bfe6f2fc72a1089531e004979",
+  "doc_type": "TRAINING"
+ },
+ {
+  "id": "D127",
+  "kind": "DESC",
+  "role": "ADMIN",
+  "question": "咱们《伺服系统常见故障与售后处理培训》里讲伺服过载与过热时，如果驱动器报过载或者电机表面温度超过80℃，一般先查什么、有什么要求，后面还要注意哪些事？",
+  "ground_truth": "先核对负载惯量比，一般不超过电机转子惯量的10倍，超过时调整增益或加减速机；再检查抱闸是否完全打开，检查环境温度是否超过40℃；长期在额定转矩100%以上运行会导致温升超标，应重新选型。",
+  "gold_docs": [
+   "TRN-SV-001"
+  ],
+  "gold_parent": "2237ed651fb93f881b3af6264fd686be",
+  "gold_chunk": "e5bcee1c032ece35fb98820b99237c97",
+  "doc_type": "TRAINING"
+ },
+ {
+  "id": "M001",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-CF-60X360 的工作环境温度是多少？另外，KL-CF-60X360 电机的可靠性要求里，寿命和噪声的判定标准分别是多少？",
+  "ground_truth": "KL-CF-60X360 的工作环境温度是 -10℃ ~ +40℃。寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-CF-60X360",
+  "gold_docs": [
+   "DOC2409300009"
+  ],
+  "gold_parent": "fbcb44c7cafba5a7058f8d62cdf10c28",
+  "gold_chunk": "78a007ba5774de389645d60e10a23b62",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M002",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 的温升是多少？另外，KL-SV-130-2000W 这款交流伺服电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-SV-130-2000W 的温升是 ≤ 75K（电阻法）。当前 BOM 版本是 B。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SV-130-2000W",
+  "gold_docs": [
+   "DOC2409300027"
+  ],
+  "gold_parent": "ccaa5415f34c20d369e02f36645e36b5",
+  "gold_chunk": "c84a0a1c579f047d0b3d46f9f22336c3",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M003",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ48-5W-220 的工作环境温度是多少？另外，KL-SP-YJ48-5W-220 这款电机的可靠性要求里，寿命和噪声的判定标准分别是多少？",
+  "ground_truth": "KL-SP-YJ48-5W-220 的工作环境温度是 -10℃ ~ +40℃。寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-SP-YJ48-5W-220",
+  "gold_docs": [
+   "DOC2409300001"
+  ],
+  "gold_parent": "f2678f868f3456278d8ca66232e76dbf",
+  "gold_chunk": "7c6e842f441078e84e26aa0d41517223",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M004",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-ST-42x48 的噪声是多少？另外，KL-ST-42x48 这款两相混合式步进电机是哪个事业部做的，现在用的是哪个版本的BOM？",
+  "ground_truth": "KL-ST-42x48 的噪声是 ≤ 45 dB(A)（1m）。KL-ST-42x48 属于智能驱控事业部，当前 BOM 版本是 A。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-ST-42x48",
+  "gold_docs": [
+   "DOC2409300018"
+  ],
+  "gold_parent": "89c20b5bc888787fc83522d76f18c1d6",
+  "gold_chunk": "1677c6522937a44f9c3cc8602a6de597",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M005",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-ST-28x32 的温升是多少？另外，装KL-ST-28x32的时候能不能敲转轴？还有用的时候电压和驱动器细分有啥要求？",
+  "ground_truth": "KL-ST-28x32 的温升是 ≤ 75K（电阻法）。安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标；建议驱动器细分设置≥8，可显著降低低速振动与噪声。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-ST-28x32",
+  "gold_docs": [
+   "DOC2409300016"
+  ],
+  "gold_parent": "ef6895e094756cd856f97bee70d2371b",
+  "gold_chunk": "75eac99e078cb11df96173c3692539e9",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M006",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-CF-80X600 的工作环境温度是多少？另外，KL-CF-80X600 贯流风机现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-CF-80X600 的工作环境温度是 -10℃ ~ +40℃。当前 BOM 版本是 B。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-CF-80X600",
+  "gold_docs": [
+   "DOC2409300011"
+  ],
+  "gold_parent": "c12c394c2f04199d3a282ebe44caf89d",
+  "gold_chunk": "152a579309792e4bbbb3ce412bd6e5fb",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M007",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ58-8W-220 的效率是多少？另外，KL-SP-YJ58-8W-220 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "KL-SP-YJ58-8W-220 的效率是 18%~28%。安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。",
+  "expected": "18%~28%",
+  "model": "KL-SP-YJ58-8W-220",
+  "gold_docs": [
+   "DOC2409300002"
+  ],
+  "gold_parent": "4962aa4c7396afdd7e2690dae0d1fca2",
+  "gold_chunk": "5dfcfa77a9e5989f0ded4e686d5606b3",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M008",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 的噪声是多少？另外，KL-SV-60-200W 这款交流伺服电机现在用的是哪个版本的 BOM？",
+  "ground_truth": "KL-SV-60-200W 的噪声是 ≤ 60 dB(A)（1m）。当前 BOM 版本是 B。",
+  "expected": "≤ 60 dB(A)（1m）",
+  "model": "KL-SV-60-200W",
+  "gold_docs": [
+   "DOC2409300022"
+  ],
+  "gold_parent": "17789e6746cbc419e226fc383f6f0ecb",
+  "gold_chunk": "6bf8cdc0f3a7ab15495c313f01378a4a",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M009",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-CF-80X600 的工作环境温度是多少？另外，KL-CF-80X600 电机安装的时候能不能敲转轴，为什么？",
+  "ground_truth": "KL-CF-80X600 的工作环境温度是 -10℃ ~ +40℃。不能敲击转轴，因为敲击会损伤轴承与磁钢。",
+  "expected": "-10℃ ~ +40℃",
+  "model": "KL-CF-80X600",
+  "gold_docs": [
+   "DOC2409300011"
+  ],
+  "gold_parent": "d645f48f984b150228161d6ccebcc066",
+  "gold_chunk": "cf30395a59c6ea76570a56d2152f91e6",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M010",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-GR-TYD49 的温升是多少？另外，KL-GR-TYD49 这款齿轮减速电机是哪个事业部做的，现在用的是哪个版本的BOM？",
+  "ground_truth": "KL-GR-TYD49 的温升是 ≤ 75K（电阻法）。KL-GR-TYD49 属于家电电机事业部，当前 BOM 版本是 A。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-GR-TYD49",
+  "gold_docs": [
+   "DOC2409300028"
+  ],
+  "gold_parent": "b49b7ed7ef78611075f4eeebf38b7575",
+  "gold_chunk": "5536e12a55c49e3763dfd17886ac636d",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M011",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-60-200W 的噪声是多少？另外，KL-SV-60-200W 伺服电机安装和使用时要注意哪些事项？",
+  "ground_truth": "KL-SV-60-200W 的噪声是 ≤ 60 dB(A)（1m）。1. 安装时请勿敲击转轴，避免轴承与磁钢损伤。2. 请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。3. 须与匹配的伺服驱动器配套使用，编码器线缆长度不超过 20m，并做好屏蔽接地。",
+  "expected": "≤ 60 dB(A)（1m）",
+  "model": "KL-SV-60-200W",
+  "gold_docs": [
+   "DOC2409300022"
+  ],
+  "gold_parent": "68af495c3909d6210383eebdbf5a10b6",
+  "gold_chunk": "f71774be8305348d49b718893cd81851",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M012",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-CF-65X480 的额定转矩是多少？另外，KL-CF-65X480 贯流风机现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-CF-65X480 的额定转矩是 0.147 N·m。当前 BOM 版本是 B。",
+  "expected": "0.147 N·m",
+  "model": "KL-CF-65X480",
+  "gold_docs": [
+   "DOC2409300010"
+  ],
+  "gold_parent": "92121219598883faca344639339260b1",
+  "gold_chunk": "117934ad6d9094d76f8d3121a7c03b69",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M013",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-BL-120W-310 的额定电压是多少？另外，KL-BL-120W-310 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "KL-BL-120W-310 的额定电压是 310VDC。寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "310VDC",
+  "model": "KL-BL-120W-310",
+  "gold_docs": [
+   "DOC2409300015"
+  ],
+  "gold_parent": "59527925327773ecdd444d0b62bcff2a",
+  "gold_chunk": "4c4f4d4538611e7776e10c801f34c01f",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M014",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-80-750W 的额定转速是多少？另外，咱们80法兰750W的交流伺服电机安装和使用时要注意啥？比如能不能敲转轴、电压范围、配驱动器还有编码器线缆有啥要求？",
+  "ground_truth": "KL-SV-80-750W 的额定转速是 3000 rpm。安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标；须与匹配的伺服驱动器配套使用，编码器线缆长度不超过20m，并做好屏蔽接地。",
+  "expected": "3000 rpm",
+  "model": "KL-SV-80-750W",
+  "gold_docs": [
+   "DOC2409300024"
+  ],
+  "gold_parent": "858b1c9309fe6b5ee8726674a45437ef",
+  "gold_chunk": "ec7c9227c1bb8dac32aacae4bdc9644c",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M015",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-220 的防护等级是多少？另外，KL-SP-YJ68-25W-220 这个罩极电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-SP-YJ68-25W-220 的防护等级是 IP40。当前 BOM 版本是 B。",
+  "expected": "IP40",
+  "model": "KL-SP-YJ68-25W-220",
+  "gold_docs": [
+   "DOC2409300006"
+  ],
+  "gold_parent": "1a258d92da93bfd309fc540239e8ee68",
+  "gold_chunk": "061fbc68fd184e95d567036cd4b77ca8",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M016",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-80-400W 的防护等级是多少？另外，KL-SV-80-400W 这款电机的寿命和噪声要满足什么要求才算合格？",
+  "ground_truth": "KL-SV-80-400W 的防护等级是 IP65。寿命要求 ≥ 20000h；噪声要求 ≤ 60 dB(A)（1m）。",
+  "expected": "IP65",
+  "model": "KL-SV-80-400W",
+  "gold_docs": [
+   "DOC2409300023"
+  ],
+  "gold_parent": "af0736d8717eb459e8abefc036769161",
+  "gold_chunk": "eda10e3a719a9155fcb2ba3a009b36ca",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M017",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ68-25W-120 的噪声是多少？另外，KL-SP-YJ68-25W-120 这个罩极电机现在用的是哪个版本的 BOM？",
+  "ground_truth": "KL-SP-YJ68-25W-120 的噪声是 ≤ 45 dB(A)（1m）。当前 BOM 版本是 B。",
+  "expected": "≤ 45 dB(A)（1m）",
+  "model": "KL-SP-YJ68-25W-120",
+  "gold_docs": [
+   "DOC2409300007"
+  ],
+  "gold_parent": "64badac8622ab357e74e1fe7672d8e84",
+  "gold_chunk": "e5fcd7e01434c84ac073abb525018067",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M018",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ58-8W-220 的温升是多少？另外，KL-SP-YJ58-8W-220 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "KL-SP-YJ58-8W-220 的温升是 ≤ 75K（电阻法）。寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SP-YJ58-8W-220",
+  "gold_docs": [
+   "DOC2409300002"
+  ],
+  "gold_parent": "16af9893a96949977534bf34f3f6990f",
+  "gold_chunk": "5d37e838010f90702135f504fe4621f6",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M019",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ72-30W-220 的温升是多少？另外，KL-SP-YJ72-30W-220 电机安装和使用时要注意哪些事项？",
+  "ground_truth": "KL-SP-YJ72-30W-220 的温升是 ≤ 75K（电阻法）。安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压 ±10% 范围内使用，长期过压会导致温升超标。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SP-YJ72-30W-220",
+  "gold_docs": [
+   "DOC2409300008"
+  ],
+  "gold_parent": "a5f3c1e20634cadae52caf78a9326f46",
+  "gold_chunk": "c3a215ddc0d32c94d177dbfe8d7eb870",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M020",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-BL-60W-310 的防护等级是多少？另外，KL-BL-60W-310 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "KL-BL-60W-310 的防护等级是 IP40。寿命要求 ≥ 20000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "IP40",
+  "model": "KL-BL-60W-310",
+  "gold_docs": [
+   "DOC2409300013"
+  ],
+  "gold_parent": "e4740d3e337afcb1648abe6ef72c2bf0",
+  "gold_chunk": "1338988f2af0b7412ed1989b590db57e",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M021",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SV-130-2000W 的额定转速是多少？另外，KL-SV-130-2000W 这款电机的可靠性要求里，寿命和噪声的判定标准分别是多少？",
+  "ground_truth": "KL-SV-130-2000W 的额定转速是 3000 rpm。寿命要求 ≥ 20000h；噪声要求 ≤ 60 dB(A)（1m）。",
+  "expected": "3000 rpm",
+  "model": "KL-SV-130-2000W",
+  "gold_docs": [
+   "DOC2409300027"
+  ],
+  "gold_parent": "03261852ee43bd9c665c93a6bdd7162b",
+  "gold_chunk": "8df3fda0c14d3d2bdddf40da09440e65",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M022",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-BL-120W-310 的额定电压是多少？另外，KL-BL-120W-310 这款无刷直流电机现在用的是哪个 BOM 版本？",
+  "ground_truth": "KL-BL-120W-310 的额定电压是 310VDC。当前 BOM 版本是 B。",
+  "expected": "310VDC",
+  "model": "KL-BL-120W-310",
+  "gold_docs": [
+   "DOC2409300015"
+  ],
+  "gold_parent": "7497540793da172e09da71f2551a431f",
+  "gold_chunk": "03ce6638ed3e0b82d4ee6073323dbee6",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M023",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-ST-28x32 的温升是多少？另外，KL-ST-28x32 这款步进电机是哪个事业部做的，现在BOM版本到哪一版了？",
+  "ground_truth": "KL-ST-28x32 的温升是 ≤ 75K（电阻法）。KL-ST-28x32 属于智能驱控事业部，当前 BOM 版本是 A。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-ST-28x32",
+  "gold_docs": [
+   "DOC2409300016"
+  ],
+  "gold_parent": "df114ff115018bfb93846b639f50b119",
+  "gold_chunk": "00bbb1d8396288b56e7d175d9087898e",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M024",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ48-5W-220 的防护等级是多少？另外，KL-SP-YJ48-5W-220 这个罩极电机现在用的是哪个版本的 BOM？",
+  "ground_truth": "KL-SP-YJ48-5W-220 的防护等级是 IP40。当前 BOM 版本是 B。",
+  "expected": "IP40",
+  "model": "KL-SP-YJ48-5W-220",
+  "gold_docs": [
+   "DOC2409300001"
+  ],
+  "gold_parent": "b549ebdf9ff145ba4777c5a7d4a491c5",
+  "gold_chunk": "ad2a9d3bb807abc80cf99c5770ae9e2d",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M025",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-ST-42x48 的绝缘等级是多少？另外，装KL-ST-42x48的时候转轴能不能敲？敲了会有什么问题？",
+  "ground_truth": "KL-ST-42x48 的绝缘等级是 B 级。不能敲击转轴，否则可能损伤轴承与磁钢。",
+  "expected": "B 级",
+  "model": "KL-ST-42x48",
+  "gold_docs": [
+   "DOC2409300018"
+  ],
+  "gold_parent": "91baf9a5a149541955fdbb999bb64126",
+  "gold_chunk": "691e70fd12b7f30892d5d7c058c0e271",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M026",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ61-12W-220 的防护等级是多少？另外，KL-SP-YJ61-12W-220 这款电机的可靠性要求里，寿命和噪声分别要达到什么标准才算合格？",
+  "ground_truth": "KL-SP-YJ61-12W-220 的防护等级是 IP40。寿命要求 ≥ 10000h；噪声要求 ≤ 45 dB(A)（1m）。",
+  "expected": "IP40",
+  "model": "KL-SP-YJ61-12W-220",
+  "gold_docs": [
+   "DOC2409300003"
+  ],
+  "gold_parent": "806d878935927754872ff779ecdcb9f9",
+  "gold_chunk": "92c7fa8afb5e1c31361d69b59ba72bbb",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M027",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-CF-60X360 的额定功率是多少？另外，装KL-CF-60X360的时候能不能敲转轴，为什么？",
+  "ground_truth": "KL-CF-60X360 的额定功率是 20 W。不能敲击转轴，因为敲击会损伤轴承与磁钢。",
+  "expected": "20 W",
+  "model": "KL-CF-60X360",
+  "gold_docs": [
+   "DOC2409300009"
+  ],
+  "gold_parent": "2ca51b7db8fdf8f6fd78f16f00f978e6",
+  "gold_chunk": "3b60679259106e17276a2a701f5ebd26",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M028",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ72-30W-220 的额定功率是多少？另外，KL-SP-YJ72-30W-220 这个罩极电机现在用的是哪个 BOM 版本，归哪个事业部管？",
+  "ground_truth": "KL-SP-YJ72-30W-220 的额定功率是 30 W。当前 BOM 版本是 B，所属事业部是家电电机事业部。",
+  "expected": "30 W",
+  "model": "KL-SP-YJ72-30W-220",
+  "gold_docs": [
+   "DOC2409300008"
+  ],
+  "gold_parent": "ad8425f0bb4a65658cf0fc1b1a5953a0",
+  "gold_chunk": "fdbec2a22b3644c3f9db4df19e369ba5",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M029",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-SP-YJ48-5W-220 的温升是多少？另外，装KL-SP-YJ48-5W-220电机的时候，敲转轴会有什么问题，电压方面又要注意啥？",
+  "ground_truth": "KL-SP-YJ48-5W-220 的温升是 ≤ 75K（电阻法）。安装时请勿敲击转轴，避免轴承与磁钢损伤；请在额定电压±10%范围内使用，长期过压会导致温升超标。",
+  "expected": "≤ 75K（电阻法）",
+  "model": "KL-SP-YJ48-5W-220",
+  "gold_docs": [
+   "DOC2409300001"
+  ],
+  "gold_parent": "a1160785021eca50a86ff4b1ae26625b",
+  "gold_chunk": "04e504c9ec858dc4ec6502becf81cdf2",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "M030",
+  "kind": "MIXED",
+  "role": "ADMIN",
+  "question": "KL-BL-90W-310 的防护等级是多少？另外，KL-BL-90W-310 这个无刷直流电机是哪个事业部做的，现在用的是哪版 BOM？",
+  "ground_truth": "KL-BL-90W-310 的防护等级是 IP40。KL-BL-90W-310 属于智能驱控事业部，当前 BOM 版本是 B。",
+  "expected": "IP40",
+  "model": "KL-BL-90W-310",
+  "gold_docs": [
+   "DOC2409300014"
+  ],
+  "gold_parent": "cfc322ed3787b325a935be6adf43f048",
+  "gold_chunk": "ff15d70d85047d0f26175a1ddbd64179",
+  "doc_type": "DATASHEET"
+ },
+ {
+  "id": "R001",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "今天深圳天气怎么样",
+  "ground_truth": ""
+ },
+ {
+  "id": "R002",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "帮我写一首关于春天的诗",
+  "ground_truth": ""
+ },
+ {
+  "id": "R003",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "科朗今天的股价是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R004",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "公司年假有几天",
+  "ground_truth": ""
+ },
+ {
+  "id": "R005",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "食堂今天中午吃什么",
+  "ground_truth": ""
+ },
+ {
+  "id": "R006",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "KL-SV-130-3KW 的额定转矩是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R007",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "KL-SV-180-7.5KW 的额定电流多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R008",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "你们的伺服电机能用在核潜艇上吗，具体参数是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R009",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "竞争对手汇川的 SV660 驱动器报警 Er.210 怎么处理",
+  "ground_truth": ""
+ },
+ {
+  "id": "R010",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "特斯拉 Model 3 的驱动电机功率是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R011",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "帮我算一下个人所得税",
+  "ground_truth": ""
+ },
+ {
+  "id": "R012",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "KL-XYZ-999 的防护等级是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R013",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "公司去年的净利润是多少",
+  "ground_truth": ""
+ },
+ {
+  "id": "R014",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "怎么申请出差报销",
+  "ground_truth": ""
+ },
+ {
+  "id": "R015",
+  "kind": "REFUSE",
+  "sub": "知识库里没有",
+  "role": "SALES",
+  "question": "推荐一部好看的电影",
+  "ground_truth": ""
+ },
+ {
+  "id": "R016",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-60-200W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时按什么标准判定合格？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ],
+  "gold_parent": "dfa1323aff8c623f5c947e7b6a94f30c",
+  "gold_chunk": "a4abf8811b6a17c5988f6c1784174061",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R017",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-110-1200W 安装尺寸图明细表里，伺服转子组件 110-1200W 下面都包含哪些零件，各要几个？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ],
+  "gold_parent": "55fa0ea55c977832745bbc9f897fe712",
+  "gold_chunk": "950eaeed87b0a920fa545941ede298b7",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R018",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-130-2000W 安装尺寸图里对前法兰表面处理是怎么要求的？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ],
+  "gold_parent": "842404b998940825dd6aee069121af41",
+  "gold_chunk": "0f8516d8f4d9634008d8a812ddb77f04",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R019",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-80-400W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时按什么标准判定合格？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ],
+  "gold_parent": "f6ad64c1be3bc6444df12e806c1c7498",
+  "gold_chunk": "7a8e99a4b8402629ec4d70c023d15ac0",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R020",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "我要查KL-SV-130-2000W交流伺服电机130法兰2000W的安装尺寸图，这图纸的图号、版本、比例、设计人和日期分别是啥？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ],
+  "gold_parent": "9a2564f0e80f3ed3362845ec68a231b2",
+  "gold_chunk": "adbaf8c3c441524d8402bc28de0b518c",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R021",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-60-200W 安装尺寸图里，伺服转子组件 60-200W 充磁后都包含哪些零件，各要几个？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ],
+  "gold_parent": "ee5d466a09529d1906c02837a42a9279",
+  "gold_chunk": "ac1da1b6304fcda0d10ed9e84ad6921e",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R022",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-60-200W 安装尺寸图的技术要求里，前法兰表面处理是怎么规定的？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-60-200W-01"
+  ],
+  "gold_parent": "17ae4389294df64ac5da98daddbb1e46",
+  "gold_chunk": "229dce2c640c722a611517f792a04d99",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R023",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "我要查KL-SV-130-1500W这款交流伺服电机的安装尺寸图，图纸的图号、版本、比例和设计信息分别是啥？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ],
+  "gold_parent": "b92253154c89cba1a931c0ee21ae2b4c",
+  "gold_chunk": "277f83014703fdf448dc6f66a1ba0b9d",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R024",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-130-1500W 安装尺寸图里，止口直径和轴径的公差要求分别是多少，质检时按什么标准判定合格？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ],
+  "gold_parent": "c14faa1f85f484f039df7e81b2a4c24b",
+  "gold_chunk": "cd58d1191dbe7ff0f32ce5fa35a29ce8",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R025",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-80-750W 安装尺寸图里，伺服转子组件 80-750W 的 BOM 都包含哪些零件，各要几个？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-80-750W-01"
+  ],
+  "gold_parent": "2b4668a4d4b1d6df435582abec8c2371",
+  "gold_chunk": "bd881116591eb21b2b6eaef2f1314171",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R026",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-130-2000W 安装尺寸图明细表里，伺服转子组件 130-2000W 下面都包含哪些零件，各要几个？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ],
+  "gold_parent": "4594e97c27d5347ad494b2ef8e8c8ca2",
+  "gold_chunk": "5b0e766cb6d2a53089e1230abc709db6",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R027",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-130-2000W 安装尺寸图一致性校验时，发现图纸轴径和明细表物料对不上，这种情况该怎么处理？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-2000W-01"
+  ],
+  "gold_parent": "cd8e68a1908c9c04f5218acda27756b4",
+  "gold_chunk": "cc23ac9ad37903f4219a9395d338f911",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R028",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-130-1500W 安装尺寸图里，伺服转子组件 130-1500W 是由哪些零件组成的，各要几个？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-130-1500W-01"
+  ],
+  "gold_parent": "e99318adc9154dc0e42dbffdefca9440",
+  "gold_chunk": "1920d1e5686160244a28dbf5bec59225",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R029",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "KL-SV-80-400W 安装尺寸图的一致性校验里，图纸轴径和明细表物料的轴径对不上，这种情况该怎么处理？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-80-400W-01"
+  ],
+  "gold_parent": "6bdfba1d4bb0f23676919cc055a9d0f6",
+  "gold_chunk": "def6b36a3cf6b80f8b84383b6133c130",
+  "doc_type": "DRAWING"
+ },
+ {
+  "id": "R030",
+  "kind": "REFUSE",
+  "sub": "没有权限",
+  "role": "SALES",
+  "question": "我要查KL-SV-110-1200W交流伺服电机110法兰1200W的安装尺寸图，怎么确认我手上这份图纸是不是最新版本？",
+  "ground_truth": "",
+  "gold_docs": [
+   "DWG-KL-SV-110-1200W-01"
+  ],
+  "gold_parent": "82c8b8f2f0215033a9fcc82fa2337816",
+  "gold_chunk": "112b699dd4448bb70d7d2153019e98da",
+  "doc_type": "DRAWING"
+ }
+]

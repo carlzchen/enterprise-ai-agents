@@ -1,0 +1,824 @@
+{
+ "summary": {
+  "single_call": {
+   "用例": 12,
+   "出错": 0,
+   "基础型号正确": 3,
+   "改动类型召回": "2/12",
+   "多报的改动类型": 0,
+   "最后仍对不上的问题": 0,
+   "说明里来源不明的数字": 0,
+   "平均耗时秒": 72.0,
+   "平均 token": 411
+  },
+  "single_agent": {
+   "用例": 12,
+   "出错": 4,
+   "基础型号正确": 8,
+   "改动类型召回": "8/12",
+   "多报的改动类型": 7,
+   "最后仍对不上的问题": 0,
+   "说明里来源不明的数字": 14,
+   "平均耗时秒": 31.9,
+   "平均 token": 50822
+  },
+  "multi": {
+   "用例": 12,
+   "出错": 0,
+   "基础型号正确": 11,
+   "改动类型召回": "12/12",
+   "多报的改动类型": 9,
+   "最后仍对不上的问题": 1,
+   "说明里来源不明的数字": 29,
+   "平均耗时秒": 35.0,
+   "平均 token": 31315
+  }
+ },
+ "rows": [
+  {
+   "case": "c01",
+   "mode": "single_call",
+   "model_ok": true,
+   "base_model": "KL-SV-80-400W",
+   "want_model": "KL-SV-80-400W",
+   "types": [
+    "SHAFT"
+   ],
+   "want_types": [
+    "SHAFT"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 2473,
+   "seconds": 6.59,
+   "agents_failed": 0,
+   "unit_cost": null,
+   "unit_cost_gap": 0.0047
+  },
+  {
+   "case": "c02",
+   "mode": "single_call",
+   "model_ok": true,
+   "base_model": "KL-SV-80-750W",
+   "want_model": "KL-SV-80-750W",
+   "types": [
+    "CONNECTOR"
+   ],
+   "want_types": [
+    "CONNECTOR"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 2466,
+   "seconds": 6.14,
+   "agents_failed": 0,
+   "unit_cost": null,
+   "unit_cost_gap": 0.0157
+  },
+  {
+   "case": "c03",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-ST-42x48",
+   "types": [],
+   "want_types": [
+    "CONNECTOR"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 241.78,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c04",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-BL-90W-310",
+   "types": [],
+   "want_types": [
+    "MAGNET"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 302.45,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c05",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-SP-YJ61-18W-220",
+   "types": [],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 182.56,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c06",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-CF-65X480",
+   "types": [],
+   "want_types": [
+    "HOUSING"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 122.88,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c07",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-GR-GM37",
+   "types": [],
+   "want_types": [
+    "BEARING"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.23,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c08",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-ST-57x56",
+   "types": [],
+   "want_types": [
+    "SHAFT"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.22,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c09",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-BL-90W-310",
+   "types": [],
+   "want_types": [
+    "PACKAGING"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.21,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c10",
+   "mode": "single_call",
+   "model_ok": true,
+   "base_model": null,
+   "want_model": null,
+   "types": [],
+   "want_types": [],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.23,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c11",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-SP-YJ68-25W-120",
+   "types": [],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 1,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.29,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c12",
+   "mode": "single_call",
+   "model_ok": false,
+   "base_model": null,
+   "want_model": "KL-SV-80-400W",
+   "types": [],
+   "want_types": [
+    "CONNECTOR",
+    "SHAFT"
+   ],
+   "types_hit": 0,
+   "types_extra": 0,
+   "types_miss": 2,
+   "issues_left": 0,
+   "warnings": 0,
+   "rounds": null,
+   "tokens": 0,
+   "seconds": 0.36,
+   "agents_failed": 1,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c01",
+   "mode": "single_agent",
+   "error": "Unavailable: 大模型服务：熔断中",
+   "seconds": 18.0
+  },
+  {
+   "case": "c02",
+   "mode": "single_agent",
+   "error": "Unavailable: 大模型服务：熔断中",
+   "seconds": 18.0
+  },
+  {
+   "case": "c03",
+   "mode": "single_agent",
+   "error": "Unavailable: 大模型服务：熔断中",
+   "seconds": 18.0
+  },
+  {
+   "case": "c04",
+   "mode": "single_agent",
+   "error": "Unavailable: 大模型服务：熔断中",
+   "seconds": 18.0
+  },
+  {
+   "case": "c05",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-SP-YJ61-18W-220",
+   "want_model": "KL-SP-YJ61-18W-220",
+   "types": [
+    "CONNECTOR",
+    "PACKAGING",
+    "WINDING"
+   ],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 1,
+   "types_extra": 2,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 0,
+   "tokens": 76035,
+   "seconds": 43.58,
+   "agents_failed": 0,
+   "unit_cost": 34.9423,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c06",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-CF-65X480",
+   "want_model": "KL-CF-65X480",
+   "types": [
+    "HOUSING"
+   ],
+   "want_types": [
+    "HOUSING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 3,
+   "rounds": 0,
+   "tokens": 46467,
+   "seconds": 31.52,
+   "agents_failed": 0,
+   "unit_cost": 38.063,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c07",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-GR-GM37",
+   "want_model": "KL-GR-GM37",
+   "types": [
+    "BEARING"
+   ],
+   "want_types": [
+    "BEARING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 0,
+   "tokens": 46301,
+   "seconds": 24.74,
+   "agents_failed": 0,
+   "unit_cost": 24.5732,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c08",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-ST-57x56",
+   "want_model": "KL-ST-57x56",
+   "types": [
+    "BEARING",
+    "HOUSING",
+    "SHAFT"
+   ],
+   "want_types": [
+    "SHAFT"
+   ],
+   "types_hit": 1,
+   "types_extra": 2,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 0,
+   "tokens": 59959,
+   "seconds": 33.11,
+   "agents_failed": 0,
+   "unit_cost": 42.5597,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c09",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-BL-90W-310",
+   "want_model": "KL-BL-90W-310",
+   "types": [
+    "PACKAGING"
+   ],
+   "want_types": [
+    "PACKAGING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 0,
+   "tokens": 43891,
+   "seconds": 30.58,
+   "agents_failed": 0,
+   "unit_cost": 77.9179,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c10",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-SV-130-2000W",
+   "want_model": null,
+   "types": [
+    "CONNECTOR",
+    "HOUSING",
+    "WINDING"
+   ],
+   "want_types": [],
+   "types_hit": 0,
+   "types_extra": 3,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 0,
+   "tokens": 23162,
+   "seconds": 19.33,
+   "agents_failed": 0,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c11",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-SP-YJ68-25W-120",
+   "want_model": "KL-SP-YJ68-25W-120",
+   "types": [
+    "WINDING"
+   ],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 0,
+   "tokens": 57787,
+   "seconds": 37.84,
+   "agents_failed": 0,
+   "unit_cost": 24.8479,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c12",
+   "mode": "single_agent",
+   "model_ok": true,
+   "base_model": "KL-SV-80-400W",
+   "want_model": "KL-SV-80-400W",
+   "types": [
+    "CONNECTOR",
+    "SHAFT"
+   ],
+   "want_types": [
+    "CONNECTOR",
+    "SHAFT"
+   ],
+   "types_hit": 2,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 0,
+   "tokens": 52978,
+   "seconds": 34.44,
+   "agents_failed": 0,
+   "unit_cost": 171.2965,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c01",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SV-80-400W",
+   "want_model": "KL-SV-80-400W",
+   "types": [
+    "SHAFT"
+   ],
+   "want_types": [
+    "SHAFT"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 1,
+   "tokens": 28220,
+   "seconds": 37.64,
+   "agents_failed": 0,
+   "unit_cost": 156.2965,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c02",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SV-80-750W",
+   "want_model": "KL-SV-80-750W",
+   "types": [
+    "CONNECTOR",
+    "HOUSING"
+   ],
+   "want_types": [
+    "CONNECTOR"
+   ],
+   "types_hit": 1,
+   "types_extra": 1,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 3,
+   "rounds": 1,
+   "tokens": 25256,
+   "seconds": 37.19,
+   "agents_failed": 0,
+   "unit_cost": 199.8025,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c03",
+   "mode": "multi",
+   "model_ok": false,
+   "base_model": "KL-ST-42x40",
+   "want_model": "KL-ST-42x48",
+   "types": [
+    "CONNECTOR"
+   ],
+   "want_types": [
+    "CONNECTOR"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 1,
+   "tokens": 28282,
+   "seconds": 28.77,
+   "agents_failed": 0,
+   "unit_cost": 23.823,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c04",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-BL-90W-310",
+   "want_model": "KL-BL-90W-310",
+   "types": [
+    "MAGNET"
+   ],
+   "want_types": [
+    "MAGNET"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 3,
+   "rounds": 1,
+   "tokens": 24765,
+   "seconds": 27.42,
+   "agents_failed": 0,
+   "unit_cost": 82.6808,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c05",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SP-YJ61-18W-220",
+   "want_model": "KL-SP-YJ61-18W-220",
+   "types": [
+    "CONNECTOR",
+    "WINDING"
+   ],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 1,
+   "types_extra": 1,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 1,
+   "tokens": 30383,
+   "seconds": 31.72,
+   "agents_failed": 0,
+   "unit_cost": 23.9463,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c06",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-CF-65X480",
+   "want_model": "KL-CF-65X480",
+   "types": [
+    "HOUSING"
+   ],
+   "want_types": [
+    "HOUSING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 4,
+   "rounds": 1,
+   "tokens": 23534,
+   "seconds": 29.79,
+   "agents_failed": 0,
+   "unit_cost": 38.063,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c07",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-GR-GM37",
+   "want_model": "KL-GR-GM37",
+   "types": [
+    "BEARING"
+   ],
+   "want_types": [
+    "BEARING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 4,
+   "rounds": 1,
+   "tokens": 24141,
+   "seconds": 27.25,
+   "agents_failed": 0,
+   "unit_cost": 24.5732,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c08",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-ST-57x56",
+   "want_model": "KL-ST-57x56",
+   "types": [
+    "BEARING",
+    "HOUSING",
+    "SHAFT"
+   ],
+   "want_types": [
+    "SHAFT"
+   ],
+   "types_hit": 1,
+   "types_extra": 2,
+   "types_miss": 0,
+   "issues_left": 1,
+   "warnings": 4,
+   "rounds": 3,
+   "tokens": 92022,
+   "seconds": 93.33,
+   "agents_failed": 0,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c09",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-BL-90W-310",
+   "want_model": "KL-BL-90W-310",
+   "types": [
+    "PACKAGING"
+   ],
+   "want_types": [
+    "PACKAGING"
+   ],
+   "types_hit": 1,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 1,
+   "tokens": 28972,
+   "seconds": 28.01,
+   "agents_failed": 0,
+   "unit_cost": 77.9179,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c10",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SV-130-2000W",
+   "want_model": null,
+   "types": [
+    "MAGNET",
+    "OTHER",
+    "SHAFT",
+    "WINDING"
+   ],
+   "want_types": [],
+   "types_hit": 0,
+   "types_extra": 4,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 1,
+   "tokens": 14558,
+   "seconds": 12.05,
+   "agents_failed": 0,
+   "unit_cost": null,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c11",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SP-YJ68-25W-120",
+   "want_model": "KL-SP-YJ68-25W-120",
+   "types": [
+    "OTHER",
+    "WINDING"
+   ],
+   "want_types": [
+    "WINDING"
+   ],
+   "types_hit": 1,
+   "types_extra": 1,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 2,
+   "rounds": 1,
+   "tokens": 25416,
+   "seconds": 26.41,
+   "agents_failed": 0,
+   "unit_cost": 32.7678,
+   "unit_cost_gap": null
+  },
+  {
+   "case": "c12",
+   "mode": "multi",
+   "model_ok": true,
+   "base_model": "KL-SV-80-400W",
+   "want_model": "KL-SV-80-400W",
+   "types": [
+    "CONNECTOR",
+    "SHAFT"
+   ],
+   "want_types": [
+    "CONNECTOR",
+    "SHAFT"
+   ],
+   "types_hit": 2,
+   "types_extra": 0,
+   "types_miss": 0,
+   "issues_left": 0,
+   "warnings": 1,
+   "rounds": 1,
+   "tokens": 30233,
+   "seconds": 40.6,
+   "agents_failed": 0,
+   "unit_cost": 171.2965,
+   "unit_cost_gap": null
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+package com.minierp.production;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface WorkOrderRepository extends JpaRepository<WorkOrder, Long> {
+    List<WorkOrder> findByStatusIn(List<String> statuses);
+}

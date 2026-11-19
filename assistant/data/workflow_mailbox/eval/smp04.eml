@@ -1,0 +1,24 @@
+From: c010.contact0@example.com
+To: sales@kelang.example.com
+Subject: =?utf-8?b?5qC35ZOB5om/6K6k?=
+Message-ID: <eval-smp04@workflow-sample>
+Date: Mon, 12 Oct 2026 12:16:00 +0800
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5024156379475850955=="
+
+--===============5024156379475850955==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+样品测试全部通过，承认书已签字，见附件。
+
+--===============5024156379475850955==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''%E6%89%BF%E8%AE%A4%E4%B9%A6.txt
+MIME-Version: 1.0
+
+5qC35ZOB5om/6K6k5LmmIEtMLVNULTQyeDQ4IOinhOagvOeJiOacrCBCIOW3suaJv+iupA==
+
+--===============5024156379475850955==--

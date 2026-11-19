@@ -1,0 +1,3328 @@
+{
+ "summary": {
+  "emails": 70,
+  "errors": 0,
+  "seconds": 473.5,
+  "split_exact": "70/70",
+  "split_exact_compound": "8/8",
+  "status": {
+   "DONE": 64,
+   "IGNORED": 6
+  },
+  "review_first_pass": 62,
+  "review_rounds": {
+   "0": 62,
+   "2": 1,
+   "1": 1
+  },
+  "review_failed_to_human": 1,
+  "review_issue_rules": {
+   "unsupported_commitment": 4
+  },
+  "tasks_created": 38
+ },
+ "rows": [
+  {
+   "id": "E001",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_PO20260908906_第2版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_PO20260908906_第2版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 5.4,
+   "final_draft": "常阳哲先生，您好：\n\n感谢您的来信。我们已收到贵司订单 PO20260908906 的变更（第 2 版），并已按新版本明细确认如下：\n\nC001-GE-1014 ×1600，交期 2026-10-18；\nC001-GE-1035 ×2500，交期 2026-10-08；\nC001-SH-1007 ×11000，交期 2026-10-08。\n\n订单确认将按上述内容重新回传，请查收。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E002",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_4507090901_第2版.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_4507090901_第2版.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 4.7,
+   "final_draft": "郝波成先生，您好：\n\n感谢您的来信。我们已收到贵司订单 4507090901 的变更（第 2 版），并已按新版本明细确认如下：\n\n107251 ×1700，交期 2026-09-29；\n107200 ×1200，交期 2026-10-04；\n107217 ×650，交期 2026-11-08。\n\n订单确认将按上述内容重新回传，请查收。\n\n如有其他问题，欢迎随时联系。\n\n科朗销售部"
+  },
+  {
+   "id": "E003",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_4529100001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_4529100001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "要求交期 2026-10-13 早于标准交期（下单后 20 天，即 2026-10-23）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.6,
+   "final_draft": "余晴女士，您好：\n\n感谢贵司发来采购订单 4529100001，我们已收到并登记。\n\n该订单明细为：K29300524 ×100，交期 2026-10-13。\n\n关于第 1 行交期，我们正在内部核对，确认后将另行回复。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E004",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_4526100001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_4526100001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "数量 570 不是包装倍数 20 的整数倍"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 4.7,
+   "final_draft": "侯华宁女士，您好：\n\n感谢贵司发来采购订单 4526100001，我们已收到并核对订单明细，现就交期确认如下：\n\nK26300000 ×570，交期 2026-11-01；\nK26300655 ×200，交期 2026-10-30；\nK26300262 ×440，交期 2026-11-02。\n\n关于第 1 行数量（整箱倍数）事项，我们正在内部核对，确认后另行回复。\n\n随函回传订单确认，请查收。如有疑问，欢迎随时联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E005",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 0.9,
+   "final_draft": null
+  },
+  {
+   "id": "E006",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 2.7,
+   "final_draft": "Dear Kenji Sato,\n\nThank you for your email and for your interest in our AC servo motors for your new project.\n\nRegarding your enquiry on product specifications, our engineers are checking the matching models and datasheets and will revert shortly.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E007",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C006-261001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C006-261001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "要求交期 2026-10-09 早于标准交期（下单后 15 天，即 2026-10-19）；单价 63.00 偏离参考价 69.22 -9.0%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 5.3,
+   "final_draft": "廖宁锋先生，您好：\n\n感谢贵司发来采购订单 PO-C006-261001，我们已收到并核对订单明细，具体如下：\n\nK06300655 ×4900，交期 2026-10-09；\nK06300131 ×900，交期 2026-11-06；\nK06300262 ×5900，交期 2026-11-13。\n\n关于第 1 行交期及第 2 行单价，我们正在内部核对，确认后将另行回复。\n\n随函附上订单确认，请查收。如有任何疑问，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E008",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-05001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-05001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 25.01 偏离参考价 23.73 +5.4%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 5.8,
+   "final_draft": "贾飞斌先生，您好：\n\n感谢贵司发来采购订单 CG-2026-05001，我们已收到并确认订单明细如下：\n\nK05300262 ×5600，交期 2026-11-06。\n\n关于第 1 行单价，我们正在内部核对，确认后将另行回复。\n\n如有其他问题，欢迎随时联系我们。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E009",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.8,
+   "final_draft": "薛旭您好：\n\n感谢您的来信，很高兴了解到贵公司正在开发新产品并需要交流伺服电机。\n\n关于您询问的产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E010",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": "订单已全部发完（未发数量 0），发货日期 2026-09-28，状态 SHIPPED/已开票。客户邮件中另询问 220VAC 200W 伺服电机选型与资料，属产品选型问题，不在本跟单任务范围，建议转销售/技术支持跟进。"
+    },
+    "S2": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S2:task1",
+     true
+    ]
+   ],
+   "seconds": 11.8,
+   "final_draft": "Dear Laura Schmidt,\n\nThank you for your email. Please find our responses below.\n\nRegarding your PO PO-C022-2609902 (our order SO2609110010), we are pleased to confirm that it has been fully shipped. All three lines have been shipped in full with no outstanding quantity. The shipment went out on 2026-09-28 under delivery DN2609280018, which has now been invoiced.\n\nRegarding your enquiry on product specifications for the AC servo motor (220VAC, 200W), our engineers are checking the matching models and datasheets and will revert shortly.\n\nPlease do not hesitate to contact us if you have any further questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E011",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 11.1,
+   "final_draft": "段诗婷女士，您好：\n\n感谢您的来信。关于您询问的订单 PO-C018-2609906（我方订单号 SO2609180008），现回复如下：\n\n该订单目前状态为已确认，尚未发货。其中 M18.ST.004 未发 700 台、M18.BL.003 未发 2400 台、M18.SE.002 未发 280 台，暂无发货记录，将按原定交期 2026-10-05 安排。\n\n如有其他疑问，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E012",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C027-261001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C027-261001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "客户料号 127901 没有登记，可能是 KL-ST-28x32（产品线、规格代号相符）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 5.2,
+   "final_draft": "尊敬的谭晖强先生：\n\n您好！感谢贵司发来采购订单 PO-C027-261001，我们已收到并确认订单明细如下：\n\n料号 127901，数量 160，交期 2026-10-19。\n\n关于订单中第 1 行料号的相关事项，我们正在内部核对，确认后将另行回复。\n\n如有其他问题，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E013",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "po_entry",
+     "采购订单_4507100001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "po_entry",
+     "采购订单_4507100001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    },
+    "S2": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": "订单原定交期 2026-10-04 已早于今日（2026-10-05），实际已逾期，建议计划部核实具体可发货时间；客户本次未提出加急要求，故未做加急评估。邮件中提到的另一份新 PO 4507100001 未在本单范围内处理。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S2:task1",
+     true
+    ]
+   ],
+   "seconds": 11.6,
+   "final_draft": "郝波成先生，您好：\n\n感谢您的来信，现就您提出的各项事宜回复如下。\n\n一、关于采购订单 4507100001\n\n我司已收到贵司采购订单 4507100001，订单明细确认如下：\n  107200 ×800，交期 2026-11-16\n  107268 ×750，交期 2026-11-12\n  107251 ×1720，交期 2026-11-16\n\n二、关于订单 4507090901 的状态\n\n您的订单 4507090901（我方订单号 SO2609010002）目前状态为已确认，尚未发货。其中料号 107251 未发 1700 台，料号 107200 未发 1000 台，暂无发货记录，将按原定交期 2026-10-04 安排。\n\n如有其他疑问，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E014",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.5,
+   "final_draft": "侯华宁您好：\n\n感谢您的来信，以及贵司对科朗产品的关注。\n\n关于您询问的交流伺服电机（220VAC、1500W）产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n如有其他问题，欢迎随时联系我们。\n\n顺祝商祺\n\n科朗销售部"
+  },
+  {
+   "id": "E015",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 9.2,
+   "final_draft": "钟鑫您好：\n\n感谢您的来信。关于订单 PO20260928904（我方订单 SO2609280007）中料号 C032-GE-1007 的提前交货申请，经评估，我们可以满足您的要求，确认按 2026-10-18 交货。\n\n如有其他需要，欢迎随时联系我们。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E016",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 4.6,
+   "final_draft": "秦豪磊先生，您好：\n\n感谢您就新项目电机选型事宜与我们联系。\n\n关于您询问的产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n感谢您的理解与耐心，期待与您进一步沟通。\n\n科朗销售部"
+  },
+  {
+   "id": "E017",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261005001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261005001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "数量 40 低于最小起订量 100"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 4.2,
+   "final_draft": "王强锋先生，您好：\n\n感谢贵司发来采购订单 PO20261005001，我们已收到并确认订单明细如下：\n\nK17300131 ×40，交期 2026-11-16。\n\n关于第 1 行数量（起订量）事宜，我们正在内部核对，确认后将另行回复。\n\n如有其他问题，欢迎随时联系。\n\n科朗销售部"
+  },
+  {
+   "id": "E018",
+   "scenario": "duplicate",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C006-261001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C006-261001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "PO PO-C006-261001 已经收过（第 1 版，邮件 <e007.04f2bc18@c006-corp.example.com>），内容完全相同；要求交期 2026-10-09 早于标准交期（下单后 15 天，即 2026-10-19）；单价 63.00 偏离参考价 69.22 -9.0%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 2.5,
+   "final_draft": "侯慧您好：\n\n感谢您的来信。关于贵司采购订单 PO-C006-261001，我们此前已经收到并正在处理中，本次邮件不重复下单，请您放心。\n\n如有其他需要，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E019",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 9.1,
+   "final_draft": "余晴您好：\n\n感谢您的来信，关于您询问的订单 4529090901 交期事宜，现回复如下：\n\n您的订单 4529090901（我方订单号 SO2609040002）已全部发货完毕，未发数量为 0，发货日期为 2026-09-17，请留意收货。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E020",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 9.9,
+   "final_draft": "王强锋先生，您好：\n\n感谢您对我司订单 PO20260911905 的关注。关于您询问的发货情况，现回复如下：\n\n您的订单 PO20260911905（我方订单号 SO2609110005）已全部发货完毕，未发数量为 0，发货日期为 2026-09-23，请留意收货。\n\n如有其他问题，欢迎随时联系我们。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E021",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.4,
+   "final_draft": "谭晖强先生，您好：\n\n感谢您就新项目电机选型事宜与我们联系，也感谢您对科朗产品的关注。\n\n关于您询问的交流伺服电机（220VAC、1500W）产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E022",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（原因：库存不足，需计划部排产评估），故未向客户承诺新日期，已派 PRODUCTION 任务（task1，待人工审批）。邮件中另询贯流风机 220V/20W 新品选型与规格书，属销售/技术选型事项，未在本任务处理，建议转销售跟进。"
+    },
+    "S2": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ],
+    [
+     "S2:task1",
+     true
+    ]
+   ],
+   "seconds": 12.1,
+   "final_draft": "黎鑫亮先生，您好：\n\n感谢您的来信，针对您提出的两项事宜，回复如下：\n\n一、关于订单 PO20260928908（我方订单 SO2609280001）中料号 C004-SH-1007 的交期\n该订单目前状态为已确认，料号 C004-SH-1007 未发数量为 5500，原交期为 2026-10-22，暂无发货记录。您提出希望提前至 2026-10-16 交货，我们已安排计划部进行评估，会尽快回复确认日期。\n\n二、关于贯流风机的型号推荐与规格书\n您提到新产品需要 220V、20W 的贯流风机，年用量约 10000 台。我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n感谢您的理解与支持，如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E023",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "系统判断库存不足，check_expedite 未返回 confirmable_date，故未向客户承诺新日期，已派任务给计划部（PRODUCTION）评估，task_ref=task1，待人工审批。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 12.4,
+   "final_draft": "莫楠您好：\n\n感谢您的来信。关于订单 CG-2026-21904（我方订单 SO2609230007）中料号 K21300262 共 1500 件尚未发货、原交期为 2026-10-23 的情况，您提出希望提前至 2026-10-15 交货的需求，我们已安排计划部评估可行性，会尽快回复确认交期。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E024",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 7.0,
+   "final_draft": "胡伟豪先生，您好：\n\n感谢您对科朗产品的关注与信任，也感谢您就新项目电机选型向我们询价。\n\n关于您询问的产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n再次感谢您的来信，期待与您进一步沟通。\n\n科朗销售部"
+  },
+  {
+   "id": "E025",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_4507100002.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_4507100002.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 4.2,
+   "final_draft": "史旭楠女士，您好：\n\n感谢贵司发来采购订单 4507100002，我司已收到并确认，订单明细及交期如下：\n\n107234 ×1480，交期 2026-11-07；\n107268 ×850，交期 2026-11-09；\n107251 ×2180，交期 2026-11-01；\n107217 ×400，交期 2026-11-20。\n\n随函回传订单确认，请查收。如对上述内容有任何疑问，欢迎随时与我司联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E026",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_PO20261005001_第2版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_PO20261005001_第2版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 4.3,
+   "final_draft": "宋林航您好：\n\n感谢您的来信。我们已收到贵司订单 PO20261005001 的变更（第 2 版），并已按新版明细确认如下：K17300131 ×500，交期 2026-11-23。\n\n订单确认书将按上述内容重新回传，请查收。\n\n如有其他问题，欢迎随时联系。\n\n科朗销售部"
+  },
+  {
+   "id": "E027",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 8.4,
+   "final_draft": "万军航您好：\n\n感谢您的来信。关于贵司订单 4523090903（我方订单号 SO2609150011）的状态，现回复如下：\n\n该订单目前状态为已确认，尚未发货。其中 K23300393 未发 1000 只，K23300000 未发 700 只，暂无发货记录，我们将按原定交期 2026-10-08 安排。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E028",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "4525100001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "4525100001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 7.9,
+   "final_draft": "Dear Mark Johnson,\n\nThank you for your email and for sending us purchase order 4525100001. We confirm that we have received it.\n\nRegarding your order, it contains one line item: item 125217, quantity 300, with a requested delivery date of 2026-11-17.\n\nPlease do not hesitate to contact us if you have any further questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E029",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C008-261001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C008-261001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 4.3,
+   "final_draft": "卢鸿洋先生/女士，您好：\n\n感谢贵司发来采购订单 PO-C008-261001，我司已收到并确认订单明细，具体交期如下：\n\nK08300131 ×5800，交期 2026-10-28；\nK08300393 ×3200，交期 2026-10-30；\nK08300000 ×250，交期 2026-11-16。\n\n随函回传订单确认，请查收。如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E030",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 4.5,
+   "final_draft": "常阳哲先生，您好：\n\n感谢贵司发来采购订单 PO20261007001，我司已收到并确认订单明细如下：\n\n1. C001-BL-1000 ×950，交期 2026-11-13；\n2. C001-SH-1007 ×5900，交期 2026-11-05。\n\n随函回传订单确认，请查收。如对上述内容有任何疑问，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E031",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 1.8,
+   "final_draft": null
+  },
+  {
+   "id": "E032",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.3,
+   "final_draft": "谭晖强先生，您好：\n\n感谢您就新项目电机选型向我们询价。\n\n关于您询问的产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n感谢您的理解与耐心，期待与您进一步沟通。\n\n科朗销售部"
+  },
+  {
+   "id": "E033",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 30.82 偏离参考价 27.55 +11.9%（阈值 3%）；数量 190 不是包装倍数 20 的整数倍"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.1,
+   "final_draft": "姜峰您好：\n\n感谢贵司发来采购订单 PO20261007001，我们已收到并核对，订单明细及交期确认如下：\n\nK24300131 ×1200，交期 2026-11-09；\nK24300393 ×1100，交期 2026-11-04；\nK24300655 ×190，交期 2026-11-06。\n\n关于第 2 行单价及第 3 行数量（整箱倍数），我们正在内部核对，确认后另行回复。\n\n随函回传订单确认，请查收。如有疑问，欢迎随时联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E034",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "po_change",
+     "采购订单_PO20260908906_第3版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "po_change",
+     "采购订单_PO20260908906_第3版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    },
+    "S2": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "submit"
+     ],
+     "note": "客户邮件另提到 PO20260908906 有变更（附件第 3 版），本次未涉及该单，如需处理请另行确认。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 10.1,
+   "final_draft": "常阳哲先生，您好：\n\n感谢您的来信。关于订单 PO20260908906 的变更（第 3 版），我们已收到，并将按新版本明细执行，具体如下：\nC001-GE-1014 ×1600，交期 2026-10-18；\nC001-GE-1035 ×2500，交期 2026-10-08；\nC001-SH-1007 ×11000，交期 2026-10-08；\nC001-BL-1000 ×500，交期 2026-11-05。\n\n关于订单 PO20260923911（我方订单 SO2609230001）中料号 C001-GE-1014 的提前交货请求，经评估，我们可以满足您要求的 2026-10-22 提前交货日期。该订单目前状态为已确认，该料号尚未发货，数量 2900，我们将按 2026-10-22 安排发货。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E035",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 7.8,
+   "final_draft": "贾萱梅女士，您好：\n\n感谢您对我司订单 PO20260916904（我方订单号 SO2609160001）交期情况的关注。现就您询问的事项回复如下：\n\n关于订单 PO20260916904 的当前状态：该订单目前状态为已确认，尚未发货。其中 C003-GE-1028 未发 1100 台，C003-SH-1000 未发 13500 台，暂无发货记录，将按原定交期 2026-10-14 安排。\n\n如有其他疑问，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E036",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-09001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-09001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 77.84 偏离参考价 70.74 +10.0%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 7.0,
+   "final_draft": "崔钧鸿先生/女士，您好：\n\n感谢贵司发来采购订单 CG-2026-09001，我们已收到并确认订单明细如下：\n\nM09.BL.001 ×1050，交期 2026-11-22。\n\n关于第 1 行单价，我们正在内部核对，确认后将另行回复。\n\n如有其他问题，欢迎随时联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E037",
+   "scenario": "duplicate",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261007001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "PO PO20261007001 已经收过（第 1 版，邮件 <e033.9a04da9c@c024-corp.example.com>），内容完全相同；单价 30.82 偏离参考价 27.55 +11.9%（阈值 3%）；数量 190 不是包装倍数 20 的整数倍"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 4.1,
+   "final_draft": "邵明刚先生，您好：\n\n感谢您的来信。关于贵司采购订单 PO20261007001，我们此前已经收到并正在处理中，本次邮件不重复下单，请您放心。\n\n如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E038",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261008001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261008001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "客户料号 C032-SE-1902 没有登记，可能是 KL-SV-60-200W（产品线、功率相符）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.3,
+   "final_draft": "田平斌先生，您好：\n\n感谢贵司发来采购订单 PO20261008001，我们已收到并确认订单明细如下：\n\n1. C032-GE-1014 ×200，交期 2026-11-02；\n2. C032-SE-1902 ×18，交期 2026-11-23；\n3. C032-GE-1007 ×700，交期 2026-11-04。\n\n关于第 2 行料号，我们正在内部核对，确认后将另行回复。\n\n随函附上订单确认，请查收。如有任何问题，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E039",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_CG-2026-09001_第2版.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_CG-2026-09001_第2版.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 77.84 偏离参考价 70.74 +10.0%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.1,
+   "final_draft": "崔钧鸿先生/女士，您好：\n\n感谢您的来信。我们已收到贵司订单 CG-2026-09001 的变更（第 2 版），并已按新版本明细确认如下：\n\nM09.BL.001 ×1050，交期 2026-11-29。\n\n关于第 1 行单价，我们正在内部核对，确认后将另行回复。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E040",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C018-261001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C018-261001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 298.86 偏离参考价 278.05 +7.5%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 5.4,
+   "final_draft": "秦豪磊先生，您好：\n\n感谢贵司发来采购订单 PO-C018-261001，我们已收到并核对订单明细，现就各项内容回复如下：\n\n一、订单明细及交期确认\nM18.SE.005 ×42，交期 2026-11-22；\nM18.ST.001 ×140，交期 2026-11-07；\nM18.SE.002 ×51，交期 2026-11-06。\n\n二、关于第 1 行单价\n该事项我们正在内部核对，确认后将另行回复。\n\n如对以上内容有任何疑问，欢迎随时与我们联系。感谢贵司的支持与配合！\n\n科朗销售部"
+  },
+  {
+   "id": "E041",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-02001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_CG-2026-02001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 10.1,
+   "final_draft": "常晟先生/女士，您好：\n\n感谢贵司发来采购订单 CG-2026-02001，我司已收悉。现将订单明细及交期确认如下：\n\nK02300000 ×5500，交期 2026-10-30；\nK02300131 ×2400，交期 2026-11-05；\nK02300393 ×2300，交期 2026-11-09。\n\n随函回传订单确认，请查收。如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E042",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 1.4,
+   "final_draft": null
+  },
+  {
+   "id": "E043",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "PO20261009001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "PO20261009001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "客户料号 M35.ST.903 没有登记，可能是 KL-ST-42x40（产品线、电压、规格代号相符）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 9.2,
+   "final_draft": "Dear Anna,\n\nThank you for your email and for sending us purchase order PO20261009001. We confirm receipt of the order, which covers the following two line items:\n\n- M35.SE.002, quantity 40, requested date 2026-11-23\n- M35.ST.903, quantity 540, requested date 2026-11-10\n\nRegarding the delivery dates, we are checking them internally and will revert to you separately.\n\nWe are also checking item 20, the part number, internally and will revert to you separately on this point as well.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E044",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_4529100001_第2版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_4529100001_第2版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "要求交期 2026-10-13 早于标准交期（下单后 20 天，即 2026-10-23）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 4.9,
+   "final_draft": "熊博东先生，您好：\n\n感谢您的来信。我们已收到贵司订单 4529100001 的变更（第 2 版），并将以新版为准。按新版本明细如下：\n\nK29300524 ×100，交期 2026-10-13；\nK29300131 ×1050，交期 2026-11-05。\n\n关于第 1 行交期，我们正在内部核对，确认后另行回复。\n\n订单确认我们将重新回传，感谢您的配合。\n\n科朗销售部"
+  },
+  {
+   "id": "E045",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 9.4,
+   "final_draft": "姜峰您好：\n\n感谢您的来信，关于订单 SO2609280006（贵司料号 K24300524）的发货进度，现回复如下：\n\n该订单目前状态为已确认，其中料号 K24300524 对应数量 1900 尚未发货，暂无发货记录，将按原定交期 2026-10-20 安排。\n\n如有其他疑问，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E046",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": "订单已确认，两行均未发货（1100 + 1000），无发货记录。原要求日期 2026-10-04 已过，客户未提出新交期，故未做加急评估；如需加急请客户给出目标日期。未查库存/生产信息，未向客户承诺新日期。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 8.9,
+   "final_draft": "Dear Hans Weber,\n\nThank you for your email and for your inquiry regarding the status of your order.\n\nWe would like to confirm that your PO PO-C022-2609903 (our order SO2609110011) is confirmed. Currently, there have been no shipments yet: 1,100 pcs of item 122200 and 1,000 pcs of item 122251 remain to be shipped. The order is being handled according to the original delivery date of 2026-10-04, and we will update you as soon as a shipping date is fixed.\n\nPlease do not hesitate to contact us if you have any further questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E047",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": "订单状态 SHIPPED，500 台已全部发出（发货单 DN2609230008，2026-09-23，已开票）。邮件中另询步进电机新品选型（24VDC、42x40 机座、年用量约 20000 台）及规格书，属选型推荐事项，不在本工具范围内，需转销售/技术跟进。"
+    },
+    "S2": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S2:task1",
+     true
+    ]
+   ],
+   "seconds": 8.1,
+   "final_draft": "谭晖强先生，您好：\n\n感谢您的来信，现就您咨询的事项回复如下：\n\n关于订单 PO-C027-2609901 的发货情况：该订单已全部发货完毕，发货日期为 2026-09-23，未发数量为 0，无待发部分。\n\n关于您正在开发的新产品所需步进电机（24VDC、机座 42x40，年用量约 20000 台）：我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E048",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "4528100001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "4528100001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "要求交期 2026-10-19 早于标准交期（下单后 20 天，即 2026-10-29）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 7.8,
+   "final_draft": "Dear Mr. Becker,\n\nThank you for your email and for sending us purchase order 4528100001. We confirm receipt of the order, which covers the following three line items:\n\n- KOS300000 x1000, requested date 2026-10-19\n- KOS300131 x260, requested date 2026-11-11\n- KOS300262 x500, requested date 2026-11-14\n\nRegarding the delivery date for item 10, we are currently checking this internally and will revert to you separately.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E049",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "po_change",
+     "采购订单_PO20260908906_第4版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "po_change",
+     "采购订单_PO20260908906_第4版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    },
+    "S2": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "submit"
+     ],
+     "note": "邮件原文另提到订单 PO20260908906 有第 4 版变更，本次未涉及，如需处理请另行确认。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 19.8,
+   "final_draft": "常阳哲先生，您好：\n\n感谢您的来信，现就您提到的两项事宜回复如下。\n\n一、关于订单 PO20260908906 的变更\n\n我们已收到贵司订单 PO20260908906 的变更（第 4 版），将按新版本明细执行，具体如下：\n\nC001-GE-1014 ×1600，交期 2026-10-18\nC001-GE-1035 ×600，交期 2026-10-08\nC001-SH-1007 ×11000，交期 2026-10-08\nC001-SH-1021 ×3000，交期 2026-10-29\n\n二、关于订单 PO20260924912 中料号 C001-SH-1021 的提前交货\n\n订单 PO20260924912（我方订单 SO2609240001）中料号 C001-SH-1021 共 12500 件尚未发货，原交期 2026-10-23。经评估，我们可以满足您提前到 2026-10-15 交货的要求，将按该日期安排发货。\n\n如有其他问题，欢迎随时与我们联系。\n\n科朗销售部"
+  },
+  {
+   "id": "E050",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（原因：库存不足，需计划部排产评估），故未向客户承诺新日期，已派 PRODUCTION 任务（task1，待人工审批）。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 15.2,
+   "final_draft": "杜立斌先生，您好：\n\n感谢您的来信。关于订单 CG-2026-09905（我方订单 SO2609280002）中料号 M09.CR.004 的提前交货申请，现回复如下：\n\n该订单目前状态为已确认，料号 M09.CR.004 未发数量为 2300，原交期为 2026-10-28，暂无发货记录。您提出希望提前至 2026-10-19 交货的需求，我们已安排计划部进行评估，会尽快回复确认日期。\n\n如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E051",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "po_entry",
+     "4512100001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ],
+    [
+     "po_entry",
+     "4512100001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    },
+    "S2": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": "订单状态 CONFIRMED，无发货记录，未发数量合计 8500 pcs（三行分别为 2200/5000/1300）。原交期 2026-10-04 已过，客户未提出新交期，故未做加急评估；如需具体发货日期或加急，请客户给出目标日期后再评估。另：邮件提到的新 PO 4512100001 未在本单查询范围内，需另行确认。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 11.7,
+   "final_draft": "Dear Anna,\n\nThank you for your email and for sending us your new PO 4512100001. We confirm that we have received it with the following lines: M12.CR.004 x2060 (required 2026-11-01), M12.BL.003 x300 (required 2026-11-23), M12.SH.005 x2700 (required 2026-11-12) and M12.BL.002 x800 (required 2026-11-17).\n\nRegarding your PO 4512090902 (our order SO2609160005), we confirm that it is confirmed and currently has no shipments yet. All three lines remain outstanding: 2,200 pcs of M12.GE.001, 5,000 pcs of M12.SH.005 and 1,300 pcs of M12.BL.002. It is being handled per the original delivery date of 2026-10-04.\n\nPlease do not hesitate to contact us if you have any questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E052",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_PO-C008-261001_第2版.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_PO-C008-261001_第2版.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 6.5,
+   "final_draft": "程勇阳先生，您好：\n\n感谢您的来信。我们已收到贵司订单 PO-C008-261001 的变更（第 2 版），并已按新版明细确认如下：\n\nK08300131 ×5800，交期 2026-11-11；\nK08300393 ×3200，交期 2026-10-30；\nK08300000 ×250，交期 2026-11-16；\nK08300262 ×1160，交期 2026-11-01。\n\n订单确认将按上述新版内容重新回传，请查收。\n\n如有其他问题，欢迎随时联系我们。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E053",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "4516100001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "4516100001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "数量 500 低于最小起订量 1000"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 7.6,
+   "final_draft": "Dear Emre Yilmaz,\n\nThank you for your email and for sending us purchase order 4516100001. We hereby confirm receipt of the order, which covers the following three line items:\n\n- IBE300262 x350, requested date 2026-11-16\n- IBE300393 x500, requested date 2026-10-31\n- IBE300131 x2600, requested date 2026-11-10\n\nRegarding the delivery dates, we are currently reviewing them internally and will revert to you separately.\n\nIn addition, please note that we are checking the quantity (MOQ) for item 20 internally and will also revert to you separately on this point.\n\nThank you for your patience and understanding. Please do not hesitate to contact us should you have any questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E054",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO20261010001.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO20261010001.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 3.3,
+   "final_draft": "钱伟先生/女士，您好：\n\n感谢贵司发来采购订单 PO20261010001，我司已收到并确认，订单明细如下：\n\nC003-SH-1014 ×2900，交期 2026-11-05。\n\n随函回传订单确认，请查收。如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E055",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 1.5,
+   "final_draft": null
+  },
+  {
+   "id": "E056",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "PO20261011001_v1.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "PO20261011001_v1.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "PO 总额 6,895.15 和各行之和 6,802.90 对不上"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 6.9,
+   "final_draft": "Dear Ji-ho Park,\n\nThank you for your email and for sending us purchase order PO20261011001. We confirm receipt of the order, which covers the following two line items:\n\n- RHG300262 x250, requested 2026-11-08\n- RHG300000 x1220, requested 2026-11-14\n\nWe are currently checking the order total internally and will revert to you separately on this matter.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E057",
+   "scenario": "compound",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ],
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（库存不足，需计划部排产评估），故未向客户承诺任何新日期，已用 create_task 派给计划部（PRODUCTION）评估，task_ref=task1，待人工审批。另：邮件中提到的交流伺服电机 220VAC/1200W 选型与规格书需求不属于本跟单范围，未作回复，建议转销售/技术处理。"
+    },
+    "S2": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ],
+    [
+     "S2:task1",
+     true
+    ]
+   ],
+   "seconds": 13.2,
+   "final_draft": "程勇阳先生，您好：\n\n感谢您的来信，现就您提出的两项事宜回复如下：\n\n一、关于订单 PO-C008-2609904（我方订单 SO2609240004）中料号 K08300000 的交期\n该订单目前状态为已确认，其中料号 K08300000 对应 1100 台尚未发货，原交期为 2026-10-23。您希望提前至 2026-10-15 交货，由于目前库存不足，我们暂无法确认该日期。我们已安排计划部评估排产可行性，会尽快回复可确认的交期。\n\n二、关于交流伺服电机的选型与规格资料\n您提到新产品需要 220VAC、1200W 的交流伺服电机，年用量约 10000 台。我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n感谢您的理解与支持，如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E058",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（库存不足，需计划部排产评估），故未向客户确认任何新日期，已派 PRODUCTION 任务（task1，待人工审批）。订单无发货记录。"
+    }
+   },
+   "review_rounds": 2,
+   "review_passed": false,
+   "review_issues": [
+    [
+     "unsupported_commitment"
+    ],
+    [
+     "unsupported_commitment"
+    ],
+    [
+     "unsupported_commitment"
+    ]
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 14.2,
+   "final_draft": "莫楠您好：\n\n感谢您的来信。关于订单 CG-2026-21905（我方订单 SO2609280005）中料号 K21300262 共 1400 件尚未发货、原交期为 2026-10-28 的情况，我们已了解您希望提前至 2026-10-23 交货的需求。目前库存不足，我们已安排计划部评估排产，能否满足该日期会尽快回复您。\n\n如有其他问题，欢迎随时联系。\n\n科朗销售部"
+  },
+  {
+   "id": "E059",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "4514100001_v1.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "4514100001_v1.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "要求交期 2026-10-21 早于标准交期（下单后 15 天，即 2026-10-26）"
+    }
+   },
+   "review_rounds": 1,
+   "review_passed": true,
+   "review_issues": [
+    [
+     "unsupported_commitment"
+    ],
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 7.1,
+   "final_draft": "Dear Ji-ho Park,\n\nThank you for your email and for sending us purchase order 4514100001.\n\nWe confirm that we have received your PO 4514100001, covering one line item: C014-SH-1000, quantity 1800.\n\nRegarding the delivery date for item 1, we are checking this internally and will revert to you separately.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E060",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 1.5,
+   "final_draft": null
+  },
+  {
+   "id": "E061",
+   "scenario": "spam",
+   "split_ok": true,
+   "want": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "other",
+     null
+    ]
+   ],
+   "status": "IGNORED",
+   "agents": {},
+   "review_rounds": null,
+   "review_passed": null,
+   "review_issues": [],
+   "executed": [],
+   "seconds": 1.1,
+   "final_draft": null
+  },
+  {
+   "id": "E062",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "采购订单_CG-2026-05001_第2版.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "采购订单_CG-2026-05001_第2版.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": false,
+     "tools": [],
+     "note": "单价 25.01 偏离参考价 23.73 +5.4%（阈值 3%）"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 3.6,
+   "final_draft": "贾飞斌先生，您好：\n\n感谢您的来信。我们已收到贵司订单 CG-2026-05001 的变更（第 2 版），并将以新版为准。按新版本明细如下：\n\nK05300262 ×3400，交期 2026-11-20；\nK05300000 ×5500，交期 2026-11-05。\n\n关于第 1 行单价，我们正在内部核对，确认后另行回复。\n\n订单确认我们将重新回传给您，请留意查收。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E063",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "PO20261011001_v1.xlsx"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "PO20261011001_v1.xlsx"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 8.4,
+   "final_draft": "Dear Anna,\n\nThank you for your email and for sending us purchase order PO20261011001. We confirm that we have received it.\n\nRegarding the two line items, we have recorded item 111217 with a quantity of 2300 and a requested date of 2026-11-10, and item 111200 with a quantity of 1200 and a requested date of 2026-11-20.\n\nWe will keep you informed of the progress of your order. Please do not hesitate to contact us if you have any questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E064",
+   "scenario": "po_change",
+   "split_ok": true,
+   "want": [
+    [
+     "po_change",
+     "PO20260903901_v2.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_change",
+     "PO20260903901_v2.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 10.2,
+   "final_draft": "Dear Ji-ho Park,\n\nThank you for your email and for sending us revision 2 of PO PO20260903901. We confirm that we have received the revised PO.\n\nWe have updated our order accordingly. The updated lines are as follows:\n  RHG300262  x1500  req. 2026-10-08\n  RHG300000  x1500  req. 2026-10-08\n  RHG300131  x2400  req. 2026-10-08\n  RHG300393  x2200  req. 2026-11-21\n\nPlease let us know if you have any questions.\n\nBest regards, Kelang Sales"
+  },
+  {
+   "id": "E065",
+   "scenario": "delivery_query",
+   "split_ok": true,
+   "want": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "delivery_query",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": true,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "submit"
+     ],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ]
+   ],
+   "seconds": 6.7,
+   "final_draft": "黄亮您好：\n\n感谢您的来信。关于您查询的订单 SO2609030006（贵司料号 K33300131）的发货进度，现回复如下：\n\n该订单已全部发货完毕，其中料号 K33300131 对应数量 260 已全部发出，未发数量为 0。发货单 DN2609210007 的发货日期为 2026-09-21，该单已开票。\n\n如有其他疑问，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E066",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_4520100001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_4520100001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 3.0,
+   "final_draft": "胡伟豪先生/女士，您好：\n\n感谢贵司发来采购订单 4520100001，我司已收到并确认，订单明细如下：\n\nK20300000 ×500，交期 2026-11-12。\n\n随函回传订单确认，请查收。如有其他需要，欢迎随时与我们联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E067",
+   "scenario": "spec_inquiry",
+   "split_ok": true,
+   "want": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "spec_inquiry",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "tech",
+     "ok": false,
+     "tools": [],
+     "note": "技术 Agent 在阶段 6 实现，现在转工程师"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 4.7,
+   "final_draft": "秦倩娟女士，您好：\n\n感谢您就新项目电机选型事宜与我们联系。\n\n关于您询问的产品规格，我们的技术同事正在确认匹配的型号和规格资料，确认后会尽快回复您。\n\n感谢您的理解与耐心，期待与您进一步沟通。\n\n科朗销售部"
+  },
+  {
+   "id": "E068",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（库存不足，需计划部排产评估），故未向客户承诺新日期，已派 PRODUCTION 任务（task1，待人工审批）。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 14.3,
+   "final_draft": "段诗婷女士，您好：\n\n感谢您的来信。关于订单 PO-C018-2609908（我方订单 SO2609280004）中料号 M18.SE.005 的提前交货申请，现回复如下：\n\n该订单目前状态为已确认，料号 M18.SE.005 未发数量为 290，暂无发货记录，原交期为 2026-10-22。您希望提前至 2026-10-16 交货，由于目前库存不足、需排产评估，我们已安排计划部进行评估，会尽快回复确认。\n\n感谢您的理解与支持，如有其他问题，欢迎随时联系我们。\n\n科朗销售部"
+  },
+  {
+   "id": "E069",
+   "scenario": "new_po",
+   "split_ok": true,
+   "want": [
+    [
+     "po_entry",
+     "采购订单_PO-C033-261001.pdf"
+    ]
+   ],
+   "got": [
+    [
+     "po_entry",
+     "采购订单_PO-C033-261001.pdf"
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "order",
+     "ok": true,
+     "tools": [],
+     "note": ""
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:po_version",
+     true
+    ],
+    [
+     "S1:erp",
+     true
+    ]
+   ],
+   "seconds": 5.5,
+   "final_draft": "黄亮先生/女士，您好：\n\n感谢贵司发来采购订单 PO-C033-261001，我司已收到并确认。\n\n该订单明细为：K33300131 ×24，交期 2026-11-27。随函回传订单确认，请查收。\n\n如有其他疑问，欢迎随时与我司联系。\n\n顺祝商祺！\n\n科朗销售部"
+  },
+  {
+   "id": "E070",
+   "scenario": "expedite",
+   "split_ok": true,
+   "want": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "expedite",
+     null
+    ]
+   ],
+   "status": "DONE",
+   "agents": {
+    "S1": {
+     "agent": "delivery",
+     "ok": false,
+     "tools": [
+      "find_order",
+      "get_order_status",
+      "check_expedite",
+      "create_task",
+      "submit"
+     ],
+     "note": "check_expedite 返回 feasible=false、confirmable_date 为空（库存不足，需计划部排产评估），故未向客户承诺任何新日期；已登记 PRODUCTION 任务（task1，待人工审批）。"
+    }
+   },
+   "review_rounds": 0,
+   "review_passed": true,
+   "review_issues": [
+    []
+   ],
+   "executed": [
+    [
+     "reply",
+     true
+    ],
+    [
+     "S1:task1",
+     true
+    ]
+   ],
+   "seconds": 10.5,
+   "final_draft": "莫楠您好：\n\n感谢您的来信。关于订单 CG-2026-21905（我方订单 SO2609280005）中料号 K21300262 共 1400 件尚未发货、原交期为 2026-10-28 的情况，我们已了解您产线急用的需求。您提出提前至 2026-10-22 交货，目前无法直接确认，我们已安排计划部评估排产，会尽快回复可确认的交期。\n\n如有其他问题，欢迎随时联系。\n\n科朗销售部"
+  }
+ ]
+}

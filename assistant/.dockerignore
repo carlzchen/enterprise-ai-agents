@@ -1,0 +1,10 @@
+.venv
+**/__pycache__
+output
+logs
+data/kbase_inbox
+data/workflow_mailbox
+data/kbase_eval/*.json
+!data/kbase_eval/dataset.json
+.env
+*.log

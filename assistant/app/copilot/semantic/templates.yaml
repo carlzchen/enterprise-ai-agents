@@ -1,0 +1,629 @@
+# 分析模板：高频问题用人工写好并验证过的 SQL，模型只负责选模板和填参数。
+#   time     range 需要起止日期 / asof 只看期末那一天 / none 不需要时间
+#   dims     可选的分组维度 → SQL 表达式（模型只能从这里选，不能自己写）
+#   fixed    一定会带上的分组维度
+#   filters  可选的过滤条件 → SQL 列（值由代码做归一化和转义后拼成字面量）
+#   default_group  常用的分组方式，只是给模型的提示；用户没要求分组时结果是合计
+#   roles    哪些角色可以用这个模板（不写表示不限；数据仍然受视图的行级、列级权限约束）
+#   SQL 里的占位符：{dims} 分组列  {group_by}  {filters}  {order}  {limit}
+#                  :start :end 起止日期  :start_month :end_month 起止月份  :m_start :m_end 起止月份的 1 号
+
+- id: T01
+  name: 在职人数与人员结构
+  intent: 人员与编制
+  metrics: [在职人数]
+  desc: 统计日当天的在职人数和占比，可按部门、产线、用工类型、计薪方式、性别、职级、司龄段分组
+  time: asof
+  dims:
+    部门: e.dept_name
+    产线: e.line_code
+    班组: e.team
+    用工类型: e.employment_type
+    计薪方式: e.wage_type
+    性别: e.gender
+    职级: e.grade
+    司龄段: "CASE WHEN TIMESTAMPDIFF(MONTH, e.hire_date, :end) < 3 THEN '1) 3个月内' WHEN TIMESTAMPDIFF(MONTH, e.hire_date, :end) < 12 THEN '2) 3-12个月' WHEN TIMESTAMPDIFF(MONTH, e.hire_date, :end) < 36 THEN '3) 1-3年' ELSE '4) 3年以上' END"
+  filters: {部门: e.dept_name, 产线: e.line_code, 班组: e.team, 用工类型: e.employment_type, 计薪方式: e.wage_type, 性别: e.gender}
+  sql: |
+    SELECT {dims} COUNT(*) AS `在职人数`, ROUND(COUNT(*) / SUM(COUNT(*)) OVER (), 4) AS `占比`
+    FROM v_employee e
+    WHERE e.hire_date <= :end AND (e.leave_date IS NULL OR e.leave_date > :end) {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`在职人数` DESC"
+  chart: bar
+  examples: [现在公司有多少人, 各部门分别多少人, 劳务派遣占比多少, 各产线有多少人, 男女比例, 司龄分布是怎样的, 伺服线现在多少人]
+
+- id: T02
+  name: 入职与离职人数
+  intent: 人员与编制
+  metrics: [入职人数, 离职人数]
+  desc: 期间内的入职人数、离职人数、净增人数，可按月份、部门、产线、用工类型分组
+  time: range
+  dims:
+    月份: "DATE_FORMAT(t.d, '%Y-%m')"
+    部门: t.dept_name
+    产线: t.line_code
+    用工类型: t.employment_type
+    计薪方式: t.wage_type
+  filters: {部门: t.dept_name, 产线: t.line_code, 用工类型: t.employment_type, 计薪方式: t.wage_type}
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} SUM(t.kind = 'HIRE') AS `入职人数`, SUM(t.kind = 'LEAVE') AS `离职人数`,
+           SUM(t.kind = 'HIRE') - SUM(t.kind = 'LEAVE') AS `净增人数`
+    FROM (
+      SELECT 'HIRE' AS kind, h.hire_date AS d, h.dept_name, h.line_code, h.employment_type, h.wage_type
+      FROM v_employee h WHERE h.hire_date BETWEEN :start AND :end
+      UNION ALL
+      SELECT 'LEAVE' AS kind, l.leave_date AS d, l.dept_name, l.line_code, l.employment_type, l.wage_type
+      FROM v_employee l WHERE l.status = 'LEFT' AND l.leave_date BETWEEN :start AND :end
+    ) t
+    WHERE 1 = 1 {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`离职人数` DESC"
+  chart: bar
+  examples: [上个月入职和离职各多少人, 今年每个月入离职人数, 上月各部门离职多少人, 三季度招了多少人, 今年净增多少人]
+
+- id: T03
+  name: 月度离职率
+  intent: 人员与编制
+  metrics: [离职率, 离职人数]
+  desc: 每个月的离职率 = 当月离职人数 ÷ 月初在职人数，可再按部门、产线、用工类型、计薪方式细分
+  time: range
+  fixed: [月份]
+  dims:
+    月份: "DATE_FORMAT(m.d, '%Y-%m')"
+    部门: e.dept_name
+    产线: e.line_code
+    用工类型: e.employment_type
+    计薪方式: e.wage_type
+  filters: {部门: e.dept_name, 产线: e.line_code, 用工类型: e.employment_type, 计薪方式: e.wage_type}
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    WITH RECURSIVE m AS (
+      SELECT CAST(:m_start AS DATE) AS d
+      UNION ALL
+      SELECT DATE_ADD(d, INTERVAL 1 MONTH) FROM m WHERE d < CAST(:m_end AS DATE)
+    )
+    SELECT {dims}
+           SUM(e.hire_date < m.d AND (e.leave_date IS NULL OR e.leave_date >= m.d)) AS `月初在职人数`,
+           SUM(e.status = 'LEFT' AND e.leave_date BETWEEN m.d AND LAST_DAY(m.d)) AS `离职人数`,
+           ROUND(SUM(e.status = 'LEFT' AND e.leave_date BETWEEN m.d AND LAST_DAY(m.d))
+                 / NULLIF(SUM(e.hire_date < m.d AND (e.leave_date IS NULL OR e.leave_date >= m.d)), 0), 4) AS `离职率`
+    FROM m CROSS JOIN v_employee e
+    WHERE 1 = 1 {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`离职率` DESC"
+  chart: line
+  examples: [上个月离职率多少, 今年每个月的离职率, 各产线上月离职率, 劳务派遣的流失率是多少, 最近半年离职率趋势]
+
+- id: T04
+  name: 离职人员清单
+  intent: 人员与编制
+  metrics: [离职人数]
+  desc: 期间内离职人员的明细（工号、姓名、部门、产线、入职日期、离职日期、司龄、离职原因）
+  time: range
+  kind: list
+  filters: {部门: e.dept_name, 产线: e.line_code, 用工类型: e.employment_type, 计薪方式: e.wage_type}
+  roles: [ADMIN, HR, MANAGEMENT, PRODUCTION]
+  sql: |
+    SELECT e.emp_no AS `工号`, e.name AS `姓名`, e.dept_name AS `部门`, e.line_code AS `产线`, e.position_name AS `岗位`,
+           e.hire_date AS `入职日期`, e.leave_date AS `离职日期`, e.tenure_months AS `司龄月数`, e.leave_reason AS `离职原因`
+    FROM v_employee e
+    WHERE e.status = 'LEFT' AND e.leave_date BETWEEN :start AND :end {filters}
+    ORDER BY e.leave_date DESC {limit}
+  chart: table
+  examples: [上个月谁离职了, 列出九月离职的人, 伺服线最近三个月离职名单]
+
+- id: T05
+  name: 离职原因分布
+  intent: 人员与编制
+  metrics: [离职人数]
+  desc: 期间内离职人员按离职原因统计人数和占比，可再按部门、产线、司龄段细分
+  time: range
+  fixed: [离职原因]
+  dims:
+    离职原因: e.leave_reason
+    部门: e.dept_name
+    产线: e.line_code
+    用工类型: e.employment_type
+    司龄段: "CASE WHEN e.tenure_months < 3 THEN '1) 3个月内' WHEN e.tenure_months < 12 THEN '2) 3-12个月' WHEN e.tenure_months < 36 THEN '3) 1-3年' ELSE '4) 3年以上' END"
+  filters: {部门: e.dept_name, 产线: e.line_code, 用工类型: e.employment_type, 计薪方式: e.wage_type}
+  roles: [ADMIN, HR, MANAGEMENT, PRODUCTION]
+  sql: |
+    SELECT {dims} COUNT(*) AS `离职人数`, ROUND(COUNT(*) / SUM(COUNT(*)) OVER (), 4) AS `占比`
+    FROM v_employee e
+    WHERE e.status = 'LEFT' AND e.leave_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`离职人数` DESC"
+  chart: pie
+  examples: [今年大家为什么离职, 离职原因分布, 上半年离职的主要原因是什么]
+
+- id: T06
+  name: 出勤率
+  intent: 考勤工时
+  metrics: [出勤率, 应出勤人天, 实际出勤人天]
+  desc: 出勤率 = 实际出勤人天 ÷ 应出勤人天，同时给出迟到、旷工、请假人次，可按月份、部门、产线、班组分组
+  time: range
+  dims:
+    月份: "DATE_FORMAT(a.work_date, '%Y-%m')"
+    部门: a.dept_name
+    产线: a.line_code
+    班组: a.team
+  filters: {部门: a.dept_name, 产线: a.line_code, 班组: a.team}
+  sql: |
+    SELECT {dims} COUNT(*) AS `应出勤人天`, SUM(a.status IN ('NORMAL', 'LATE')) AS `实际出勤人天`,
+           SUM(a.status = 'LATE') AS `迟到人次`, SUM(a.status = 'ABSENT') AS `旷工人次`, SUM(a.status = 'LEAVE') AS `请假人天`,
+           ROUND(SUM(a.status IN ('NORMAL', 'LATE')) / NULLIF(COUNT(*), 0), 4) AS `出勤率`
+    FROM v_attendance a
+    WHERE a.work_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`出勤率` ASC"
+  chart: bar
+  examples: [上个月出勤率多少, 各部门上月出勤率, 伺服线九月出勤率, 今年每个月的出勤率, 哪个班组出勤率最低]
+
+- id: T07
+  name: 加班工时与加班率
+  intent: 考勤工时
+  metrics: [加班率, 加班工时, 人均加班工时]
+  desc: 加班工时、人均加班工时和加班率（加班工时 ÷ 应出勤人天 × 8），可按月份、部门、产线、班组分组
+  time: range
+  dims:
+    月份: "DATE_FORMAT(a.work_date, '%Y-%m')"
+    部门: a.dept_name
+    产线: a.line_code
+    班组: a.team
+  filters: {部门: a.dept_name, 产线: a.line_code, 班组: a.team}
+  sql: |
+    SELECT {dims} COUNT(DISTINCT a.employee_id) AS `人数`, ROUND(SUM(a.overtime_hours), 1) AS `加班工时`,
+           ROUND(SUM(a.overtime_hours) / NULLIF(COUNT(DISTINCT a.employee_id), 0), 1) AS `人均加班工时`,
+           ROUND(SUM(a.overtime_hours) / NULLIF(COUNT(*) * 8, 0), 4) AS `加班率`
+    FROM v_attendance a
+    WHERE a.work_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`加班率` DESC"
+  chart: bar
+  examples: [上个月伺服线的加班率是多少, 各产线上月加班率, 今年各月加班工时趋势, 哪个部门加班最多, 步进线九月人均加班多少小时]
+
+- id: T08
+  name: 个人加班排名
+  intent: 考勤工时
+  metrics: [加班工时]
+  desc: 期间内加班工时最多的员工名单
+  time: range
+  kind: list
+  default_top: 10
+  filters: {部门: a.dept_name, 产线: a.line_code, 班组: a.team}
+  sql: |
+    SELECT a.emp_no AS `工号`, a.name AS `姓名`, a.dept_name AS `部门`, a.line_code AS `产线`, a.team AS `班组`,
+           ROUND(SUM(a.overtime_hours), 1) AS `加班工时`, COUNT(*) AS `出勤天数`
+    FROM v_attendance a
+    WHERE a.work_date BETWEEN :start AND :end {filters}
+    GROUP BY a.emp_no, a.name, a.dept_name, a.line_code, a.team
+    ORDER BY `加班工时` DESC {limit}
+  chart: bar
+  examples: [上个月谁加班最多, 伺服线加班前十名, 九月加班时间最长的五个人]
+
+- id: T09
+  name: 请假统计
+  intent: 考勤工时
+  metrics: [请假天数]
+  desc: 已批准请假单的张数和天数，可按请假类型、部门、月份分组
+  time: range
+  dims:
+    请假类型: l.leave_type
+    部门: l.dept_name
+    月份: "DATE_FORMAT(l.start_date, '%Y-%m')"
+  filters: {部门: l.dept_name, 请假类型: l.leave_type}
+  default_group: [请假类型]
+  sql: |
+    SELECT {dims} COUNT(*) AS `请假单数`, COUNT(DISTINCT l.employee_id) AS `请假人数`, ROUND(SUM(l.days), 1) AS `请假天数`
+    FROM v_leave l
+    WHERE l.status = 'APPROVED' AND l.start_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`请假天数` DESC"
+  chart: bar
+  examples: [上个月请假情况, 今年病假一共多少天, 各部门请假天数, 三季度年假休了多少天]
+
+- id: T10
+  name: 迟到与旷工统计
+  intent: 考勤工时
+  metrics: [迟到次数, 旷工次数]
+  desc: 迟到人次、旷工人次和涉及人数，可按部门、产线、班组、月份分组
+  time: range
+  dims:
+    部门: a.dept_name
+    产线: a.line_code
+    班组: a.team
+    月份: "DATE_FORMAT(a.work_date, '%Y-%m')"
+  filters: {部门: a.dept_name, 产线: a.line_code, 班组: a.team}
+  default_group: [部门]
+  sql: |
+    SELECT {dims} SUM(a.status = 'LATE') AS `迟到人次`, SUM(a.status = 'ABSENT') AS `旷工人次`,
+           COUNT(DISTINCT IF(a.status IN ('LATE', 'ABSENT'), a.employee_id, NULL)) AS `涉及人数`
+    FROM v_attendance a
+    WHERE a.work_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`旷工人次` DESC, `迟到人次` DESC"
+  chart: bar
+  examples: [上个月迟到多少人次, 哪个部门旷工最多, 各产线九月迟到情况, 今年每月旷工人次]
+
+- id: T11
+  name: 人工成本
+  intent: 薪酬与计件
+  metrics: [人工成本, 应发工资, 实发工资, 个税]
+  desc: 人工成本（应发工资 + 单位社保公积金）以及应发工资、实发工资、个税的合计，可按月份、部门、产线、成本类型、计薪方式分组
+  time: range
+  dims:
+    月份: s.period
+    部门: s.dept_name
+    产线: s.line_code
+    成本类型: s.cost_type
+    计薪方式: s.wage_type
+  filters: {部门: s.dept_name, 产线: s.line_code, 成本类型: s.cost_type, 计薪方式: s.wage_type}
+  default_group: [月份]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} COUNT(DISTINCT s.employee_id) AS `计薪人数`, ROUND(SUM(s.gross_pay), 2) AS `应发工资`,
+           ROUND(SUM(s.net_pay), 2) AS `实发工资`, ROUND(SUM(s.income_tax), 2) AS `个税`,
+           ROUND(SUM(s.social_employer), 2) AS `单位社保公积金`, ROUND(SUM(s.gross_pay + s.social_employer), 2) AS `人工成本`
+    FROM v_payslip s
+    WHERE s.period BETWEEN :start_month AND :end_month {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`人工成本` DESC"
+  chart: bar
+  examples: [上个月人工成本多少, 今年每个月的人工成本, 各部门八月人工成本, 制造费用里的人工成本多少, 各产线人工成本对比, 八月实发工资总额, 代扣个税一共多少]
+
+- id: T12
+  name: 人均工资
+  intent: 薪酬与计件
+  metrics: [人均工资, 应发工资]
+  desc: 月人均应发工资和月人均实发工资（按人月平均），可按部门、产线、计薪方式、月份分组
+  time: range
+  dims:
+    部门: s.dept_name
+    产线: s.line_code
+    计薪方式: s.wage_type
+    成本类型: s.cost_type
+    月份: s.period
+  filters: {部门: s.dept_name, 产线: s.line_code, 计薪方式: s.wage_type, 成本类型: s.cost_type}
+  default_group: [部门]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} COUNT(DISTINCT s.employee_id) AS `计薪人数`, ROUND(SUM(s.gross_pay) / NULLIF(COUNT(*), 0), 2) AS `人均应发工资`,
+           ROUND(SUM(s.net_pay) / NULLIF(COUNT(*), 0), 2) AS `人均实发工资`
+    FROM v_payslip s
+    WHERE s.period BETWEEN :start_month AND :end_month {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`人均应发工资` DESC"
+  chart: bar
+  examples: [各部门人均工资, 上个月人均工资多少, 伺服线工人平均拿多少钱, 计件和月薪员工的平均工资对比, 今年人均工资趋势]
+
+- id: T13
+  name: 计件工资与保底补差
+  intent: 薪酬与计件
+  metrics: [计件工资, 保底补差]
+  desc: 计件员工的计件工资总额、人均计件工资、保底补差金额和拿保底的人数，可按产线、班组、月份分组
+  time: range
+  dims:
+    产线: s.line_code
+    班组: s.team
+    月份: s.period
+  filters: {产线: s.line_code, 班组: s.team}
+  default_group: [产线]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} COUNT(DISTINCT s.employee_id) AS `计件人数`, ROUND(SUM(s.piece_pay), 2) AS `计件工资总额`,
+           ROUND(SUM(s.piece_pay) / NULLIF(COUNT(*), 0), 2) AS `人均计件工资`,
+           ROUND(SUM(s.guarantee_topup), 2) AS `保底补差金额`, SUM(s.guarantee_topup > 0) AS `保底人次`,
+           ROUND(SUM(s.guarantee_topup > 0) / NULLIF(COUNT(*), 0), 4) AS `保底人次占比`
+    FROM v_payslip s
+    WHERE s.wage_type = 'PIECE' AND s.period BETWEEN :start_month AND :end_month {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`计件工资总额` DESC"
+  chart: bar
+  examples: [上个月计件工资总额多少, 伺服线八月计件工资, 多少人拿的是保底, 各产线保底补差金额, 今年每月计件工资]
+
+- id: T14
+  name: 当前计件单价
+  intent: 薪酬与计件
+  metrics: [计件单价]
+  desc: 各产线在统计日生效的计件单价和生效日期
+  time: asof
+  kind: list
+  filters: {产线: r.line_code}
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT r.line_code AS `产线`, r.rate AS `计件单价`, r.effective_from AS `生效日期`, r.remark AS `备注`
+    FROM hr_piece_rate r
+    WHERE r.effective_from = (SELECT MAX(x.effective_from) FROM hr_piece_rate x
+                              WHERE x.line_code = r.line_code AND x.effective_from <= :end) {filters}
+    ORDER BY r.line_code {limit}
+  chart: table
+  examples: [现在各产线计件单价是多少, 伺服线计件单价, 去年的计件单价是多少]
+
+- id: T15
+  name: 产量与良率
+  intent: 生产与人效
+  metrics: [良品数, 报废数, 良率]
+  desc: 良品数、报废数和良率（良品数 ÷ 良品数加报废数），可按产线、月份、产品分组
+  time: range
+  dims:
+    产线: w.line_code
+    月份: "DATE_FORMAT(w.report_date, '%Y-%m')"
+    产品: w.product_code
+  filters: {产线: w.line_code, 产品: w.product_code}
+  default_group: [产线]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, QUALITY, PRODUCTION]
+  sql: |
+    SELECT {dims} ROUND(SUM(w.good_qty), 0) AS `良品数`, ROUND(SUM(w.scrap_qty), 0) AS `报废数`,
+           ROUND(SUM(w.good_qty) / NULLIF(SUM(w.good_qty) + SUM(w.scrap_qty), 0), 4) AS `良率`
+    FROM v_wo_report w
+    WHERE w.report_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`良率` ASC"
+  chart: bar
+  examples: [上个月各产线产量和良率, L5 线最近三个月良率趋势, 伺服线九月产量多少, 哪条线良率最低, 今年每月产量]
+
+- id: T16
+  name: 人均产量与人均产值
+  intent: 生产与人效
+  metrics: [人均产量, 人均产值]
+  desc: 各产线每月的良品数、完工产值、计薪人数，以及人均产量和人均产值（完工产值 = 良品数 × 标准售价）
+  time: range
+  dims:
+    产线: x.line_code
+    月份: x.month
+  filters: {产线: x.line_code}
+  default_group: [产线]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} ROUND(SUM(x.good_qty), 0) AS `良品数`, ROUND(SUM(x.output_value), 2) AS `完工产值`, SUM(x.workers) AS `计薪人月`,
+           ROUND(SUM(x.good_qty) / NULLIF(SUM(x.workers), 0), 1) AS `人均产量`,
+           ROUND(SUM(x.output_value) / NULLIF(SUM(x.workers), 0), 2) AS `人均产值`
+    FROM (
+      SELECT p.month, p.line_code, p.good_qty, p.output_value, h.workers
+      FROM (SELECT DATE_FORMAT(w.report_date, '%Y-%m') AS month, w.line_code, SUM(w.good_qty) AS good_qty,
+                   SUM(IF(w.item_type = 'PRODUCT', w.good_qty * COALESCE(pr.list_price, 0), 0)) AS output_value
+            FROM v_wo_report w LEFT JOIN md_product pr ON pr.code = w.product_code
+            WHERE w.report_date BETWEEN :start AND :end
+            GROUP BY DATE_FORMAT(w.report_date, '%Y-%m'), w.line_code) p
+      JOIN (SELECT s.period AS month, s.line_code, COUNT(DISTINCT s.employee_id) AS workers
+            FROM v_payslip s
+            WHERE s.period BETWEEN :start_month AND :end_month AND s.line_code IS NOT NULL
+            GROUP BY s.period, s.line_code) h ON h.month = p.month AND h.line_code = p.line_code
+    ) x
+    WHERE 1 = 1 {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`人均产值` DESC"
+  chart: bar
+  examples: [各产线人均产值排名, 伺服线上月人均产值, 上个月各产线人均产量, 今年伺服线每月人均产值]
+
+- id: T17
+  name: 单位人工成本
+  intent: 生产与人效
+  metrics: [单位人工成本, 人工成本, 良品数]
+  desc: 各产线每台良品分摊的人工成本 = 产线人工成本 ÷ 产线良品数
+  time: range
+  dims:
+    产线: x.line_code
+    月份: x.month
+  filters: {产线: x.line_code}
+  default_group: [产线]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, PRODUCTION]
+  sql: |
+    SELECT {dims} ROUND(SUM(x.labor_cost), 2) AS `人工成本`, ROUND(SUM(x.good_qty), 0) AS `良品数`,
+           ROUND(SUM(x.labor_cost) / NULLIF(SUM(x.good_qty), 0), 2) AS `单位人工成本`
+    FROM (
+      SELECT h.month, h.line_code, h.labor_cost, p.good_qty
+      FROM (SELECT s.period AS month, s.line_code, SUM(s.gross_pay + s.social_employer) AS labor_cost
+            FROM v_payslip s
+            WHERE s.period BETWEEN :start_month AND :end_month AND s.line_code IS NOT NULL
+            GROUP BY s.period, s.line_code) h
+      JOIN (SELECT DATE_FORMAT(w.report_date, '%Y-%m') AS month, w.line_code, SUM(w.good_qty) AS good_qty
+            FROM v_wo_report w
+            WHERE w.report_date BETWEEN :start AND :end
+            GROUP BY DATE_FORMAT(w.report_date, '%Y-%m'), w.line_code) p ON p.month = h.month AND p.line_code = h.line_code
+    ) x
+    WHERE 1 = 1 {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`单位人工成本` DESC"
+  chart: bar
+  examples: [各产线单位人工成本, 伺服线一台电机分摊多少人工, 上月每台人工成本最高的是哪条线]
+
+- id: T18
+  name: OEE 与劳动效率
+  intent: 生产与人效
+  metrics: [OEE, 劳动效率]
+  desc: 设备综合效率 OEE 及其三要素（时间稼动率、性能稼动率、良品率）和劳动效率，可按产线、月份分组
+  time: range
+  dims:
+    产线: d.line_code
+    月份: "DATE_FORMAT(d.work_date, '%Y-%m')"
+  filters: {产线: d.line_code}
+  default_group: [产线]
+  roles: [ADMIN, HR, MANAGEMENT, FINANCE, QUALITY, PRODUCTION]
+  sql: |
+    SELECT {dims} ROUND(AVG(d.oee), 4) AS `OEE`, ROUND(AVG(d.availability), 4) AS `时间稼动率`,
+           ROUND(AVG(d.performance), 4) AS `性能稼动率`, ROUND(AVG(d.quality), 4) AS `良品率`,
+           ROUND(SUM(d.std_hours) / NULLIF(SUM(d.actual_hours), 0), 4) AS `劳动效率`
+    FROM v_line_day d
+    WHERE d.work_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`OEE` ASC"
+  chart: bar
+  examples: [各产线上月 OEE, 伺服线今年每月 OEE 趋势, 哪条线劳动效率最低, L8 线去年的稼动率]
+
+- id: T19
+  name: 收入、成本与毛利
+  intent: 成本与毛利
+  metrics: [销售收入, 销售成本, 毛利, 毛利率, 销量]
+  desc: 销量、销售收入、销售成本、毛利和毛利率，可按月份、季度、事业部、产品系列、产品、客户、行业、区域、内外销分组
+  time: range
+  dims:
+    月份: f.month
+    季度: f.quarter
+    事业部: f.business_unit
+    产品系列: f.series
+    产品: f.product_code
+    客户: f.customer_name
+    行业: f.industry
+    区域: f.region
+    内外销: "IF(f.is_domestic = 1, '内销', '外销')"
+  filters: {事业部: f.business_unit, 产品系列: f.series, 产品: f.product_code, 客户: f.customer_name, 行业: f.industry, 区域: f.region, 内外销: f.is_domestic}
+  default_group: [月份]
+  roles: [ADMIN, FINANCE, MANAGEMENT]
+  sql: |
+    SELECT {dims} ROUND(SUM(f.qty), 0) AS `销量`, ROUND(SUM(f.revenue_cny), 2) AS `销售收入`, ROUND(SUM(f.cost_cny), 2) AS `销售成本`,
+           ROUND(SUM(f.gross_profit_cny), 2) AS `毛利`, ROUND(SUM(f.gross_profit_cny) / NULLIF(SUM(f.revenue_cny), 0), 4) AS `毛利率`
+    FROM v_sales_fact f
+    WHERE f.delivery_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`毛利` DESC"
+  chart: bar
+  examples: [三季度各产品系列的收入成本和毛利率, 今年每个月的毛利率, 伺服系列上月毛利多少, 哪个客户毛利贡献最大, 各事业部今年毛利率对比, 外销毛利率多少]
+
+- id: T20
+  name: 销售收入与销量
+  intent: 成本与毛利
+  metrics: [销售收入, 销量, 平均售价]
+  desc: 销量、销售收入、平均售价和收入占比（不含成本和毛利），可按月份、季度、事业部、产品系列、产品、客户、行业、区域、内外销分组
+  time: range
+  dims:
+    月份: f.month
+    季度: f.quarter
+    事业部: f.business_unit
+    产品系列: f.series
+    产品: f.product_code
+    客户: f.customer_name
+    行业: f.industry
+    区域: f.region
+    内外销: "IF(f.is_domestic = 1, '内销', '外销')"
+  filters: {事业部: f.business_unit, 产品系列: f.series, 产品: f.product_code, 客户: f.customer_name, 行业: f.industry, 区域: f.region, 内外销: f.is_domestic}
+  default_group: [月份]
+  roles: [ADMIN, FINANCE, MANAGEMENT, SALES]
+  sql: |
+    SELECT {dims} ROUND(SUM(f.qty), 0) AS `销量`, ROUND(SUM(f.revenue_cny), 2) AS `销售收入`,
+           ROUND(SUM(f.revenue_cny) / NULLIF(SUM(f.qty), 0), 2) AS `平均售价`,
+           ROUND(SUM(f.revenue_cny) / SUM(SUM(f.revenue_cny)) OVER (), 4) AS `收入占比`
+    FROM v_sales_fact f
+    WHERE f.delivery_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`销售收入` DESC"
+  chart: bar
+  examples: [上个月销售收入多少, 今年各月销售额, 各产品系列销量占比, 前十大客户销售额, 华东区域三季度卖了多少, 伺服电机平均售价]
+
+- id: T21
+  name: 直接人工成本率
+  intent: 成本与毛利
+  metrics: [直接人工成本率, 人工成本, 销售收入]
+  desc: 每月生产类人工成本占销售收入的比例
+  time: range
+  fixed: [月份]
+  dims:
+    月份: s.month
+  roles: [ADMIN, FINANCE, MANAGEMENT]
+  sql: |
+    SELECT {dims} ROUND(SUM(s.revenue), 2) AS `销售收入`, ROUND(SUM(l.labor), 2) AS `生产人工成本`,
+           ROUND(SUM(l.labor) / NULLIF(SUM(s.revenue), 0), 4) AS `直接人工成本率`
+    FROM (SELECT f.month, SUM(f.revenue_cny) AS revenue FROM v_sales_fact f
+          WHERE f.delivery_date BETWEEN :start AND :end GROUP BY f.month) s
+    JOIN (SELECT p.period AS month, SUM(p.gross_pay + p.social_employer) AS labor FROM v_payslip p
+          WHERE p.period BETWEEN :start_month AND :end_month AND p.cost_type = 'PRODUCTION' GROUP BY p.period) l
+      ON l.month = s.month
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`直接人工成本率` DESC"
+  chart: line
+  examples: [直接人工成本率多少, 今年人工成本占收入的比例, 人工成本率趋势]
+
+- id: T22
+  name: 采购价差
+  intent: 成本与毛利
+  metrics: [采购价差]
+  desc: 原材料发票价和订单价的差异（价差金额、价差率、计入销售成本的价差），可按月份、物料类别、供应商、物料分组
+  time: range
+  dims:
+    月份: v.month
+    物料类别: v.category
+    供应商: v.supplier_name
+    物料: v.material_name
+  filters: {物料类别: v.category, 供应商: v.supplier_name}
+  default_group: [月份]
+  roles: [ADMIN, FINANCE, MANAGEMENT]
+  sql: |
+    SELECT {dims} ROUND(SUM(v.qty * v.po_price), 2) AS `订单价金额`, ROUND(SUM(v.variance), 2) AS `价差金额`,
+           ROUND(SUM(v.variance) / NULLIF(SUM(v.qty * v.po_price), 0), 4) AS `价差率`,
+           ROUND(SUM(v.variance_cogs), 2) AS `计入成本的价差`
+    FROM v_price_variance v
+    WHERE v.invoice_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`价差金额` DESC"
+  chart: bar
+  examples: [今年铜材采购价差多少, 每个月的采购价差, 原材料涨价对成本影响多大, 哪个供应商价差最大]
+
+- id: T23
+  name: 应收与逾期
+  intent: 回款与结算
+  metrics: [应收余额, 逾期金额, 逾期率]
+  desc: 未收清发票的应收余额、逾期金额、逾期发票数、最长逾期天数和逾期率，可按客户、行业、区域分组
+  time: none
+  dims:
+    客户: i.customer_name
+    行业: i.industry
+    区域: i.region
+  filters: {客户: i.customer_name, 行业: i.industry, 区域: i.region}
+  default_group: [客户]
+  roles: [ADMIN, FINANCE, MANAGEMENT, SALES]
+  sql: |
+    SELECT {dims} ROUND(SUM(i.outstanding_cny), 2) AS `应收余额`,
+           ROUND(SUM(IF(i.overdue_days > 0, i.outstanding_cny, 0)), 2) AS `逾期金额`,
+           SUM(i.overdue_days > 0) AS `逾期发票数`, MAX(GREATEST(i.overdue_days, 0)) AS `最长逾期天数`,
+           ROUND(SUM(IF(i.overdue_days > 0, i.outstanding_cny, 0)) / NULLIF(SUM(i.outstanding_cny), 0), 4) AS `逾期率`
+    FROM v_sales_invoice i
+    WHERE i.status IN ('OPEN', 'PARTIAL') {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`逾期金额` DESC"
+  chart: bar
+  examples: [哪些客户回款逾期了, 现在应收账款多少, 逾期金额最大的客户, 各区域应收逾期情况, 应收逾期率多少]
+
+- id: T24
+  name: 回款金额
+  intent: 回款与结算
+  metrics: [回款金额]
+  desc: 期间内的回款笔数和回款金额，可按月份、客户、收款方式分组
+  time: range
+  dims:
+    月份: "DATE_FORMAT(r.receipt_date, '%Y-%m')"
+    客户: r.customer_name
+    收款方式: r.method
+  filters: {客户: r.customer_name, 收款方式: r.method}
+  default_group: [月份]
+  roles: [ADMIN, FINANCE, MANAGEMENT]
+  sql: |
+    SELECT {dims} COUNT(*) AS `回款笔数`, ROUND(SUM(r.amount_cny), 2) AS `回款金额`
+    FROM v_receipt r
+    WHERE r.receipt_date BETWEEN :start AND :end {filters}
+    {group_by}
+    ORDER BY {order} {limit}
+  order: "`回款金额` DESC"
+  chart: bar
+  examples: [本月回款多少, 今年每个月回款金额, 上月哪个客户回款最多, 承兑汇票收了多少]

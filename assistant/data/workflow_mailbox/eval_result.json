@@ -1,0 +1,1050 @@
+{
+ "summary": {
+  "n": 54,
+  "errors": 54,
+  "意图完全一致": 0,
+  "发件人识别正确": 0,
+  "各意图": {
+   "new_inquiry": {
+    "标注": 14,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "counter_offer": {
+    "标注": 6,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "tender": {
+    "标注": 3,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "sample": {
+    "标注": 5,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "purchase_order": {
+    "标注": 8,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "delivery_query": {
+    "标注": 6,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "complaint": {
+    "标注": 4,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "supplier_reply": {
+    "标注": 4,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "invoice": {
+    "标注": 3,
+    "精确率": null,
+    "召回率": 0.0
+   },
+   "other": {
+    "标注": 4,
+    "精确率": null,
+    "召回率": 0.0
+   }
+  },
+  "字段": {},
+  "字段合计": {
+   "n": 0,
+   "正确": 0
+  },
+  "多行明细数量正确": "0/0",
+  "平均耗时秒": 0.0,
+  "不一致的邮件": [
+   {
+    "name": "inq01",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：OpenAITimeoutError: Request timed out."
+   },
+   {
+    "name": "inq02",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：OpenAITimeoutError: Request timed out."
+   },
+   {
+    "name": "inq03",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：OpenAITimeoutError: Request timed out."
+   },
+   {
+    "name": "inq04",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：OpenAITimeoutError: Request timed out."
+   },
+   {
+    "name": "inq05",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inq06",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inq07",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inq08",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inq09",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "ctr01",
+    "应为": [
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "ctr02",
+    "应为": [
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "ctr03",
+    "应为": [
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "ctr04",
+    "应为": [
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "ctr05",
+    "应为": [
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po01",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po02",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po03",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po04",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po05",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "po06",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "dlv01",
+    "应为": [
+     "delivery_query"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "dlv02",
+    "应为": [
+     "delivery_query"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "dlv03",
+    "应为": [
+     "delivery_query"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "dlv04",
+    "应为": [
+     "delivery_query"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "dlv05",
+    "应为": [
+     "delivery_query"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "smp01",
+    "应为": [
+     "sample"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "smp02",
+    "应为": [
+     "sample"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "smp03",
+    "应为": [
+     "sample"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "smp04",
+    "应为": [
+     "sample"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "tnd01",
+    "应为": [
+     "tender"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "tnd02",
+    "应为": [
+     "tender"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "tnd03",
+    "应为": [
+     "tender"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "cmp01",
+    "应为": [
+     "complaint"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "cmp02",
+    "应为": [
+     "complaint"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "cmp03",
+    "应为": [
+     "complaint"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "sup01",
+    "应为": [
+     "supplier_reply"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "sup02",
+    "应为": [
+     "supplier_reply"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "sup03",
+    "应为": [
+     "supplier_reply"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "sup04",
+    "应为": [
+     "supplier_reply"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inv01",
+    "应为": [
+     "invoice"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inv02",
+    "应为": [
+     "invoice"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inv03",
+    "应为": [
+     "invoice"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "oth01",
+    "应为": [
+     "other"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "oth02",
+    "应为": [
+     "other"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "oth03",
+    "应为": [
+     "other"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "oth04",
+    "应为": [
+     "other"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "mul01",
+    "应为": [
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "mul02",
+    "应为": [
+     "delivery_query",
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "mul03",
+    "应为": [
+     "sample",
+     "counter_offer"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "mul04",
+    "应为": [
+     "complaint",
+     "purchase_order"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "unk01",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "unk02",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "fwd01",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   },
+   {
+    "name": "inj01",
+    "应为": [
+     "new_inquiry"
+    ],
+    "识别为": [],
+    "error": "大模型服务：熔断中"
+   }
+  ],
+  "字段错误": []
+ },
+ "rows": [
+  {
+   "name": "inq01",
+   "error": "大模型服务：OpenAITimeoutError: Request timed out.",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq02",
+   "error": "大模型服务：OpenAITimeoutError: Request timed out.",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq03",
+   "error": "大模型服务：OpenAITimeoutError: Request timed out.",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq04",
+   "error": "大模型服务：OpenAITimeoutError: Request timed out.",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq05",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq06",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq07",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq08",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inq09",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "ctr01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "ctr02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "ctr03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "ctr04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "ctr05",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po05",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "po06",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "dlv01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "dlv02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "dlv03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "dlv04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "dlv05",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "smp01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "sample"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "smp02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "sample"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "smp03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "sample"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "smp04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "sample"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "tnd01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "tender"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "tnd02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "tender"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "tnd03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "tender"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "cmp01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "complaint"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "cmp02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "complaint"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "cmp03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "complaint"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "sup01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "supplier_reply"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "sup02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "supplier_reply"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "sup03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "supplier_reply"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "sup04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "supplier_reply"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inv01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "invoice"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inv02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "invoice"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inv03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "invoice"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "oth01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "other"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "oth02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "other"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "oth03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "other"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "oth04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "other"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "mul01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "mul02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "delivery_query",
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "mul03",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "sample",
+    "counter_offer"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "mul04",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "complaint",
+    "purchase_order"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "unk01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "unk02",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "fwd01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  },
+  {
+   "name": "inj01",
+   "error": "大模型服务：熔断中",
+   "intents": [],
+   "want": [
+    "new_inquiry"
+   ],
+   "party_ok": false,
+   "fields": {}
+  }
+ ]
+}

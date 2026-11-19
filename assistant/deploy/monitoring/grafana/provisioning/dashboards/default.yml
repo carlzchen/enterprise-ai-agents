@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: MiniERP
+    folder: MiniERP AI
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

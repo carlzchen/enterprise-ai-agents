@@ -1,0 +1,25 @@
+{
+  "_说明": "公司 SSO 身份 → 知识库角色和密级上限。部门决定基本角色，职位补充角色，职级决定密级；部分角色有密级上限。真实环境由信息安全和 HR 维护。",
+  "dept_roles": [
+    {"dept": "D100", "role": "ENGINEER"},
+    {"dept": "D200", "role": "QUALITY"},
+    {"dept": "D300", "role": "PRODUCTION"},
+    {"dept": "D400", "role": "SALES"},
+    {"dept": "D500", "role": "PURCHASE"},
+    {"dept": "D600", "role": "FINANCE"}
+  ],
+  "title_roles": [
+    {"pattern": "总监|总经理|副总|厂长", "role": "MANAGEMENT"},
+    {"pattern": "研发|设计|结构|电气", "role": "ENGINEER"},
+    {"pattern": "质量|品质|检验|QE", "role": "QUALITY"},
+    {"pattern": "工艺|车间|班组|生产", "role": "PRODUCTION"},
+    {"pattern": "销售|营销|客户经理", "role": "SALES"},
+    {"pattern": "采购", "role": "PURCHASE"}
+  ],
+  "level_clearance": [
+    {"pattern": "^M[1-9]$", "level": 2},
+    {"pattern": "^P([6-9]|1[0-9])$", "level": 2},
+    {"pattern": "^P[1-5]$", "level": 1}
+  ],
+  "role_clearance_cap": {"SALES": 1, "PRODUCTION": 1, "PURCHASE": 1, "FINANCE": 1}
+}
