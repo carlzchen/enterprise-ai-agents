@@ -1,4 +1,4 @@
-# MiniERP AI Assistant
+# Enterprise AI Agents
 
 **Enterprise knowledge-base Q&A (multimodal RAG) + email-driven multi-agent order workflow for a micro-motor manufacturer.**
 Built with LangGraph, DeepAgents, Milvus, BGE-M3 and DeepSeek on top of a full ERP/PLM system (Java + Vue) that supplies realistic business data.
